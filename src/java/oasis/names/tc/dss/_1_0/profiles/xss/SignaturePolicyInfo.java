@@ -84,7 +84,7 @@ public class SignaturePolicyInfo {
      * 
      * @return
      *     possible object is
-     *     {@link ObjectIdentifierType }
+     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getSignaturePolicyIdentifier() {
@@ -96,7 +96,7 @@ public class SignaturePolicyInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link ObjectIdentifierType }
+     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
      *     
      */
     public void setSignaturePolicyIdentifier(ObjectIdentifierType value) {
@@ -108,7 +108,7 @@ public class SignaturePolicyInfo {
      * 
      * @return
      *     possible object is
-     *     {@link ObjectIdentifierType }
+     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getSignaturePolicyDigestAlgorithm() {
@@ -120,7 +120,7 @@ public class SignaturePolicyInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link ObjectIdentifierType }
+     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
      *     
      */
     public void setSignaturePolicyDigestAlgorithm(ObjectIdentifierType value) {
@@ -154,7 +154,7 @@ public class SignaturePolicyInfo {
      * 
      * @return
      *     possible object is
-     *     {@link TransformsType }
+     *     {@link org.w3._2000._09.xmldsig.TransformsType }
      *     
      */
     public TransformsType getTransforms() {
@@ -166,7 +166,7 @@ public class SignaturePolicyInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link TransformsType }
+     *     {@link org.w3._2000._09.xmldsig.TransformsType }
      *     
      */
     public void setTransforms(TransformsType value) {

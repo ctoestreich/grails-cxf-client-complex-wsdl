@@ -60,9 +60,9 @@ public class SPKIDataType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link byte[]}{@code >}
-     * {@link org.w3c.dom.Element }
      * {@link Object }
+     * {@link org.w3c.dom.Element }
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link byte[]}{@code >}
      * 
      * 
      */

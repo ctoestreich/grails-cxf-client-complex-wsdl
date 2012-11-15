@@ -26,6 +26,8 @@ import org.w3._2000._09.xmldsig.KeyInfoType;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ReferenceListDataReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "DataReference");
+    private final static QName _ReferenceListKeyReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeyReference");
     private final static QName _EncryptionProperty_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptionProperty");
     private final static QName _EncryptedKey_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptedKey");
     private final static QName _CipherData_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "CipherData");
@@ -38,8 +40,6 @@ public class ObjectFactory {
     private final static QName _AgreementMethodTypeKANonce_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KA-Nonce");
     private final static QName _EncryptionMethodTypeKeySize_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeySize");
     private final static QName _EncryptionMethodTypeOAEPparams_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "OAEPparams");
-    private final static QName _ReferenceListDataReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "DataReference");
-    private final static QName _ReferenceListKeyReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeyReference");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.w3._2001._04.xmlenc
@@ -134,6 +134,24 @@ public class ObjectFactory {
      */
     public TransformsType createTransformsType() {
         return new TransformsType();
+    }
+
+    /**
+     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "DataReference", scope = ReferenceList.class)
+    public JAXBElement<ReferenceType> createReferenceListDataReference(ReferenceType value) {
+        return new JAXBElement<ReferenceType>(_ReferenceListDataReference_QNAME, ReferenceType.class, ReferenceList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KeyReference", scope = ReferenceList.class)
+    public JAXBElement<ReferenceType> createReferenceListKeyReference(ReferenceType value) {
+        return new JAXBElement<ReferenceType>(_ReferenceListKeyReference_QNAME, ReferenceType.class, ReferenceList.class, value);
     }
 
     /**
@@ -242,24 +260,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "OAEPparams", scope = EncryptionMethodType.class)
     public JAXBElement<byte[]> createEncryptionMethodTypeOAEPparams(byte[] value) {
         return new JAXBElement<byte[]>(_EncryptionMethodTypeOAEPparams_QNAME, byte[].class, EncryptionMethodType.class, ((byte[]) value));
-    }
-
-    /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "DataReference", scope = ReferenceList.class)
-    public JAXBElement<ReferenceType> createReferenceListDataReference(ReferenceType value) {
-        return new JAXBElement<ReferenceType>(_ReferenceListDataReference_QNAME, ReferenceType.class, ReferenceList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KeyReference", scope = ReferenceList.class)
-    public JAXBElement<ReferenceType> createReferenceListKeyReference(ReferenceType value) {
-        return new JAXBElement<ReferenceType>(_ReferenceListKeyReference_QNAME, ReferenceType.class, ReferenceList.class, value);
     }
 
 }

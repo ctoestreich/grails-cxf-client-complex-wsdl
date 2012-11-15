@@ -117,7 +117,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link SignatureType }
+     *     {@link org.w3._2000._09.xmldsig.SignatureType }
      *     
      */
     public SignatureType getSignature() {
@@ -129,7 +129,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link SignatureType }
+     *     {@link org.w3._2000._09.xmldsig.SignatureType }
      *     
      */
     public void setSignature(SignatureType value) {

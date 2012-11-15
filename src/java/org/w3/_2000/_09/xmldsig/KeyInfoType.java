@@ -53,13 +53,13 @@ import org.w3c.dom.Element;
 public class KeyInfoType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "KeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "X509Data", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "PGPData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "MgmtData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "RetrievalMethod", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
         @XmlElementRef(name = "SPKIData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "KeyName", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class)
+        @XmlElementRef(name = "MgmtData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+        @XmlElementRef(name = "KeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+        @XmlElementRef(name = "KeyName", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+        @XmlElementRef(name = "RetrievalMethod", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+        @XmlElementRef(name = "X509Data", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+        @XmlElementRef(name = "PGPData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class)
     })
     @XmlMixed
     @XmlAnyElement(lax = true)
@@ -88,16 +88,16 @@ public class KeyInfoType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.w3c.dom.Element }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link KeyValueType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link X509DataType }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link SPKIDataType }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link String }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link PGPDataType }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link KeyValueType }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link RetrievalMethodType }{@code >}
      * {@link Object }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link SPKIDataType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link X509DataType }{@code >}
+     * {@link org.w3c.dom.Element }
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link PGPDataType }{@code >}
      * 
      * 
      */

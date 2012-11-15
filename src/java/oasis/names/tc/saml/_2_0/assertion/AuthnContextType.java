@@ -50,10 +50,10 @@ import javax.xml.bind.annotation.XmlType;
 public class AuthnContextType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "AuthenticatingAuthority", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "AuthnContextClassRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "AuthnContextDeclRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "AuthnContextDecl", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
+        @XmlElementRef(name = "AuthenticatingAuthority", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "AuthnContextDecl", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "AuthnContextClassRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
     })
     protected List<JAXBElement<?>> content;
 
@@ -87,8 +87,8 @@ public class AuthnContextType {
      * Objects of the following type(s) are allowed in the list
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * 
      * 
      */

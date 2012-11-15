@@ -11,10 +11,7 @@ class DssService {
     oasis.names.tc.dss._1_0.core.wsdl.SOAPport dssServiceClient
 
     VerifyResponse verify() {
-        def other = new SignatureObjectType.Other()
-        other.x509Data = new X509DataType(x509IssuerSerialOrX509SKIOrX509SubjectName: ["some data"] as List<Object>)
-        def sig = new SignatureObjectType(other: other)
-        def request = new VerifyRequest(signatureObject: sig)
+        def request = new VerifyRequest()
 
         try {
             dssServiceClient.verify(request)

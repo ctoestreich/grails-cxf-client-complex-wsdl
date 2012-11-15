@@ -58,7 +58,7 @@ public class SignedReference {
      * 
      * @return
      *     possible object is
-     *     {@link TransformsType }
+     *     {@link org.w3._2000._09.xmldsig.TransformsType }
      *     
      */
     public TransformsType getTransforms() {
@@ -70,7 +70,7 @@ public class SignedReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link TransformsType }
+     *     {@link org.w3._2000._09.xmldsig.TransformsType }
      *     
      */
     public void setTransforms(TransformsType value) {

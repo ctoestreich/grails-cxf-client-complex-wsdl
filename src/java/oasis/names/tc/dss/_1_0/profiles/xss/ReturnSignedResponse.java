@@ -121,7 +121,7 @@ public class ReturnSignedResponse {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link CommitmentType }
+         * {@link org.etsi.uri._2038.v1_1.CommitmentType }
          * 
          * 
          */

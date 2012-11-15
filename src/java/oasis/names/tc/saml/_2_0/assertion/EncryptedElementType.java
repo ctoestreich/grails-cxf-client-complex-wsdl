@@ -48,7 +48,7 @@ public class EncryptedElementType {
      * 
      * @return
      *     possible object is
-     *     {@link EncryptedDataType }
+     *     {@link org.w3._2001._04.xmlenc.EncryptedDataType }
      *     
      */
     public EncryptedDataType getEncryptedData() {
@@ -60,7 +60,7 @@ public class EncryptedElementType {
      * 
      * @param value
      *     allowed object is
-     *     {@link EncryptedDataType }
+     *     {@link org.w3._2001._04.xmlenc.EncryptedDataType }
      *     
      */
     public void setEncryptedData(EncryptedDataType value) {
@@ -85,7 +85,7 @@ public class EncryptedElementType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link EncryptedKeyType }
+     * {@link org.w3._2001._04.xmlenc.EncryptedKeyType }
      * 
      * 
      */

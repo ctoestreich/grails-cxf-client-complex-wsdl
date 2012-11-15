@@ -43,7 +43,7 @@ public class ResponseSignature {
      * 
      * @return
      *     possible object is
-     *     {@link SignatureType }
+     *     {@link org.w3._2000._09.xmldsig.SignatureType }
      *     
      */
     public SignatureType getSignature() {
@@ -55,7 +55,7 @@ public class ResponseSignature {
      * 
      * @param value
      *     allowed object is
-     *     {@link SignatureType }
+     *     {@link org.w3._2000._09.xmldsig.SignatureType }
      *     
      */
     public void setSignature(SignatureType value) {

@@ -76,8 +76,8 @@ public class ObjectType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.w3c.dom.Element }
      * {@link String }
+     * {@link org.w3c.dom.Element }
      * {@link Object }
      * 
      * 

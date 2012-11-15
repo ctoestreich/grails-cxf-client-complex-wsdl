@@ -82,6 +82,7 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.neethi/neethi/bundles/neethi-3.0.2.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.cxf/cxf-rt-ws-policy/jars/cxf-rt-ws-policy-2.6.2.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.liquibase/liquibase-core/jars/liquibase-core-2.0.5.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/dk.brics.automaton/automaton/jars/automaton-1.11-8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

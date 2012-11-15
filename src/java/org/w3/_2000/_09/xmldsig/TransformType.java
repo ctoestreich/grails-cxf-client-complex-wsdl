@@ -68,10 +68,10 @@ public class TransformType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.w3c.dom.Element }
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link Object }
      * {@link String }
+     * {@link org.w3c.dom.Element }
      * 
      * 
      */

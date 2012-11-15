@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 public class EvidenceType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "AssertionIDReference", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "Assertion", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class)
+        @XmlElementRef(name = "Assertion", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "AssertionIDReference", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class)
     })
     protected List<JAXBElement<?>> assertionIDReferenceOrAssertion;
 
@@ -61,8 +61,8 @@ public class EvidenceType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._1_0.assertion.AssertionType }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * 
      * 
      */

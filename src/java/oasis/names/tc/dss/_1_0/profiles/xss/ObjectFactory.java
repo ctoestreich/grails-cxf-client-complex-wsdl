@@ -167,7 +167,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link CertificateTrustTreesType }{@code >}}
+     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", name = "X509CertificateValidationOptions")

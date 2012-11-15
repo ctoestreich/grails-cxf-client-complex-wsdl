@@ -40,10 +40,10 @@ import javax.xml.bind.annotation.XmlType;
 public class EvidenceType {
 
     @XmlElementRefs({
+        @XmlElementRef(name = "AssertionIDRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "EncryptedAssertion", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "AssertionURIRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "Assertion", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "AssertionIDRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
+        @XmlElementRef(name = "AssertionURIRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
     })
     protected List<JAXBElement<?>> assertionIDRefOrAssertionURIRefOrAssertion;
 
@@ -65,10 +65,10 @@ public class EvidenceType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.EncryptedElementType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.AssertionType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * 
      * 
      */

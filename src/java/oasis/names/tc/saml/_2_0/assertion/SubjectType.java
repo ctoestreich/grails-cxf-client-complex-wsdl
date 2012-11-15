@@ -45,10 +45,10 @@ import javax.xml.bind.annotation.XmlType;
 public class SubjectType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "BaseID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "EncryptedID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "NameID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "SubjectConfirmation", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
+        @XmlElementRef(name = "SubjectConfirmation", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "EncryptedID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "BaseID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
     })
     protected List<JAXBElement<?>> content;
 
@@ -80,10 +80,10 @@ public class SubjectType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.BaseIDAbstractType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.SubjectConfirmationType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.EncryptedElementType }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.NameIDType }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.EncryptedElementType }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.SubjectConfirmationType }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.BaseIDAbstractType }{@code >}
      * 
      * 
      */

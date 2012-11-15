@@ -154,13 +154,13 @@ public class CompoundResponse {
     public static class Responses {
 
         @XmlElementRefs({
-            @XmlElementRef(name = "ArchiveRetrievalResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveRetrievalResponse.class),
+            @XmlElementRef(name = "SignResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignResponse.class),
             @XmlElementRef(name = "VerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyResponse.class),
-            @XmlElementRef(name = "ArchiveVerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveSubmitResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitResponse.class),
+            @XmlElementRef(name = "ArchiveRetrievalResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveRetrievalResponse.class),
             @XmlElementRef(name = "ArchiveModifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "ArchiveVerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
             @XmlElementRef(name = "ArchiveDeleteResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveDeleteResponse.class),
-            @XmlElementRef(name = "SignResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignResponse.class)
+            @XmlElementRef(name = "ArchiveSubmitResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitResponse.class)
         })
         protected List<Object> verifyResponseOrSignResponseOrArchiveSubmitResponse;
 
@@ -182,13 +182,13 @@ public class CompoundResponse {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveRetrievalResponse }
+         * {@link oasis.names.tc.dss._1_0.core.schema.SignResponse }
          * {@link oasis.names.tc.dss._1_0.core.schema.VerifyResponse }
+         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveRetrievalResponse }
          * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.ResponseBaseType }{@code >}
-         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveSubmitResponse }
          * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.ResponseBaseType }{@code >}
          * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveDeleteResponse }
-         * {@link oasis.names.tc.dss._1_0.core.schema.SignResponse }
+         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveSubmitResponse }
          * 
          * 
          */

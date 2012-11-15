@@ -62,21 +62,21 @@ import oasis.names.tc.saml._1_0.assertion.NameIdentifierType;
 public class OptionalOutputs {
 
     @XmlElementRefs({
+        @XmlElementRef(name = "SignatureReason", namespace = "urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF", type = JAXBElement.class),
+        @XmlElementRef(name = "SchemeInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = SchemeInfo.class),
+        @XmlElementRef(name = "UpdatedSignature", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = UpdatedSignature.class),
+        @XmlElementRef(name = "ProcessingDetails", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ProcessingDetails.class),
+        @XmlElementRef(name = "X509CertificateInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = X509CertificateInfo.class),
         @XmlElementRef(name = "ResponseID", namespace = "urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing:1.0", type = JAXBElement.class),
         @XmlElementRef(name = "SignaturePolicyInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = SignaturePolicyInfo.class),
+        @XmlElementRef(name = "VerifyManifestResults", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
         @XmlElementRef(name = "DocumentWithSignature", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = DocumentWithSignature.class),
         @XmlElementRef(name = "TransformedDocument", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = TransformedDocument.class),
-        @XmlElementRef(name = "SignatureInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = SignatureInfo.class),
-        @XmlElementRef(name = "SchemeInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = SchemeInfo.class),
-        @XmlElementRef(name = "ProcessingDetails", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ProcessingDetails.class),
-        @XmlElementRef(name = "VerifyManifestResults", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
         @XmlElementRef(name = "SignerIdentity", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "ArchiveInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ArchiveInfo.class),
+        @XmlElementRef(name = "SignatureInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = SignatureInfo.class),
         @XmlElementRef(name = "SigningTime", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SigningTime.class),
-        @XmlElementRef(name = "SignatureReason", namespace = "urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF", type = JAXBElement.class),
-        @XmlElementRef(name = "X509CertificateInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = X509CertificateInfo.class),
-        @XmlElementRef(name = "UpdatedSignature", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = UpdatedSignature.class),
-        @XmlElementRef(name = "ResponseSignature", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ResponseSignature.class),
-        @XmlElementRef(name = "ArchiveInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ArchiveInfo.class)
+        @XmlElementRef(name = "ResponseSignature", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ResponseSignature.class)
     })
     protected List<Object> documentWithSignatureOrVerifyManifestResultsOrProcessingDetails;
 
@@ -99,20 +99,20 @@ public class OptionalOutputs {
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
+     * {@link SchemeInfo }
+     * {@link UpdatedSignature }
+     * {@link ProcessingDetails }
+     * {@link X509CertificateInfo }
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
      * {@link SignaturePolicyInfo }
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link VerifyManifestResultsType }{@code >}
      * {@link oasis.names.tc.dss._1_0.core.schema.DocumentWithSignature }
      * {@link TransformedDocument }
-     * {@link SignatureInfo }
-     * {@link SchemeInfo }
-     * {@link ProcessingDetails }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link VerifyManifestResultsType }{@code >}
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link NameIdentifierType }{@code >}
-     * {@link SigningTime }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
-     * {@link X509CertificateInfo }
-     * {@link UpdatedSignature }
-     * {@link ResponseSignature }
      * {@link ArchiveInfo }
+     * {@link SignatureInfo }
+     * {@link SigningTime }
+     * {@link ResponseSignature }
      * 
      * 
      */

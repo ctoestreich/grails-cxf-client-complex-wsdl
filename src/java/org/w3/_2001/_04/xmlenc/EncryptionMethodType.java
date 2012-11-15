@@ -73,8 +73,8 @@ public class EncryptionMethodType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link byte[]}{@code >}
+     * {@link Object }
      * {@link String }
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link java.math.BigInteger }{@code >}
      * 

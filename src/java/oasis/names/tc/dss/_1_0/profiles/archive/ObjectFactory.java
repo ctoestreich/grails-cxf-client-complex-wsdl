@@ -93,7 +93,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ObjectIdentifierType }{@code >}}
+     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchivePolicy")

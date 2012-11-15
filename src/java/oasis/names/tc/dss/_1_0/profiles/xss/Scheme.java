@@ -43,7 +43,7 @@ public class Scheme {
      * 
      * @return
      *     possible object is
-     *     {@link InternationalNamesType }
+     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
      *     
      */
     public InternationalNamesType getSchemeName() {
@@ -55,7 +55,7 @@ public class Scheme {
      * 
      * @param value
      *     allowed object is
-     *     {@link InternationalNamesType }
+     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
      *     
      */
     public void setSchemeName(InternationalNamesType value) {

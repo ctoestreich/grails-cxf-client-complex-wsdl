@@ -106,7 +106,7 @@ public class SubjectConfirmationType {
      * 
      * @return
      *     possible object is
-     *     {@link KeyInfoType }
+     *     {@link org.w3._2000._09.xmldsig.KeyInfoType }
      *     
      */
     public KeyInfoType getKeyInfo() {
@@ -118,7 +118,7 @@ public class SubjectConfirmationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link KeyInfoType }
+     *     {@link org.w3._2000._09.xmldsig.KeyInfoType }
      *     
      */
     public void setKeyInfo(KeyInfoType value) {

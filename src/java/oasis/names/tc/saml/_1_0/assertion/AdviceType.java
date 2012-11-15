@@ -41,8 +41,8 @@ import org.w3c.dom.Element;
 public class AdviceType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "AssertionIDReference", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "Assertion", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class)
+        @XmlElementRef(name = "Assertion", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "AssertionIDReference", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class)
     })
     @XmlAnyElement(lax = true)
     protected List<Object> assertionIDReferenceOrAssertionOrAny;
@@ -65,10 +65,10 @@ public class AdviceType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.w3c.dom.Element }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link AssertionType }{@code >}
      * {@link Object }
      * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
+     * {@link javax.xml.bind.JAXBElement }{@code <}{@link AssertionType }{@code >}
+     * {@link org.w3c.dom.Element }
      * 
      * 
      */

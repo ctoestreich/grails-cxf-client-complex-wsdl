@@ -87,7 +87,7 @@ public class SignatureObjectType {
      * 
      * @return
      *     possible object is
-     *     {@link SignatureType }
+     *     {@link org.w3._2000._09.xmldsig.SignatureType }
      *     
      */
     public SignatureType getSignature() {
@@ -99,7 +99,7 @@ public class SignatureObjectType {
      * 
      * @param value
      *     allowed object is
-     *     {@link SignatureType }
+     *     {@link org.w3._2000._09.xmldsig.SignatureType }
      *     
      */
     public void setSignature(SignatureType value) {
@@ -265,7 +265,7 @@ public class SignatureObjectType {
          * 
          * @return
          *     possible object is
-         *     {@link X509DataType }
+         *     {@link org.w3._2000._09.xmldsig.X509DataType }
          *     
          */
         public X509DataType getX509Data() {
@@ -277,7 +277,7 @@ public class SignatureObjectType {
          * 
          * @param value
          *     allowed object is
-         *     {@link X509DataType }
+         *     {@link org.w3._2000._09.xmldsig.X509DataType }
          *     
          */
         public void setX509Data(X509DataType value) {

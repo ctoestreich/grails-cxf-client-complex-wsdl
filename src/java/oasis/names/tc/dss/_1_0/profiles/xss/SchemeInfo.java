@@ -57,7 +57,7 @@ public class SchemeInfo {
      * 
      * @return
      *     possible object is
-     *     {@link InternationalNamesType }
+     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
      *     
      */
     public InternationalNamesType getSchemeName() {
@@ -69,7 +69,7 @@ public class SchemeInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link InternationalNamesType }
+     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
      *     
      */
     public void setSchemeName(InternationalNamesType value) {
@@ -105,7 +105,7 @@ public class SchemeInfo {
      * 
      * @return
      *     possible object is
-     *     {@link ObjectIdentifierType }
+     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getTSLDigestAlgorithm() {
@@ -117,7 +117,7 @@ public class SchemeInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link ObjectIdentifierType }
+     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
      *     
      */
     public void setTSLDigestAlgorithm(ObjectIdentifierType value) {
