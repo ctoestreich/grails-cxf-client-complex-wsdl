@@ -1,0 +1,2051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Version 2.1 (Added compound operations)
+	Version 2.0 (Added archive operations)
+	Version 1.2 (PDF Service added, added support to allow certificates on dss:SignatureObject)
+	Version 1.1 (PDF Lite)
+	Version 1.0 (DSS,XSS Core)--><definitions targetNamespace="urn:oasis:names:tc:dss:1.0:core:wsdl" name="dss" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:impl="urn:oasis:names:tc:dss:1.0:core:wsdl" xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:archp="urn:oasis:names:tc:dss:1.0:profiles:archive" xmlns:comp="urn:oasis:names:tc:dss:1.0:profiles:compound" xmlns:compAsync="urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing:1.0">
+  <!--Schema Type Definitions-->
+  <types>
+    <!--XAdES Schema, embedded to fix broken URL in its original ETSI version-->
+    <xsd:schema targetNamespace="http://uri.etsi.org/01903/v1.2.2#" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://uri.etsi.org/01903/v1.2.2#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+      <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+      <!--Start auxiliary types definitions: AnyType, ObjectIdentifierType, 
+		EncapsulatedPKIDataType and TimestampType-->
+      <!--Start AnyType-->
+      <xsd:element name="Any" type="AnyType"/>
+      <xsd:complexType name="AnyType" mixed="true">
+        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+          <xsd:any namespace="##any" processContents="lax"/>
+        </xsd:sequence>
+        <xsd:anyAttribute namespace="##any"/>
+      </xsd:complexType>
+      <!--End AnyType-->
+      <!--Start ObjectIdentifierType-->
+      <xsd:element name="ObjectIdentifier" type="ObjectIdentifierType"/>
+      <xsd:complexType name="ObjectIdentifierType">
+        <xsd:sequence>
+          <xsd:element name="Identifier" type="IdentifierType"/>
+          <xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="DocumentationReferences" type="DocumentationReferencesType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IdentifierType">
+        <xsd:simpleContent>
+          <xsd:extension base="xsd:anyURI">
+            <xsd:attribute name="Qualifier" type="QualifierType" use="optional"/>
+          </xsd:extension>
+        </xsd:simpleContent>
+      </xsd:complexType>
+      <xsd:simpleType name="QualifierType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="OIDAsURI"/>
+          <xsd:enumeration value="OIDAsURN"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="DocumentationReferencesType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="DocumentationReference" type="xsd:anyURI"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End ObjectIdentifierType-->
+      <!--Start EncapsulatedPKIDataType-->
+      <xsd:element name="EncapsulatedPKIData" type="EncapsulatedPKIDataType"/>
+      <xsd:complexType name="EncapsulatedPKIDataType">
+        <xsd:simpleContent>
+          <xsd:extension base="xsd:base64Binary">
+            <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+          </xsd:extension>
+        </xsd:simpleContent>
+      </xsd:complexType>
+      <!--End EncapsulatedPKIDataType-->
+      <!--Start TimeStampType-->
+      <xsd:element name="TimeStamp" type="TimeStampType"/>
+      <xsd:complexType name="TimeStampType">
+        <xsd:sequence>
+          <xsd:element name="Include" type="IncludeType" maxOccurs="unbounded"/>
+          <xsd:element ref="ds:CanonicalizationMethod" minOccurs="0"/>
+          <xsd:choice>
+            <xsd:element name="EncapsulatedTimeStamp" type="EncapsulatedPKIDataType"/>
+            <xsd:element name="XMLTimeStamp" type="AnyType"/>
+          </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="IncludeType">
+        <xsd:attribute name="URI" type="xsd:anyURI" use="required"/>
+        <xsd:attribute name="referencedData" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <!--End TimeStampType-->
+      <!--End auxiliary types definitions-->
+      <!--Start container types-->
+      <!--Start QualifyingProperties-->
+      <xsd:element name="QualifyingProperties" type="QualifyingPropertiesType"/>
+      <xsd:complexType name="QualifyingPropertiesType">
+        <xsd:sequence>
+          <xsd:element name="SignedProperties" type="SignedPropertiesType" minOccurs="0"/>
+          <xsd:element name="UnsignedProperties" type="UnsignedPropertiesType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="Target" type="xsd:anyURI" use="required"/>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <!--End QualifyingProperties-->
+      <!--Start SignedProperties-->
+      <xsd:element name="SignedProperties" type="SignedPropertiesType"/>
+      <xsd:complexType name="SignedPropertiesType">
+        <xsd:sequence>
+          <xsd:element name="SignedSignatureProperties" type="SignedSignaturePropertiesType"/>
+          <xsd:element name="SignedDataObjectProperties" type="SignedDataObjectPropertiesType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <!--End SignedProperties-->
+      <!--Start UnsignedProperties-->
+      <xsd:element name="UnsignedProperties" type="UnsignedPropertiesType"/>
+      <xsd:complexType name="UnsignedPropertiesType">
+        <xsd:sequence>
+          <xsd:element name="UnsignedSignatureProperties" type="UnsignedSignaturePropertiesType" minOccurs="0"/>
+          <xsd:element name="UnsignedDataObjectProperties" type="UnsignedDataObjectPropertiesType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <!--End UnsignedProperties-->
+      <!--Start SignedSignatureProperties-->
+      <xsd:element name="SignedSignatureProperties" type="SignedSignaturePropertiesType"/>
+      <xsd:complexType name="SignedSignaturePropertiesType">
+        <xsd:sequence>
+          <xsd:element name="SigningTime" type="xsd:dateTime" minOccurs="0"/>
+          <xsd:element name="SigningCertificate" type="CertIDListType" minOccurs="0"/>
+          <xsd:element name="SignaturePolicyIdentifier" type="SignaturePolicyIdentifierType" minOccurs="0"/>
+          <xsd:element name="SignatureProductionPlace" type="SignatureProductionPlaceType" minOccurs="0"/>
+          <xsd:element name="SignerRole" type="SignerRoleType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End SignedSignatureProperties-->
+      <!--Start SignedDataObjectProperties-->
+      <xsd:element name="SignedDataObjectProperties" type="SignedDataObjectPropertiesType"/>
+      <xsd:complexType name="SignedDataObjectPropertiesType">
+        <xsd:sequence>
+          <xsd:element name="DataObjectFormat" type="DataObjectFormatType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="CommitmentTypeIndication" type="CommitmentTypeIndicationType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="AllDataObjectsTimeStamp" type="TimeStampType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="IndividualDataObjectsTimeStamp" type="TimeStampType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End SignedDataObjectProperties-->
+      <!--Start UnsignedSignatureProperties-->
+      <xsd:element name="UnsignedSignatureProperties" type="UnsignedSignaturePropertiesType"/>
+      <xsd:complexType name="UnsignedSignaturePropertiesType">
+        <xsd:sequence>
+          <xsd:element name="CounterSignature" type="CounterSignatureType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="SignatureTimeStamp" type="TimeStampType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="CompleteCertificateRefs" type="CompleteCertificateRefsType" minOccurs="0"/>
+          <xsd:element name="CompleteRevocationRefs" type="CompleteRevocationRefsType" minOccurs="0"/>
+          <xsd:element name="AttributeCertificateRefs" type="CompleteCertificateRefsType" minOccurs="0"/>
+          <xsd:element name="AttributeRevocationRefs" type="CompleteRevocationRefsType" minOccurs="0"/>
+          <xsd:choice>
+            <xsd:element name="SigAndRefsTimeStamp" type="TimeStampType" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="RefsOnlyTimeStamp" type="TimeStampType" minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:choice>
+          <xsd:element name="CertificateValues" type="CertificateValuesType" minOccurs="0"/>
+          <xsd:element name="RevocationValues" type="RevocationValuesType" minOccurs="0"/>
+          <xsd:element name="ArchiveTimeStamp" type="TimeStampType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End UnsignedSignatureProperties-->
+      <!--Start UnsignedDataObjectProperties-->
+      <xsd:element name="UnsignedDataObjectProperties" type="UnsignedDataObjectPropertiesType"/>
+      <xsd:complexType name="UnsignedDataObjectPropertiesType">
+        <xsd:sequence>
+          <xsd:element name="UnsignedDataObjectProperty" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End UnsignedDataObjectProperties-->
+      <!--Start QualifyingPropertiesReference-->
+      <xsd:element name="QualifyingPropertiesReference" type="QualifyingPropertiesReferenceType"/>
+      <xsd:complexType name="QualifyingPropertiesReferenceType">
+        <xsd:sequence>
+          <xsd:element ref="ds:Transforms" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="URI" type="xsd:anyURI" use="required"/>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <!--End QualifyingPropertiesReference-->
+      <!--End container types-->
+      <!--Start SigningTime element-->
+      <xsd:element name="SigningTime" type="xsd:dateTime"/>
+      <!--End SigningTime element-->
+      <!--Start SigningCertificate-->
+      <xsd:element name="SigningCertificate" type="CertIDListType"/>
+      <xsd:complexType name="CertIDListType">
+        <xsd:sequence>
+          <xsd:element name="Cert" type="CertIDType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CertIDType">
+        <xsd:sequence>
+          <xsd:element name="CertDigest" type="DigestAlgAndValueType"/>
+          <xsd:element name="IssuerSerial" type="ds:X509IssuerSerialType"/>
+        </xsd:sequence>
+        <xsd:attribute name="URI" type="xsd:anyURI" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="DigestAlgAndValueType">
+        <xsd:sequence>
+          <xsd:element ref="ds:DigestMethod"/>
+          <xsd:element ref="ds:DigestValue"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End SigningCertificate-->
+      <!--Start SignaturePolicyIdentifier-->
+      <xsd:element name="SignaturePolicyIdentifier" type="SignaturePolicyIdentifierType"/>
+      <xsd:complexType name="SignaturePolicyIdentifierType">
+        <xsd:choice>
+          <xsd:element name="SignaturePolicyId" type="SignaturePolicyIdType"/>
+          <xsd:element name="SignaturePolicyImplied"/>
+        </xsd:choice>
+      </xsd:complexType>
+      <xsd:complexType name="SignaturePolicyIdType">
+        <xsd:sequence>
+          <xsd:element name="SigPolicyId" type="ObjectIdentifierType"/>
+          <xsd:element ref="ds:Transforms" minOccurs="0"/>
+          <xsd:element name="SigPolicyHash" type="DigestAlgAndValueType"/>
+          <xsd:element name="SigPolicyQualifiers" type="SigPolicyQualifiersListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SigPolicyQualifiersListType">
+        <xsd:sequence>
+          <xsd:element name="SigPolicyQualifier" type="AnyType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="SPURI" type="xsd:anyURI"/>
+      <xsd:element name="SPUserNotice" type="SPUserNoticeType"/>
+      <xsd:complexType name="SPUserNoticeType">
+        <xsd:sequence>
+          <xsd:element name="NoticeRef" type="NoticeReferenceType" minOccurs="0"/>
+          <xsd:element name="ExplicitText" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NoticeReferenceType">
+        <xsd:sequence>
+          <xsd:element name="Organization" type="xsd:string"/>
+          <xsd:element name="NoticeNumbers" type="IntegerListType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IntegerListType">
+        <xsd:sequence>
+          <xsd:element name="int" type="xsd:integer" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End SignaturePolicyIdentifier-->
+      <!--Start CounterSignature-->
+      <xsd:element name="CounterSignature" type="CounterSignatureType"/>
+      <xsd:complexType name="CounterSignatureType">
+        <xsd:sequence>
+          <xsd:element ref="ds:Signature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End CounterSignature-->
+      <!--Start DataObjectFormat-->
+      <xsd:element name="DataObjectFormat" type="DataObjectFormatType"/>
+      <xsd:complexType name="DataObjectFormatType">
+        <xsd:sequence>
+          <xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ObjectIdentifier" type="ObjectIdentifierType" minOccurs="0"/>
+          <xsd:element name="MimeType" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Encoding" type="xsd:anyURI" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="ObjectReference" type="xsd:anyURI" use="required"/>
+      </xsd:complexType>
+      <!--End DataObjectFormat-->
+      <!--Start CommitmentTypeIndication-->
+      <xsd:element name="CommitmentTypeIndication" type="CommitmentTypeIndicationType"/>
+      <xsd:complexType name="CommitmentTypeIndicationType">
+        <xsd:sequence>
+          <xsd:element name="CommitmentTypeId" type="ObjectIdentifierType"/>
+          <xsd:choice>
+            <xsd:element name="ObjectReference" type="xsd:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="AllSignedDataObjects"/>
+          </xsd:choice>
+          <xsd:element name="CommitmentTypeQualifiers" type="CommitmentTypeQualifiersListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CommitmentTypeQualifiersListType">
+        <xsd:sequence>
+          <xsd:element name="CommitmentTypeQualifier" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End CommitmentTypeIndication-->
+      <!--Start SignatureProductionPlace-->
+      <xsd:element name="SignatureProductionPlace" type="SignatureProductionPlaceType"/>
+      <xsd:complexType name="SignatureProductionPlaceType">
+        <xsd:sequence>
+          <xsd:element name="City" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="StateOrProvince" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="PostalCode" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="CountryName" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End SignatureProductionPlace-->
+      <!--Start SignerRole-->
+      <xsd:element name="SignerRole" type="SignerRoleType"/>
+      <xsd:complexType name="SignerRoleType">
+        <xsd:sequence>
+          <xsd:element name="ClaimedRoles" type="ClaimedRolesListType" minOccurs="0"/>
+          <xsd:element name="CertifiedRoles" type="CertifiedRolesListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ClaimedRolesListType">
+        <xsd:sequence>
+          <xsd:element name="ClaimedRole" type="AnyType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CertifiedRolesListType">
+        <xsd:sequence>
+          <xsd:element name="CertifiedRole" type="EncapsulatedPKIDataType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End SignerRole-->
+      <xsd:element name="AllDataObjectsTimeStamp" type="TimeStampType"/>
+      <xsd:element name="IndividualDataObjectsTimeStamp" type="TimeStampType"/>
+      <xsd:element name="SignatureTimeStamp" type="TimeStampType"/>
+      <!--Start CompleteCertificateRefs-->
+      <xsd:element name="CompleteCertificateRefs" type="CompleteCertificateRefsType"/>
+      <xsd:complexType name="CompleteCertificateRefsType">
+        <xsd:sequence>
+          <xsd:element name="CertRefs" type="CertIDListType"/>
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <!--End CompleteCertificateRefs-->
+      <!--Start CompleteRevocationRefs-->
+      <xsd:element name="CompleteRevocationRefs" type="CompleteRevocationRefsType"/>
+      <xsd:complexType name="CompleteRevocationRefsType">
+        <xsd:sequence>
+          <xsd:element name="CRLRefs" type="CRLRefsType" minOccurs="0"/>
+          <xsd:element name="OCSPRefs" type="OCSPRefsType" minOccurs="0"/>
+          <xsd:element name="OtherRefs" type="OtherCertStatusRefsType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CRLRefsType">
+        <xsd:sequence>
+          <xsd:element name="CRLRef" type="CRLRefType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CRLRefType">
+        <xsd:sequence>
+          <xsd:element name="DigestAlgAndValue" type="DigestAlgAndValueType"/>
+          <xsd:element name="CRLIdentifier" type="CRLIdentifierType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CRLIdentifierType">
+        <xsd:sequence>
+          <xsd:element name="Issuer" type="xsd:string"/>
+          <xsd:element name="IssueTime" type="xsd:dateTime"/>
+          <xsd:element name="Number" type="xsd:integer" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="URI" type="xsd:anyURI" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="OCSPRefsType">
+        <xsd:sequence>
+          <xsd:element name="OCSPRef" type="OCSPRefType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OCSPRefType">
+        <xsd:sequence>
+          <xsd:element name="OCSPIdentifier" type="OCSPIdentifierType"/>
+          <xsd:element name="DigestAlgAndValue" type="DigestAlgAndValueType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OCSPIdentifierType">
+        <xsd:sequence>
+          <xsd:element name="ResponderID" type="xsd:string"/>
+          <xsd:element name="ProducedAt" type="xsd:dateTime"/>
+        </xsd:sequence>
+        <xsd:attribute name="URI" type="xsd:anyURI" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="OtherCertStatusRefsType">
+        <xsd:sequence>
+          <xsd:element name="OtherRef" type="AnyType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End CompleteRevocationRefs-->
+      <xsd:element name="SigAndRefsTimeStamp" type="TimeStampType"/>
+      <xsd:element name="RefsOnlyTimeStamp" type="TimeStampType"/>
+      <!--Start CertificateValues-->
+      <xsd:element name="CertificateValues" type="CertificateValuesType"/>
+      <xsd:complexType name="CertificateValuesType">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="EncapsulatedX509Certificate" type="EncapsulatedPKIDataType"/>
+          <xsd:element name="OtherCertificate" type="AnyType"/>
+        </xsd:choice>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <!--End CertificateValues-->
+      <!--Start RevocationValues-->
+      <xsd:element name="RevocationValues" type="RevocationValuesType"/>
+      <xsd:complexType name="RevocationValuesType">
+        <xsd:sequence>
+          <xsd:element name="CRLValues" type="CRLValuesType" minOccurs="0"/>
+          <xsd:element name="OCSPValues" type="OCSPValuesType" minOccurs="0"/>
+          <xsd:element name="OtherValues" type="OtherCertStatusValuesType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CRLValuesType">
+        <xsd:sequence>
+          <xsd:element name="EncapsulatedCRLValue" type="EncapsulatedPKIDataType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OCSPValuesType">
+        <xsd:sequence>
+          <xsd:element name="EncapsulatedOCSPValue" type="EncapsulatedPKIDataType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OtherCertStatusValuesType">
+        <xsd:sequence>
+          <xsd:element name="OtherValue" type="AnyType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End RevocationValues-->
+      <xsd:element name="ArchiveTimeStamp" type="TimeStampType"/>
+    </xsd:schema>
+    <!--XAdES Profile of the OASIS DSS Schema CD01-->
+    <xs:schema targetNamespace="http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#" xmlns:xadp="http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#" xmlns:xades="http://uri.etsi.org/01903/v1.2.2#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+      <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+      <xs:import namespace="http://uri.etsi.org/01903/v1.2.2#"/>
+      <!--Element for selecting the form of the signature the client refers to-->
+      <xs:element name="SignatureForm" type="xs:anyURI"/>
+      <!--Element for passing to the server information on the commitment undertaken by the requester of the signature generation-->
+      <xs:element name="Commitment">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element ref="xades:CommitmentTypeIndication"/>
+            <xs:element name="BinaryValue" type="xs:base64Binary"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <!--Element for passing to the server information on the role of the requester of the signature generation-->
+      <xs:element name="SignerRole">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element ref="xades:SignerRole"/>
+            <xs:element name="BinaryValue" type="xs:base64Binary"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <!--Element for passing to the server the documents that the requester wants to be timestamped before being signed-->
+      <xs:element name="DocsToBeTimeStamped" type="xadp:DocReferencesType"/>
+      <xs:complexType name="DocReferencesType">
+        <xs:sequence>
+          <xs:element name="DocReference" maxOccurs="unbounded" type="xadp:DocReferenceType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DocReferenceType">
+        <xs:attribute name="WhichDocument" type="xs:IDREF" use="required"/>
+        <xs:attribute name="RefId" type="xs:string" use="optional"/>
+      </xs:complexType>
+      <!--Element for passing to the server individual information on the format of the documents to be signed-->
+      <xs:element name="DocsFormat" type="xadp:DocsFormatType"/>
+      <xs:complexType name="DocsFormatType">
+        <xs:sequence>
+          <xs:choice>
+            <xs:element name="DocFormat" type="xadp:DocFormatType" maxOccurs="unbounded"/>
+            <xs:element name="BinaryValue" type="xs:base64Binary"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DocFormatType">
+        <xs:complexContent>
+          <xs:extension base="xadp:DocReferenceType">
+            <xs:sequence>
+              <xs:element ref="xades:DataObjectFormat"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <!--ETSI TR 102 038 / XML Signature Policies Schema-->
+    <xsd:schema targetNamespace="http://uri.etsi.org/2038/v1.1.1#" elementFormDefault="qualified" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://uri.etsi.org/2038/v1.1.1#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:XAdES="http://uri.etsi.org/01903/v1.2.2#">
+      <xsd:import namespace="http://uri.etsi.org/01903/v1.2.2#"/>
+      <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+      <xsd:element name="SignaturePolicy" type="SignaturePolicyType"/>
+      <xsd:complexType name="SignaturePolicyType">
+        <xsd:sequence>
+          <xsd:element name="SignPolicyDigestAlg" type="ds:DigestMethodType"/>
+          <xsd:element ref="ds:Transforms" minOccurs="0"/>
+          <xsd:element name="SignPolicyInfo" type="SignaturePolicyInfoType"/>
+          <xsd:element name="SignPolicyDigest" type="ds:DigestValueType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of SignPolicyInfo-->
+      <xsd:complexType name="SignaturePolicyInfoType">
+        <xsd:sequence>
+          <xsd:element name="SignPolicyIdentifier" type="XAdES:ObjectIdentifierType"/>
+          <xsd:element name="DateOfIssue" type="xsd:dateTime"/>
+          <xsd:element name="PolicyIssuerName" type="xsd:string"/>
+          <xsd:element name="FieldOfApplication" type="xsd:string"/>
+          <xsd:element name="SignatureValidationPolicy" type="SignatureValidationPolicyType"/>
+          <xsd:element name="SignPolExtensions" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SignPolExtensionsListType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="SignPolExtension" type="XAdES:AnyType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of SignatureValidationPolicy-->
+      <xsd:complexType name="SignatureValidationPolicyType">
+        <xsd:sequence>
+          <xsd:element name="SigningPeriod" type="TimePeriodType"/>
+          <xsd:element name="CommonRules" type="CommonRulesType"/>
+          <xsd:element name="CommitmentRules" type="CommitmentRulesListType"/>
+          <xsd:element name="SignPolicyExtensions" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TimePeriodType">
+        <xsd:sequence>
+          <xsd:element name="NotBefore" type="xsd:dateTime"/>
+          <xsd:element name="NotAfter" type="xsd:dateTime" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of CommonRules-->
+      <xsd:complexType name="CommonRulesType">
+        <xsd:sequence>
+          <xsd:element name="SignerAndVerifierRules" type="SignerAndVerifierRulesType" minOccurs="0"/>
+          <xsd:element name="SigningCertTrustCondition" type="SigningCertTrustConditionType" minOccurs="0"/>
+          <xsd:element name="TimeStampTrustCondition" type="TimeStampTrustConditionType" minOccurs="0"/>
+          <xsd:element name="RoleTrustCondition" type="RoleTrustConditionType" minOccurs="0"/>
+          <xsd:element name="AlgorithmConstraintSet" type="AlgorithmConstraintSetType" minOccurs="0"/>
+          <xsd:element name="SignPolExtensions" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SignerAndVerifierRulesType">
+        <xsd:sequence>
+          <xsd:element name="SignerRules" type="SignerRulesType"/>
+          <xsd:element name="VerifierRules" type="VerifierRulesType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of CommitmentRulesType-->
+      <xsd:complexType name="CommitmentRulesListType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="CommitmentRule" type="CommitmentRuleType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CommitmentRuleType">
+        <xsd:sequence>
+          <xsd:element name="SelCommitmentTypes" type="SelectedCommitmentTypeList"/>
+          <xsd:element name="SignerAndVerifierRules" type="SignerAndVerifierRulesType" minOccurs="0"/>
+          <xsd:element name="SigningCertTrustCondition" type="SigningCertTrustConditionType" minOccurs="0"/>
+          <xsd:element name="TimeStampTrustCondition" type="TimeStampTrustConditionType" minOccurs="0"/>
+          <xsd:element name="RoleTrustCondition" type="RoleTrustConditionType" minOccurs="0"/>
+          <xsd:element name="AlgorithmConstraintSet" type="AlgorithmConstraintSetType" minOccurs="0"/>
+          <xsd:element name="SignPolExtensions" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of SelCommitmentTypes-->
+      <xsd:complexType name="SelectedCommitmentTypeList">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="SelCommitmentType" type="SelectedCommitmentType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SelectedCommitmentType">
+        <xsd:choice>
+          <xsd:element name="Empty"/>
+          <xsd:element name="RecognizedCommitmentType" type="CommitmentType"/>
+        </xsd:choice>
+      </xsd:complexType>
+      <!--Description of RecognizedCommitmentType-->
+      <xsd:complexType name="CommitmentType">
+        <xsd:sequence>
+          <xsd:element name="CommitmentIdentifier" type="XAdES:ObjectIdentifierType"/>
+          <xsd:element name="FieldOfApplication" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Semantics" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of SignerRules-->
+      <xsd:complexType name="SignerRulesType">
+        <xsd:sequence>
+          <xsd:element name="ExternalSignedObjects" type="xsd:boolean" minOccurs="0"/>
+          <xsd:element name="MandatedSignedQProperties" type="QPropertiesListType"/>
+          <xsd:element name="MandatedUnsignedQProperties" type="QPropertiesListType"/>
+          <xsd:element name="MandatedCertificateRef" type="CertificateReqType"/>
+          <xsd:element name="MandatedCertificateInfo" type="CertificateReqType"/>
+          <xsd:element name="SignPolicyExtensions" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="QPropertiesListType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="QPropertyID" type="xsd:anyURI"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="CertificateReqType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="signerOnly"/>
+          <xsd:enumeration value="fullPath"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <!--Description of VerifierRules-->
+      <xsd:complexType name="VerifierRulesType">
+        <xsd:sequence>
+          <xsd:element name="MandatedQUnsignedProperties" type="QPropertiesListType"/>
+          <xsd:element name="SignPolicyExtensions" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of SigningCertTrustCondition-->
+      <xsd:complexType name="SigningCertTrustConditionType">
+        <xsd:sequence>
+          <xsd:element name="SignerTrustTrees" type="CertificateTrustTreesType"/>
+          <xsd:element name="SignerRevReq" type="CertificateRevReqType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of SignerTrustTrees-->
+      <xsd:complexType name="CertificateTrustTreesType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="CertificateTrustPoint" type="CertificateTrustPointType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CertificateTrustPointType">
+        <xsd:sequence>
+          <!--The original tag wasn't parseable (it didn't exist in ds:) so it's been changed:-->
+          <!--<xsd:element name="TrustPoint" type="ds:X509CertificateType"/>-->
+          <xsd:element name="TrustPoint" type="xsd:base64Binary"/>
+          <xsd:element name="PathLenConstraint" type="xsd:integer" minOccurs="0"/>
+          <xsd:element name="AcceptablePolicySet" type="AcceptablePoliciesListType" minOccurs="0"/>
+          <xsd:element name="NameConstraints" type="NameConstraintsType" minOccurs="0"/>
+          <xsd:element name="PolicyConstraints" type="PolicyConstraintsType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AcceptablePoliciesListType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="AcceptablePolicy" type="XAdES:ObjectIdentifierType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NameConstraintsType">
+        <xsd:sequence>
+          <xsd:element name="PermittedSubtrees" type="GeneralSubTreesListType" minOccurs="0"/>
+          <xsd:element name="ExcludedSubtrees" type="GeneralSubTreesListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GeneralSubTreesListType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="GeneralSubTree" type="GeneralSubTreeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GeneralSubTreeType">
+        <xsd:sequence>
+          <xsd:element name="Base" type="xsd:string"/>
+          <xsd:element name="Minimum" type="xsd:integer" default="0"/>
+          <xsd:element name="Maximum" type="xsd:integer" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PolicyConstraintsType">
+        <xsd:sequence>
+          <xsd:element name="RequireExplicitPolicy" type="xsd:integer" minOccurs="0"/>
+          <xsd:element name="InhibitExplicitPolicy" type="xsd:integer" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of SignerRevReq-->
+      <xsd:complexType name="CertificateRevReqType">
+        <xsd:sequence>
+          <xsd:element name="EndRevReq" type="RevocationReqType"/>
+          <xsd:element name="CACerts" type="RevocationReqType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RevocationReqType">
+        <xsd:sequence>
+          <xsd:element name="EnuRevReq" type="EnuRevReqType"/>
+          <xsd:element name="exRevReq" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="EnuRevReqType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="clrcheck"/>
+          <xsd:enumeration value="ocspcheck"/>
+          <xsd:enumeration value="bothcheck"/>
+          <xsd:enumeration value="eithercheck"/>
+          <xsd:enumeration value="nocheck"/>
+          <xsd:enumeration value="other"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <!--Description of TimeStampTrustCondition-->
+      <xsd:complexType name="TimeStampTrustConditionType">
+        <xsd:sequence>
+          <xsd:element name="TtsCertificateTrustTrees" type="CertificateTrustTreesType" minOccurs="0"/>
+          <xsd:element name="TtsRevReq" type="CertificateRevReqType" minOccurs="0"/>
+          <xsd:element name="TtsNameConstraints" type="NameConstraintsType" minOccurs="0"/>
+          <xsd:element name="CautionPeriod" type="DeltaTimeType" minOccurs="0"/>
+          <xsd:element name="SignatureTimeStampDelay" type="DeltaTimeType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeltaTimeType">
+        <xsd:sequence>
+          <xsd:element name="DeltaSeconds" type="xsd:integer"/>
+          <xsd:element name="DeltaMinutes" type="xsd:integer"/>
+          <xsd:element name="DeltaHours" type="xsd:integer"/>
+          <xsd:element name="DeltaDays" type="xsd:integer"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of RoleTrustCondition-->
+      <xsd:complexType name="RoleTrustConditionType">
+        <xsd:sequence>
+          <xsd:element name="RoleMandated" type="xsd:boolean"/>
+          <xsd:element name="HowCertRole" type="HowCertRoleType"/>
+          <xsd:element name="AttrCertTrustTrees" type="CertificateTrustTreesType" minOccurs="0"/>
+          <xsd:element name="RoleRevReq" type="CertificateRevReqType" minOccurs="0"/>
+          <xsd:element name="RoleConstraints" type="RoleConstraintsType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="HowCertRoleType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="ClaimedRole"/>
+          <xsd:enumeration value="CertifiedRole"/>
+          <xsd:enumeration value="Either"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="RoleConstraintsType">
+        <xsd:sequence>
+          <xsd:element name="RoleTypeConstraint" type="XAdES:ObjectIdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="RoleValueConstraint" type="XAdES:AnyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Description of AlgorithmConstraintSet-->
+      <xsd:complexType name="AlgorithmConstraintSetType">
+        <xsd:sequence>
+          <xsd:element name="SignerAlgConstraints" type="AlgConstraintsListType" minOccurs="0"/>
+          <xsd:element name="EeCertAlgConstraints" type="AlgConstraintsListType" minOccurs="0"/>
+          <xsd:element name="CACertAlgConstraints" type="AlgConstraintsListType" minOccurs="0"/>
+          <xsd:element name="AaCertAlgConstraints" type="AlgConstraintsListType" minOccurs="0"/>
+          <xsd:element name="TSACertAlgConstraints" type="AlgConstraintsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AlgConstraintsListType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="AlgAndLength" type="AlgAndLengthType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AlgAndLengthType">
+        <xsd:sequence>
+          <xsd:element name="AlgId" type="xsd:anyURI"/>
+          <xsd:element name="MinKeyLength" type="xsd:integer" minOccurs="0"/>
+          <xsd:element name="Other" type="SignPolExtensionsListType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <!--****** NOTICE ******                                            
+		This version of this document is NOT a formally-approved and issued ETSI publication.  
+		This document is a ?work-in-progress? being undertaken by the TC ESI STF 290 and has been revised
+		to correct identified errors and omissions in the current extant formal ETSI publication and to 
+		also resolve issues of interpretation raised during implementations based upon that publication  
+		which are considered to be neither contentious nor to change the fundamental TSL structure defined 
+		in the original TS 102 231 document and its XSD counterpart.-->
+    <xsd:schema targetNamespace="http://uri.etsi.org/02231/v1.0bis-2005-04#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:tsl="http://uri.etsi.org/02231/v1.0bis-2005-04#">
+      <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+      <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+      <!--First some general types needed-->
+      <xsd:element name="TSLTag" type="xsd:string"/>
+      <!--AddressType-->
+      <xsd:complexType name="AddressType">
+        <xsd:sequence>
+          <xsd:element name="PostalAddresses" type="tsl:PostalAddressListType"/>
+          <xsd:element name="ElectronicAddress" type="tsl:ElectronicAddressType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--PostalAddressesType-->
+      <xsd:complexType name="PostalAddressListType">
+        <xsd:sequence>
+          <xsd:element name="PostalAddress" type="tsl:PostalAddressType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PostalAddressType">
+        <xsd:sequence>
+          <xsd:element name="StreetAddress" type="xsd:string"/>
+          <xsd:element name="Locality" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="StateOrProvince" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="PostalCode" type="xsd:string"/>
+          <xsd:element name="CountryName" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute ref="xml:lang" use="optional"/>
+      </xsd:complexType>
+      <!--ElectronicAddressType-->
+      <xsd:complexType name="ElectronicAddressType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="URN" type="xsd:anyURI"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--DigitalIdentityType-->
+      <xsd:complexType name="digitalIdentityListType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="digitalId" type="tsl:digitalIdentityType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="digitalIdentityType">
+        <xsd:choice>
+          <xsd:element name="X509Certificate" type="xsd:base64Binary"/>
+          <xsd:element name="keyValue" type="ds:KeyValueType"/>
+          <xsd:sequence>
+            <xsd:element name="digitalIdType" type="xsd:string"/>
+            <xsd:element name="digitalIdValue" type="xsd:anyType"/>
+          </xsd:sequence>
+        </xsd:choice>
+      </xsd:complexType>
+      <!--InternationalNamesType-->
+      <xsd:complexType name="InternationalNamesType">
+        <xsd:sequence maxOccurs="unbounded">
+          <xsd:element name="Name">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute ref="xml:lang" use="optional"/>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--OtherTSLPointersType-->
+      <xsd:complexType name="OtherTSLPointersType">
+        <xsd:sequence>
+          <xsd:element name="OtherTSLPointer" type="tsl:OtherTSLPointer" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OtherTSLPointer">
+        <xsd:sequence>
+          <xsd:element name="TSLLocation" type="xsd:anyURI"/>
+          <xsd:element name="AdditionalInformation" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End Type Definitions-->
+      <!--ROOT Element-->
+      <xsd:element name="TrustStatusList" type="tsl:TrustStatusListType"/>
+      <!--Trust Status List Type Definition-->
+      <xsd:complexType name="TrustStatusListType">
+        <xsd:sequence>
+          <xsd:element ref="tsl:TSLTag"/>
+          <xsd:element ref="tsl:SchemeInformation"/>
+          <xsd:element ref="tsl:TrustServiceProvider" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ds:Signature"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TrustServiceProvider" type="tsl:TSPType"/>
+      <xsd:element name="SchemeInformation" type="tsl:TSLSchemeInformationType"/>
+      <!--TSP Information-->
+      <xsd:complexType name="TSPType">
+        <xsd:sequence>
+          <xsd:element name="TSPInformation" type="tsl:TSPInformationType"/>
+          <xsd:sequence minOccurs="0">
+            <xsd:element ref="tsl:TSPServices" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TSPInformationType">
+        <xsd:sequence>
+          <xsd:element name="TSPName" type="tsl:InternationalNamesType"/>
+          <xsd:element name="TSPTradeName" type="tsl:InternationalNamesType" minOccurs="0"/>
+          <xsd:element name="TSPAddress" type="tsl:AddressType"/>
+          <xsd:element name="TSPInformationURI" type="xsd:anyURI"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--TSP Services-->
+      <xsd:element name="TSPServices" type="tsl:TSPServicesType"/>
+      <xsd:complexType name="TSPServicesType">
+        <xsd:sequence>
+          <xsd:element ref="tsl:ServiceInformation"/>
+          <xsd:element name="ServiceHistory" type="tsl:ServiceHistoryType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ServiceHistoryType">
+        <xsd:sequence>
+          <xsd:element ref="tsl:ServiceStatusInformation" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ServiceInformation" type="tsl:TSPServiceInformationType"/>
+      <!--proposal for TSL-Tag. Not part of scheme since not used formally in the TSL-standard 
+				<xsd:element name="TSL-tag" type="xsd:string" nillable="false"/>-->
+      <!--TSL Scheme Information-->
+      <xsd:complexType name="TSLSchemeInformationType">
+        <xsd:sequence>
+          <xsd:element name="TSLVersionIdentifier" type="xsd:integer" fixed="1"/>
+          <xsd:element name="TSLSequenceNumber" type="xsd:integer"/>
+          <xsd:element name="SchemeName" type="tsl:InternationalNamesType"/>
+          <xsd:element name="SchemeOperatorAddress" type="tsl:AddressType"/>
+          <xsd:element name="SchemeInformationURN" type="xsd:anyURI"/>
+          <xsd:element name="StatusDeterminationApproach" type="xsd:integer"/>
+          <xsd:element name="SchemeType" type="xsd:anyURI" minOccurs="0"/>
+          <xsd:element name="SchemeTerritory" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="PolicyOrLegalNotice" type="tsl:PolicyOrLegalnoticeType" minOccurs="0"/>
+          <xsd:element name="HistoricalInformationPeriod" type="xsd:integer"/>
+          <xsd:element name="PointersToOtherTSL" type="tsl:OtherTSLPointersType" minOccurs="0"/>
+          <xsd:element name="ListIssueDateTime" type="xsd:dateTime"/>
+          <xsd:element name="NextUpdate" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--TSP Service Information-->
+      <xsd:complexType name="TSPServiceInformationType">
+        <xsd:sequence>
+          <xsd:element ref="tsl:ServiceStatusInformation"/>
+          <xsd:element name="SchemeServiceDefinitionURI" type="xsd:anyURI" minOccurs="0"/>
+          <xsd:element name="TSPServiceDefinitionURI" type="xsd:anyURI" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Service Status Information-->
+      <xsd:element name="ServiceStatusInformation" type="tsl:ServiceStatusInformationType"/>
+      <xsd:complexType name="ServiceStatusInformationType">
+        <xsd:sequence>
+          <xsd:element name="ServiceTypeIdentifier" type="xsd:integer"/>
+          <xsd:element name="ServiceName" type="tsl:InternationalNamesType"/>
+          <xsd:element name="ServiceDigitalIdentity" type="tsl:digitalIdentityListType"/>
+          <xsd:element name="ServiceStatus" type="xsd:integer"/>
+          <xsd:element name="StatusStartingTime" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Policy or Legal Notice-->
+      <xsd:complexType name="PolicyOrLegalnoticeType">
+        <xsd:choice>
+          <xsd:element name="TSLPolicy" type="xsd:anyURI"/>
+          <xsd:element name="TSLLegalNotice" type="xsd:string"/>
+        </xsd:choice>
+        <xsd:attribute ref="xml:lang" use="optional"/>
+      </xsd:complexType>
+    </xsd:schema>
+    <!--Signature Archive Profile of the OASIS DSS Schema v1.0-->
+    <xs:schema targetNamespace="urn:oasis:names:tc:dss:1.0:profiles:archive" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xades="http://uri.etsi.org/01903/v1.2.2#" xmlns="urn:oasis:names:tc:dss:1.0:profiles:archive">
+      <xs:import namespace="urn:oasis:names:tc:dss:1.0:core:schema"/>
+      <xs:import namespace="http://uri.etsi.org/01903/v1.2.2#"/>
+      <xs:element name="ArchiveSubmitRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:OptionalInputs" minOccurs="0"/>
+            <xs:element ref="dss:InputDocuments" minOccurs="0"/>
+            <xs:element ref="dss:SignatureObject"/>
+          </xs:sequence>
+          <xs:attribute name="RequestID" type="xs:string" use="optional"/>
+          <xs:attribute name="Profile" type="xs:anyURI" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ArchiveSubmitResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:ResponseBaseType">
+              <xs:sequence>
+                <xs:element name="ArchiveIdentifier" type="ArchiveIdentifier" minOccurs="0"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ArchiveRetrievalRequest" type="ArchiveIdentifierRequest"/>
+      <xs:element name="ArchiveRetrievalResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:ResponseBaseType">
+              <xs:sequence>
+                <xs:element ref="dss:SignatureObject" minOccurs="0"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ArchiveDeleteRequest" type="ArchiveIdentifierRequest"/>
+      <xs:element name="ArchiveDeleteResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:ResponseBaseType">
+              <xs:sequence>
+                <xs:element ref="dss:SignatureObject" minOccurs="0"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ArchiveModifyRequest" type="ArchiveIdentifierRequest"/>
+      <xs:element name="ArchiveModifyResponse" type="dss:ResponseBaseType"/>
+      <xs:element name="ArchiveVerifyRequest" type="ArchiveIdentifierRequest"/>
+      <xs:element name="ArchiveVerifyResponse" type="dss:ResponseBaseType"/>
+      <xs:simpleType name="ArchiveIdentifier">
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+      <xs:element name="ArchivePolicy" type="xades:ObjectIdentifierType"/>
+      <xs:element name="RetentionPeriod" type="xs:duration"/>
+      <xs:element name="UpdateSignature">
+        <xs:complexType>
+          <xs:attribute name="Type" type="xs:anyURI" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ArchiveMode" type="xs:anyURI"/>
+      <xs:complexType name="ArchiveIdentifierRequest">
+        <xs:sequence>
+          <xs:element ref="dss:OptionalInputs" minOccurs="0"/>
+          <xs:element name="ArchiveIdentifier" type="ArchiveIdentifier"/>
+        </xs:sequence>
+        <xs:attribute name="RequestID" type="xs:string" use="optional"/>
+        <xs:attribute name="Profile" type="xs:anyURI" use="optional"/>
+      </xs:complexType>
+    </xs:schema>
+    <!--XSS Profile of the OASIS DSS Schema v1.0-->
+    <xs:schema targetNamespace="urn:oasis:names:tc:dss:1.0:profiles:XSS" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsp="http://uri.etsi.org/2038/v1.1.1#" xmlns:tsl="http://uri.etsi.org/02231/v1.0bis-2005-04#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xades="http://uri.etsi.org/01903/v1.2.2#" xmlns:saml20="urn:oasis:names:tc:SAML:2.0:assertion" xmlns="urn:oasis:names:tc:dss:1.0:profiles:XSS">
+      <xs:import namespace="http://uri.etsi.org/02231/v1.0bis-2005-04#"/>
+      <xs:import namespace="urn:oasis:names:tc:dss:1.0:profiles:archive"/>
+      <xs:import namespace="urn:oasis:names:tc:SAML:2.0:assertion" schemaLocation="saml-schema-assertion-2.0.xsd"/>
+      <xs:import namespace="http://uri.etsi.org/2038/v1.1.1#"/>
+      <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+      <xs:import namespace="http://uri.etsi.org/01903/v1.2.2#"/>
+      <xs:element name="SignaturePolicy">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="xades:ObjectIdentifierType">
+              <xs:attribute name="allowPolicyMappings" type="xs:boolean" use="optional" default="false"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SignaturePolicyInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SignaturePolicyIssuer" type="xs:string"/>
+            <xs:element name="SignaturePolicyIdentifier" type="xades:ObjectIdentifierType"/>
+            <xs:element name="SignaturePolicyDigestAlgorithm" type="xades:ObjectIdentifierType"/>
+            <xs:element name="SignaturePolicyDigestValue" type="ds:DigestValueType"/>
+            <xs:element ref="ds:Transforms" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReturnSignedResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequiredCommitments" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CommitmentType" type="xsp:CommitmentType" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResponseSignature">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ds:Signature"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReturnSignatureInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AttributeDesignator" type="saml20:AttributeType" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SignatureInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Attribute" type="saml20:AttributeType" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="BinaryAttributeValueType">
+        <xs:simpleContent>
+          <xs:extension base="xs:base64Binary">
+            <xs:attribute name="Attribute" type="xs:anyURI" use="required"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:element name="ReturnX509CertificateInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AttributeDesignator" type="saml20:AttributeType" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="X509CertificateInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Attribute" type="saml20:AttributeType" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Scheme">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SchemeName" type="tsl:InternationalNamesType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SchemeInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SchemeName" type="tsl:InternationalNamesType"/>
+            <xs:element name="TSLSequenceNumber" type="xs:integer"/>
+            <xs:element name="TSLDigestAlgorithm" type="xades:ObjectIdentifierType"/>
+            <xs:element name="TSLDigestValue" type="ds:DigestValueType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="X509CertificateValidationOptions" type="xsp:CertificateTrustTreesType"/>
+      <xs:element name="RequireQualifiedCertificate"/>
+      <!--<xs:element name="Archive">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:choice>
+							<xs:element ref="archp:ArchivePolicy" minOccurs="0"/>
+							<xs:element ref="archp:RetentionPeriod" minOccurs="0"/>
+						</xs:choice>
+						<xs:element ref="archp:UpdateSignature" minOccurs="0"/>
+						<xs:element ref="archp:ArchiveMode" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>-->
+      <xs:element name="ArchiveInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ArchiveIdentifier"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CounterSignature">
+        <xs:complexType>
+          <xs:attribute name="WhichDocument" type="xs:IDREF" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ParallelSignature"/>
+    </xs:schema>
+    <!--DSS CORE CD3 MODIFIED SCHEMA:
+		     *Added the "minOccurs=0" to the dss:InputDocuments present under dss:RequestBaseType
+		     *Modified the dss:OptionalInputs and dss:OptionalOutputs elements enumerating possible optional inputs / outputs
+		      to force some code generators to also generate code for the optional inputs / outputs-->
+    <xs:schema targetNamespace="urn:oasis:names:tc:dss:1.0:core:schema" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:xadp="http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#" xmlns:xss="urn:oasis:names:tc:dss:1.0:profiles:XSS" xmlns:pdf="urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF">
+      <!---->
+      <xs:annotation>
+        <xs:documentation xml:lang="en">This Schema defines the Digital Signature Service Core Protocols, Elements, and Bindings Working Draft 34</xs:documentation>
+      </xs:annotation>
+      <!---->
+      <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+      <xs:import namespace="urn:oasis:names:tc:SAML:1.0:assertion" schemaLocation="oasis-sstc-saml-schema-protocol-1.1.xsd"/>
+      <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+      <xs:import namespace="http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#"/>
+      <xs:import namespace="urn:oasis:names:tc:dss:1.0:profiles:XSS"/>
+      <!--COMMON PROTOCOL STRUCTURES-->
+      <xs:complexType name="AnyType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This Type type is used to match optional inputs, optional
+						outputs and to make the Schema extensible where
+						&lt;xs:any namespace="##other" processContents="lax"/>
+						is not possible due to unique particle attributtion rules.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <!---->
+      <xs:complexType name="InlineXMLType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This Type clearly expresses the fact that content of InlineXML should be
+						equivalent to a complete XML Document. I.e. having only one
+						DocumentElement and not allowing anything but PI's and Comments before
+						and after this one element. The attribute ignorePIsComments indicates
+						how to deal with PI's and Comments as a number of parsers will also
+						ignore them and a server will have to be able to know if PI's and
+						Comments have gone missing after parsing and if the client would have
+						wanted them to be signed.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:any processContents="lax"/>
+        </xs:sequence>
+        <xs:attribute name="ignorePIs" type="xs:boolean" use="optional" default="true"/>
+        <xs:attribute name="ignoreComments" type="xs:boolean" use="optional" default="true"/>
+      </xs:complexType>
+      <!---->
+      <xs:complexType name="InternationalStringType">
+        <xs:simpleContent>
+          <xs:extension base="xs:string">
+            <xs:attribute ref="xml:lang" use="required"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <!---->
+      <xs:element name="InputDocuments">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            <!--Re: UPA Problem rationale behind these changes [FW: FROM JC THROUGH KONRAD]-->
+            <!--&lt;xs:any namespace="##other" processContents="lax"/&gt;
+						allowes to introduce new top level elements from other namespaces
+						to support other types of documents in the future.-->
+            <!--Solution consistent with other places-->
+            &lt;xs:element name="Other" type="dss:AnyType"/>
+						allowes to introduce new top level elements from namespaces including
+						dss to support other types of input documents in the future.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element ref="dss:Document"/>
+              <xs:element ref="dss:TransformedData"/>
+              <xs:element ref="dss:DocumentHash"/>
+              <xs:element name="Other" type="dss:AnyType"/>
+            </xs:choice>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:complexType name="DocumentBaseType" abstract="true">
+        <xs:attribute name="ID" type="xs:ID" use="optional"/>
+        <xs:attribute name="RefURI" type="xs:anyURI" use="optional"/>
+        <xs:attribute name="RefType" type="xs:anyURI" use="optional"/>
+        <xs:attribute name="SchemaRefs" type="xs:IDREFS" use="optional"/>
+      </xs:complexType>
+      <!---->
+      <xs:element name="Document" type="dss:DocumentType"/>
+      <xs:complexType name="DocumentType">
+        <xs:complexContent>
+          <xs:extension base="dss:DocumentBaseType">
+            <xs:sequence>
+              <xs:choice>
+                <xs:element name="InlineXML" type="dss:InlineXMLType"/>
+                <xs:element name="Base64XML" type="xs:base64Binary"/>
+                <xs:element name="EscapedXML" type="xs:string"/>
+                <xs:element ref="dss:Base64Data"/>
+              </xs:choice>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <!---->
+      <xs:element name="Base64Data">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:base64Binary">
+              <xs:attribute name="MimeType" type="xs:string" use="optional"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="DocumentHash">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:DocumentBaseType">
+              <xs:sequence>
+                <xs:element ref="ds:Transforms" minOccurs="0"/>
+                <xs:element ref="ds:DigestMethod"/>
+                <xs:element ref="ds:DigestValue"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="TransformedData">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:DocumentBaseType">
+              <xs:sequence>
+                <xs:element ref="ds:Transforms" minOccurs="0"/>
+                <xs:element ref="dss:Base64Data"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="SignatureObject" type="dss:SignatureObjectType"/>
+      <xs:complexType name="SignatureObjectType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">&lt;xs:any namespace="##other" processContents="lax"/> is not
+						possible here to allow extensibility as more than one namespace
+						(i.e. ds, dss) are used in the choice hence
+						&lt;xs:element name="Other" type="dss:AnyType"/>
+						allowes to introduce new top level elements from namespaces including
+						dss to support other types of signatures in the future.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:choice>
+            <xs:element ref="ds:Signature"/>
+            <xs:element ref="dss:Timestamp"/>
+            <xs:element ref="dss:Base64Signature"/>
+            <xs:element ref="dss:SignaturePtr"/>
+            <xs:element name="Other">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ds:X509Data" maxOccurs="1"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="SchemaRefs" type="xs:IDREFS" use="optional"/>
+      </xs:complexType>
+      <!---->
+      <xs:element name="Base64Signature">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:base64Binary">
+              <xs:attribute name="Type" type="xs:anyURI"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="SignaturePtr">
+        <xs:complexType>
+          <xs:attribute name="WhichDocument" type="xs:IDREF"/>
+          <xs:attribute name="XPath" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="Result">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultMajor" type="xs:anyURI"/>
+            <xs:element name="ResultMinor" type="xs:anyURI" minOccurs="0"/>
+            <xs:element name="ResultMessage" type="dss:InternationalStringType" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--ORIGINAL (DSS) OPTIONALINPUTS / OPTIONALOUTPUTS 
+			     MODIFIED TO ALLOW SOME STUB GENERATION TOOLS (I.E. .NET) TO GENERATE ALSO STUBS FOR 
+			     OPTIONAL INPUTS AND OUTPUTS-->
+      <!--<xs:element name="OptionalInputs" type="dss:AnyType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						"dss:AnyType"/&gt; matches any top level element of any
+						namespace, hence OptionalInputs can contain 0..* top level elements.
+						It should however not contain elements that are not declared as
+						optional inputs by normative text of the dss-core or dss-profiles.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="OptionalOutputs" type="dss:AnyType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						"dss:AnyType"/&gt; matches any top level element of any
+						namespace, hence OptionalInputs can contain 0..* top level elements.
+						It should however not contain elements that are not declared as
+						optional outputs by normative text of the dss-core or dss-profiles.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>-->
+      <!--MODIFIED OPTIONAL INPUTS AND OUTPUTS-->
+      <xs:element name="OptionalInputs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+              <!--DSS CORE COMMON-->
+              <xs:element ref="dss:ServicePolicy"/>
+              <xs:element ref="dss:ClaimedIdentity"/>
+              <xs:element ref="dss:Language"/>
+              <xs:element ref="dss:AdditionalProfile"/>
+              <xs:element ref="dss:Schemas"/>
+              <!--DSS CORE SIGNINGPROTOCOL-->
+              <xs:element ref="dss:SignatureType"/>
+              <xs:element ref="dss:AddTimestamp"/>
+              <xs:element ref="dss:IntendedAudience"/>
+              <xs:element ref="dss:KeySelector"/>
+              <xs:element ref="dss:Properties"/>
+              <xs:element ref="dss:IncludeObject"/>
+              <xs:element ref="dss:IncludeEContent"/>
+              <xs:element ref="dss:SignaturePlacement"/>
+              <xs:element ref="dss:SignedReferences"/>
+              <!--DSS CORE VERIFYING PROTOCOL-->
+              <xs:element ref="dss:VerifyManifests"/>
+              <xs:element ref="dss:VerificationTime"/>
+              <xs:element ref="dss:AdditionalKeyInfo"/>
+              <xs:element ref="dss:ReturnProcessingDetails"/>
+              <xs:element ref="dss:ReturnSigningTime"/>
+              <xs:element ref="dss:ReturnSignerIdentity"/>
+              <xs:element ref="dss:ReturnUpdatedSignature"/>
+              <xs:element ref="dss:ReturnTransformedDocument"/>
+              <!--XAdES PROFILE SIGNING PROTOCOL-->
+              <xs:element ref="xadp:SignatureForm"/>
+              <!--XSS PROFILE COMMON-->
+              <xs:element ref="xss:ReturnSignedResponse"/>
+              <!--xs:element ref="xss:Archive"/-->
+              <xs:element ref="xss:ReturnSignatureInfo"/>
+              <xs:element ref="xss:ReturnX509CertificateInfo"/>
+              <!--XSS PROFILE SIGNING PROTOCOL-->
+              <xs:element ref="xss:CounterSignature"/>
+              <xs:element ref="xss:ParallelSignature"/>
+              <!--XSS PROFILE VERIFYING PROTOCOL-->
+              <xs:element ref="xss:SignaturePolicy"/>
+              <xs:element ref="xss:Scheme"/>
+              <xs:element ref="xss:X509CertificateValidationOptions"/>
+              <xs:element ref="xss:RequireQualifiedCertificate"/>
+              <!--ARCHIVE PROFILE PROTOCOL-->
+              <xs:element ref="archp:ArchivePolicy"/>
+              <xs:element ref="archp:RetentionPeriod"/>
+              <xs:element ref="archp:UpdateSignature"/>
+              <xs:element ref="archp:ArchiveMode"/>
+              <!--COMPOUND PROFILE PROTOCOL-->
+              <xs:element ref="compAsync:ResponseID" minOccurs="1" maxOccurs="1"/>
+              <!--PDF Lite-->
+              <xs:element ref="pdf:ReturnSignatureReason"/>
+            </xs:choice>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OptionalOutputs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+              <!--DSS CORE SIGNINGPROTOCOL-->
+              <xs:element ref="dss:DocumentWithSignature"/>
+              <!--DSS CORE VERIFYING PROTOCOL-->
+              <xs:element ref="dss:VerifyManifestResults"/>
+              <xs:element ref="dss:ProcessingDetails"/>
+              <xs:element ref="dss:SigningTime"/>
+              <xs:element ref="dss:SignerIdentity"/>
+              <xs:element ref="dss:UpdatedSignature"/>
+              <xs:element ref="dss:TransformedDocument"/>
+              <!--XSS PROFILE COMMON-->
+              <xs:element ref="xss:ResponseSignature"/>
+              <xs:element ref="xss:ArchiveInfo"/>
+              <xs:element ref="xss:SignatureInfo"/>
+              <xs:element ref="xss:X509CertificateInfo"/>
+              <!--XSS PROFILE VERIFYING PROTOCOL-->
+              <xs:element ref="xss:SignaturePolicyInfo"/>
+              <xs:element ref="xss:SchemeInfo"/>
+              <!--COMPOUND PROFILE PROTOCOL-->
+              <xs:element ref="compAsync:ResponseID" minOccurs="1" maxOccurs="1"/>
+              <!--PDF Lite-->
+              <xs:element ref="pdf:SignatureReason"/>
+            </xs:choice>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ServicePolicy" type="xs:anyURI"/>
+      <!---->
+      <xs:element name="ClaimedIdentity">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Name" type="saml:NameIdentifierType"/>
+            <xs:element name="SupportingInfo" type="dss:AnyType" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="Language" type="xs:language"/>
+      <!---->
+      <xs:element name="AdditionalProfile" type="xs:anyURI"/>
+      <!--COMMON PROTOCOL STRUCTURES-->
+      <!--PROTOCOL MESSAGES BEGIN-->
+      <!---->
+      <xs:complexType name="RequestBaseType">
+        <xs:sequence>
+          <xs:element ref="dss:OptionalInputs" minOccurs="0"/>
+          <xs:element ref="dss:InputDocuments" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="RequestID" type="xs:string" use="optional"/>
+        <xs:attribute name="Profile" type="xs:anyURI" use="optional"/>
+      </xs:complexType>
+      <!---->
+      <xs:element name="SignRequest">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:RequestBaseType"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="IncludeObject">
+        <xs:complexType>
+          <xs:attribute name="WhichDocument" type="xs:IDREF"/>
+          <xs:attribute name="hasObjectTagsAndAttributesSet" type="xs:boolean" default="false"/>
+          <xs:attribute name="ObjId" type="xs:string" use="optional"/>
+          <xs:attribute name="createReference" type="xs:boolean" use="optional" default="true"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="IncludeEContent"/>
+      <!---->
+      <xs:element name="SignaturePlacement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice>
+              <xs:element name="XPathAfter" type="xs:string"/>
+              <xs:element name="XPathFirstChildOf" type="xs:string"/>
+            </xs:choice>
+          </xs:sequence>
+          <xs:attribute name="WhichDocument" type="xs:IDREF"/>
+          <xs:attribute name="createEnvelopedSignature" type="xs:boolean" default="true"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:complexType name="ResponseBaseType">
+        <xs:sequence>
+          <xs:element ref="dss:Result"/>
+          <xs:element ref="dss:OptionalOutputs" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="RequestID" type="xs:string" use="optional"/>
+        <xs:attribute name="Profile" type="xs:anyURI" use="required"/>
+      </xs:complexType>
+      <!---->
+      <xs:element name="Response" type="dss:ResponseBaseType"/>
+      <!---->
+      <xs:element name="SignResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:ResponseBaseType">
+              <xs:sequence>
+                <xs:element ref="dss:SignatureObject" minOccurs="0"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <!--SIGNRESPONSE OPTIONAL OUTPUTS START-->
+      <xs:element name="DocumentWithSignature">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Document"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--SIGNRESPONSE OPTIONAL OUTPUTS END-->
+      <xs:element name="VerifyRequest">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:RequestBaseType">
+              <xs:sequence>
+                <xs:element ref="dss:SignatureObject" minOccurs="0"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="VerifyResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="dss:ResponseBaseType"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <!--PROTOCOL MESSAGES END-->
+      <!--SIGNREQUEST OPTIONAL INPUTS START-->
+      <xs:element name="SignatureType" type="xs:anyURI"/>
+      <xs:element name="AddTimestamp">
+        <xs:complexType>
+          <xs:attribute name="Type" type="xs:anyURI" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="IntendedAudience">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Recipient" type="saml:NameIdentifierType" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="KeySelector">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">&lt;xs:any namespace="##other" processContents="lax"/> is not
+						possible here to allow extensibility as another namespace than
+						the target namespace is used in the choice hence
+						&lt;xs:element name="Other" type="dss:AnyType"/>
+						allowes to introduce new top level elements from namespaces including
+						dss to support other types of key selectors in the future.
+						Note that namespace="##other" is the complement of the target namespace.
+						Note also that xml schema does not support complements for other namespaces
+						or sets of namespaces which is a defect in xml schema.
+						It only supports sets of namespaces which is not useful however as we cannot
+						know which namespaces might be relevant in the future.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice>
+              <xs:element ref="ds:KeyInfo"/>
+              <xs:element name="Other" type="dss:AnyType"/>
+            </xs:choice>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="SignedReferences">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:SignedReference" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="Properties">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SignedProperties" type="dss:PropertiesType" minOccurs="0"/>
+            <xs:element name="UnsignedProperties" type="dss:PropertiesType" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="Property">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Identifier" type="xs:anyURI"/>
+            <xs:element name="Value" type="dss:AnyType" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:complexType name="PropertiesType">
+        <xs:sequence>
+          <xs:element ref="dss:Property" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <!---->
+      <xs:element name="SignedReference">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">RefURI overrides the of &lt;dss:Document></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ds:Transforms" minOccurs="0"/>
+          </xs:sequence>
+          <xs:attribute name="WhichDocument" type="xs:IDREF" use="required"/>
+          <xs:attribute name="RefURI" type="xs:anyURI" use="optional"/>
+          <xs:attribute name="RefId" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="Schema" type="dss:DocumentType"/>
+      <!---->
+      <xs:element name="Schemas" type="dss:SchemasType"/>
+      <xs:complexType name="SchemasType">
+        <xs:sequence>
+          <xs:element ref="dss:Schema" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <!--SIGNREQUEST OPTIONAL INPUTS END-->
+      <!--VERIFYREQUEST OPTIONAL INPUTS START-->
+      <xs:element name="VerifyManifests"/>
+      <xs:element name="VerificationTime" type="xs:dateTime"/>
+      <xs:element name="AdditionalKeyInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ds:KeyInfo"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="ReturnProcessingDetails"/>
+      <!---->
+      <xs:element name="ReturnSigningTime"/>
+      <!---->
+      <xs:element name="ReturnTimestampTime"/>
+      <!---->
+      <xs:element name="ReturnSignerIdentity"/>
+      <!---->
+      <xs:element name="ReturnUpdatedSignature">
+        <xs:complexType>
+          <xs:attribute name="Type" type="xs:anyURI" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="ReturnTransformedDocument">
+        <xs:complexType>
+          <xs:attribute name="WhichReference" type="xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <!--VERIFYREQUEST OPTIONAL INPUTS END-->
+      <!--VERIFYRESPONSE OPTIONAL OUTPUTS START-->
+      <xs:element name="ProcessingDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ValidDetail" type="dss:DetailType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="IndeterminateDetail" type="dss:DetailType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="InvalidDetail" type="dss:DetailType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="SigningTime">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:dateTime">
+              <xs:attribute name="ThirdPartyTimestamp" type="xs:boolean" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="TimestampTime" type="xs:dateTime"/>
+      <!---->
+      <xs:element name="SignerIdentity" type="saml:NameIdentifierType"/>
+      <!---->
+      <xs:element name="UpdatedSignature">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:SignatureObject"/>
+          </xs:sequence>
+          <xs:attribute name="Type" type="xs:anyURI" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="TransformedDocument">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Document"/>
+          </xs:sequence>
+          <xs:attribute name="WhichReference" type="xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:complexType name="DetailType">
+        <xs:sequence>
+          <xs:element name="Code" type="xs:anyURI" minOccurs="0"/>
+          <xs:element name="Message" type="dss:InternationalStringType" minOccurs="0"/>
+          <xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Type" type="xs:anyURI" use="required"/>
+      </xs:complexType>
+      <!--VERIFYRESPONSE OPTIONAL OUTPUTS END-->
+      <!--TIMESTAMP BEGIN-->
+      <xs:element name="Timestamp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice>
+              <xs:element ref="ds:Signature"/>
+              <xs:element name="RFC3161TimeStampToken" type="xs:base64Binary"/>
+              <xs:element name="Other" type="dss:AnyType"/>
+            </xs:choice>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!---->
+      <xs:element name="TstInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SerialNumber" type="xs:integer"/>
+            <xs:element name="CreationTime" type="xs:dateTime"/>
+            <xs:element name="Policy" type="xs:anyURI" minOccurs="0"/>
+            <xs:element name="ErrorBound" type="xs:duration" minOccurs="0"/>
+            <xs:element name="Ordered" type="xs:boolean" default="false" minOccurs="0"/>
+            <xs:element name="TSA" type="saml:NameIdentifierType" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--TIMESTAMP END-->
+      <!--REQUESTER IDENTITY BEGIN-->
+      <xs:element name="RequesterIdentity">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Name" type="saml:NameIdentifierType"/>
+            <xs:element name="SupportingInfo" type="dss:AnyType" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--REQUESTER IDENTITY END-->
+      <xs:element name="VerifyManifestResults" type="dss:VerifyManifestResultsType"/>
+      <xs:complexType name="VerifyManifestResultsType">
+        <xs:sequence>
+          <xs:element ref="dss:ManifestResult" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ManifestResult">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ReferenceXpath" type="xs:string"/>
+            <xs:element name="Status" type="xs:anyURI"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <!--COMPOUND REQUEST/RESPONSE-->
+    <xs:schema targetNamespace="urn:oasis:names:tc:dss:1.0:profiles:compound" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xades="http://uri.etsi.org/01903/v1.2.2#" xmlns="urn:oasis:names:tc:dss:1.0:profiles:compound">
+      <xs:import namespace="urn:oasis:names:tc:dss:1.0:core:schema"/>
+      <xs:import namespace="http://uri.etsi.org/01903/v1.2.2#"/>
+      <xs:element name="CompoundRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:OptionalInputs" minOccurs="0"/>
+            <xs:element name="Requests">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice minOccurs="1" maxOccurs="unbounded">
+                    <xs:element ref="dss:VerifyRequest"/>
+                    <xs:element ref="dss:SignRequest"/>
+                    <xs:element ref="archp:ArchiveSubmitRequest"/>
+                    <xs:element ref="archp:ArchiveRetrievalRequest"/>
+                    <xs:element ref="archp:ArchiveModifyRequest"/>
+                    <xs:element ref="archp:ArchiveVerifyRequest"/>
+                    <xs:element ref="archp:ArchiveDeleteRequest"/>
+                  </xs:choice>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="RequestID" type="xs:string" use="optional"/>
+          <xs:attribute name="Profile" type="xs:anyURI" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CompoundResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:OptionalOutputs" minOccurs="0"/>
+            <xs:element name="Responses">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice minOccurs="1" maxOccurs="unbounded">
+                    <xs:element ref="dss:VerifyResponse"/>
+                    <xs:element ref="dss:SignResponse"/>
+                    <xs:element ref="archp:ArchiveSubmitResponse"/>
+                    <xs:element ref="archp:ArchiveRetrievalResponse"/>
+                    <xs:element ref="archp:ArchiveModifyResponse"/>
+                    <xs:element ref="archp:ArchiveVerifyResponse"/>
+                    <xs:element ref="archp:ArchiveDeleteResponse"/>
+                  </xs:choice>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing:1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xades="http://uri.etsi.org/01903/v1.2.2#" xmlns="urn:oasis:names:tc:dss:1.0:profiles:compound">
+      <xs:element name="PendingRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:OptionalInputs" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResponseID" type="xs:string"/>
+    </xs:schema>
+    <!--END COMPOUND REQUEST/RESPONSE-->
+    <!--PDF Lite-->
+    <xs:schema targetNamespace="urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:pdf="urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF" xmlns:xades="http://uri.etsi.org/01903/v1.2.2#" xmlns="urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF">
+      <xs:import namespace="urn:oasis:names:tc:dss:1.0:core:schema"/>
+      <xs:element name="SignatureReason" type="xs:string"/>
+      <xs:element name="ReturnSignatureReason"/>
+    </xs:schema>
+  </types>
+  <!--Messages-->
+  <message name="SignRequest">
+    <part name="SignRequest" element="dss:SignRequest"/>
+  </message>
+  <message name="SignResponse">
+    <part name="SignResponse" element="dss:SignResponse"/>
+  </message>
+  <message name="VerifyRequest">
+    <part name="VerifyRequest" element="dss:VerifyRequest"/>
+  </message>
+  <message name="VerifyResponse">
+    <part name="VerifyResponse" element="dss:VerifyResponse"/>
+  </message>
+  <message name="ArchiveSubmitRequest">
+    <part name="ArchiveSubmitRequest" element="archp:ArchiveSubmitRequest"/>
+  </message>
+  <message name="ArchiveSubmitResponse">
+    <part name="ArchiveSubmitResponse" element="archp:ArchiveSubmitResponse"/>
+  </message>
+  <message name="ArchiveRetrievalRequest">
+    <part name="ArchiveRetrievalRequest" element="archp:ArchiveRetrievalRequest"/>
+  </message>
+  <message name="ArchiveRetrievalResponse">
+    <part name="ArchiveRetrievalResponse" element="archp:ArchiveRetrievalResponse"/>
+  </message>
+  <message name="ArchiveDeleteRequest">
+    <part name="ArchiveDeleteRequest" element="archp:ArchiveDeleteRequest"/>
+  </message>
+  <message name="ArchiveDeleteResponse">
+    <part name="ArchiveDeleteResponse" element="archp:ArchiveDeleteResponse"/>
+  </message>
+  <message name="ArchiveModifyRequest">
+    <part name="ArchiveModifyRequest" element="archp:ArchiveModifyRequest"/>
+  </message>
+  <message name="ArchiveModifyResponse">
+    <part name="ArchiveModifyResponse" element="archp:ArchiveModifyResponse"/>
+  </message>
+  <message name="ArchiveVerifyRequest">
+    <part name="ArchiveVerifyRequest" element="archp:ArchiveVerifyRequest"/>
+  </message>
+  <message name="ArchiveVerifyResponse">
+    <part name="ArchiveVerifyResponse" element="archp:ArchiveVerifyResponse"/>
+  </message>
+  <message name="CompoundRequest">
+    <part name="CompoundRequest" element="comp:CompoundRequest"/>
+  </message>
+  <message name="CompoundResponse">
+    <part name="CompoundResponse" element="comp:CompoundResponse"/>
+  </message>
+  <message name="PendingRequest">
+    <part name="PendingRequest" element="compAsync:PendingRequest"/>
+  </message>
+  <!--PortTypes-->
+  <portType name="SOAPport">
+    <operation name="sign">
+      <input message="impl:SignRequest"/>
+      <output message="impl:SignResponse"/>
+    </operation>
+    <operation name="verify">
+      <input message="impl:VerifyRequest"/>
+      <output message="impl:VerifyResponse"/>
+    </operation>
+    <operation name="archiveSubmit">
+      <input message="impl:ArchiveSubmitRequest"/>
+      <output message="impl:ArchiveSubmitResponse"/>
+    </operation>
+    <operation name="archiveRetrieval">
+      <input message="impl:ArchiveRetrievalRequest"/>
+      <output message="impl:ArchiveRetrievalResponse"/>
+    </operation>
+    <operation name="archiveDelete">
+      <input message="impl:ArchiveDeleteRequest"/>
+      <output message="impl:ArchiveDeleteResponse"/>
+    </operation>
+    <operation name="archiveModify">
+      <input message="impl:ArchiveModifyRequest"/>
+      <output message="impl:ArchiveModifyResponse"/>
+    </operation>
+    <operation name="archiveVerify">
+      <input message="impl:ArchiveVerifyRequest"/>
+      <output message="impl:ArchiveVerifyResponse"/>
+    </operation>
+    <operation name="compound">
+      <input message="impl:CompoundRequest"/>
+      <output message="impl:CompoundResponse"/>
+    </operation>
+    <operation name="compoundAsync">
+      <input message="impl:PendingRequest"/>
+      <output message="impl:CompoundResponse"/>
+    </operation>
+  </portType>
+  <portType name="HTTPport">
+    <operation name="sign">
+      <input message="impl:SignRequest"/>
+      <output message="impl:SignResponse"/>
+    </operation>
+    <operation name="verify">
+      <input message="impl:VerifyRequest"/>
+      <output message="impl:VerifyResponse"/>
+    </operation>
+    <operation name="archiveSubmit">
+      <input message="impl:ArchiveSubmitRequest"/>
+      <output message="impl:ArchiveSubmitResponse"/>
+    </operation>
+    <operation name="archiveRetrieval">
+      <input message="impl:ArchiveRetrievalRequest"/>
+      <output message="impl:ArchiveRetrievalResponse"/>
+    </operation>
+    <operation name="archiveDelete">
+      <input message="impl:ArchiveDeleteRequest"/>
+      <output message="impl:ArchiveDeleteResponse"/>
+    </operation>
+    <operation name="archiveModify">
+      <input message="impl:ArchiveModifyRequest"/>
+      <output message="impl:ArchiveModifyResponse"/>
+    </operation>
+    <operation name="archiveVerify">
+      <input message="impl:ArchiveVerifyRequest"/>
+      <output message="impl:ArchiveVerifyResponse"/>
+    </operation>
+    <operation name="compound">
+      <input message="impl:CompoundRequest"/>
+      <output message="impl:CompoundResponse"/>
+    </operation>
+    <operation name="compoundAsync">
+      <input message="impl:PendingRequest"/>
+      <output message="impl:CompoundResponse"/>
+    </operation>
+  </portType>
+  <!--Bindings-->
+  <binding name="SOAPBinding" type="impl:SOAPport">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="sign">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="verify">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="archiveSubmit">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="archiveRetrieval">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="archiveDelete">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="archiveModify">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="archiveVerify">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="compound">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="compoundAsync">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <!--Service definition-->
+  <service name="digitalSignatureService">
+    <port name="dssPortSoap" binding="impl:SOAPBinding">
+      <soap:address location="http://psis.catcert.net/psis/catcert/dss"/>
+    </port>
+    <port name="dssPDFPortSoap" binding="impl:SOAPBinding">
+      <soap:address location="http://psis.catcert.net/psis/catcert/dsspdf"/>
+    </port>
+    <port name="dssCompoundPortSoap" binding="impl:SOAPBinding">
+      <soap:address location="http://psis.catcert.net/psis/catcert/compound"/>
+    </port>
+  </service>
+</definitions>
