@@ -69,14 +69,14 @@ public class CompoundResponse {
     @XmlElement(name = "OptionalOutputs", namespace = "urn:oasis:names:tc:dss:1.0:core:schema")
     protected OptionalOutputs optionalOutputs;
     @XmlElement(name = "Responses", required = true)
-    protected Responses responses;
+    protected CompoundResponse.Responses responses;
 
     /**
      * Gets the value of the optionalOutputs property.
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalOutputs }
+     *     {@link OptionalOutputs }
      *     
      */
     public OptionalOutputs getOptionalOutputs() {
@@ -88,7 +88,7 @@ public class CompoundResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalOutputs }
+     *     {@link OptionalOutputs }
      *     
      */
     public void setOptionalOutputs(OptionalOutputs value) {
@@ -100,10 +100,10 @@ public class CompoundResponse {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundResponse.Responses }
+     *     {@link CompoundResponse.Responses }
      *     
      */
-    public Responses getResponses() {
+    public CompoundResponse.Responses getResponses() {
         return responses;
     }
 
@@ -112,10 +112,10 @@ public class CompoundResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundResponse.Responses }
+     *     {@link CompoundResponse.Responses }
      *     
      */
-    public void setResponses(Responses value) {
+    public void setResponses(CompoundResponse.Responses value) {
         this.responses = value;
     }
 
@@ -154,13 +154,13 @@ public class CompoundResponse {
     public static class Responses {
 
         @XmlElementRefs({
-            @XmlElementRef(name = "SignResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignResponse.class),
-            @XmlElementRef(name = "VerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyResponse.class),
             @XmlElementRef(name = "ArchiveRetrievalResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveRetrievalResponse.class),
             @XmlElementRef(name = "ArchiveModifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveVerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
             @XmlElementRef(name = "ArchiveDeleteResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveDeleteResponse.class),
-            @XmlElementRef(name = "ArchiveSubmitResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitResponse.class)
+            @XmlElementRef(name = "SignResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignResponse.class),
+            @XmlElementRef(name = "ArchiveVerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "ArchiveSubmitResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitResponse.class),
+            @XmlElementRef(name = "VerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyResponse.class)
         })
         protected List<Object> verifyResponseOrSignResponseOrArchiveSubmitResponse;
 
@@ -182,13 +182,13 @@ public class CompoundResponse {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link oasis.names.tc.dss._1_0.core.schema.SignResponse }
-         * {@link oasis.names.tc.dss._1_0.core.schema.VerifyResponse }
-         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveRetrievalResponse }
-         * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.ResponseBaseType }{@code >}
-         * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.ResponseBaseType }{@code >}
-         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveDeleteResponse }
-         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveSubmitResponse }
+         * {@link ArchiveRetrievalResponse }
+         * {@link JAXBElement }{@code <}{@link ResponseBaseType }{@code >}
+         * {@link ArchiveDeleteResponse }
+         * {@link SignResponse }
+         * {@link JAXBElement }{@code <}{@link ResponseBaseType }{@code >}
+         * {@link ArchiveSubmitResponse }
+         * {@link VerifyResponse }
          * 
          * 
          */

@@ -49,7 +49,7 @@ public class KeySelector {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.KeyInfoType }
+     *     {@link KeyInfoType }
      *     
      */
     public KeyInfoType getKeyInfo() {
@@ -61,7 +61,7 @@ public class KeySelector {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.KeyInfoType }
+     *     {@link KeyInfoType }
      *     
      */
     public void setKeyInfo(KeyInfoType value) {
@@ -73,7 +73,7 @@ public class KeySelector {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public AnyType getOther() {
@@ -85,7 +85,7 @@ public class KeySelector {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public void setOther(AnyType value) {

@@ -60,7 +60,7 @@ public class ServiceStatusInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getServiceTypeIdentifier() {
@@ -72,7 +72,7 @@ public class ServiceStatusInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setServiceTypeIdentifier(BigInteger value) {
@@ -84,7 +84,7 @@ public class ServiceStatusInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public InternationalNamesType getServiceName() {
@@ -96,7 +96,7 @@ public class ServiceStatusInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public void setServiceName(InternationalNamesType value) {
@@ -108,7 +108,7 @@ public class ServiceStatusInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.DigitalIdentityListType }
+     *     {@link DigitalIdentityListType }
      *     
      */
     public DigitalIdentityListType getServiceDigitalIdentity() {
@@ -120,7 +120,7 @@ public class ServiceStatusInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.DigitalIdentityListType }
+     *     {@link DigitalIdentityListType }
      *     
      */
     public void setServiceDigitalIdentity(DigitalIdentityListType value) {
@@ -132,7 +132,7 @@ public class ServiceStatusInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getServiceStatus() {
@@ -144,7 +144,7 @@ public class ServiceStatusInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setServiceStatus(BigInteger value) {
@@ -156,7 +156,7 @@ public class ServiceStatusInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getStatusStartingTime() {
@@ -168,7 +168,7 @@ public class ServiceStatusInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setStatusStartingTime(XMLGregorianCalendar value) {

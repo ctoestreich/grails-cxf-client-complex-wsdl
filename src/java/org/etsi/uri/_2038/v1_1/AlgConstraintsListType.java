@@ -55,7 +55,7 @@ public class AlgConstraintsListType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._2038.v1_1.AlgAndLengthType }
+     * {@link AlgAndLengthType }
      * 
      * 
      */

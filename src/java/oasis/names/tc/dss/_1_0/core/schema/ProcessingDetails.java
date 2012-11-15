@@ -65,7 +65,7 @@ public class ProcessingDetails {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link oasis.names.tc.dss._1_0.core.schema.DetailType }
+     * {@link DetailType }
      * 
      * 
      */
@@ -94,7 +94,7 @@ public class ProcessingDetails {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link oasis.names.tc.dss._1_0.core.schema.DetailType }
+     * {@link DetailType }
      * 
      * 
      */
@@ -123,7 +123,7 @@ public class ProcessingDetails {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link oasis.names.tc.dss._1_0.core.schema.DetailType }
+     * {@link DetailType }
      * 
      * 
      */

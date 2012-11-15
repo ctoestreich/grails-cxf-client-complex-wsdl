@@ -49,7 +49,7 @@ public class TransformedData
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.TransformsType }
+     *     {@link TransformsType }
      *     
      */
     public TransformsType getTransforms() {
@@ -61,7 +61,7 @@ public class TransformedData
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.TransformsType }
+     *     {@link TransformsType }
      *     
      */
     public void setTransforms(TransformsType value) {
@@ -73,7 +73,7 @@ public class TransformedData
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.Base64Data }
+     *     {@link Base64Data }
      *     
      */
     public Base64Data getBase64Data() {
@@ -85,7 +85,7 @@ public class TransformedData
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.Base64Data }
+     *     {@link Base64Data }
      *     
      */
     public void setBase64Data(Base64Data value) {

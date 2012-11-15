@@ -91,7 +91,7 @@ public class ReferenceType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.DigestMethodType }
+     *     {@link DigestMethodType }
      *     
      */
     public DigestMethodType getDigestMethod() {
@@ -103,7 +103,7 @@ public class ReferenceType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.DigestMethodType }
+     *     {@link DigestMethodType }
      *     
      */
     public void setDigestMethod(DigestMethodType value) {
@@ -129,7 +129,7 @@ public class ReferenceType {
      *     byte[]
      */
     public void setDigestValue(byte[] value) {
-        this.digestValue = value;
+        this.digestValue = ((byte[]) value);
     }
 
     /**

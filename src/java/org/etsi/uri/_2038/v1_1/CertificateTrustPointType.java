@@ -71,7 +71,7 @@ public class CertificateTrustPointType {
      *     byte[]
      */
     public void setTrustPoint(byte[] value) {
-        this.trustPoint = value;
+        this.trustPoint = ((byte[]) value);
     }
 
     /**
@@ -79,7 +79,7 @@ public class CertificateTrustPointType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getPathLenConstraint() {
@@ -91,7 +91,7 @@ public class CertificateTrustPointType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setPathLenConstraint(BigInteger value) {
@@ -103,7 +103,7 @@ public class CertificateTrustPointType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.AcceptablePoliciesListType }
+     *     {@link AcceptablePoliciesListType }
      *     
      */
     public AcceptablePoliciesListType getAcceptablePolicySet() {
@@ -115,7 +115,7 @@ public class CertificateTrustPointType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.AcceptablePoliciesListType }
+     *     {@link AcceptablePoliciesListType }
      *     
      */
     public void setAcceptablePolicySet(AcceptablePoliciesListType value) {

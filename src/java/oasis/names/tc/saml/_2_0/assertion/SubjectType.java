@@ -45,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
 public class SubjectType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "NameID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "SubjectConfirmation", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "NameID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "EncryptedID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "BaseID", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
     })
@@ -58,8 +58,8 @@ public class SubjectType {
      * <p>
      * You are getting this "catch-all" property because of the following reason: 
      * The field name "SubjectConfirmation" is used by two different parts of a schema. See: 
-     * line 74 of file:/C:/temp/src/saml-schema-assertion-2.0.xsd
-     * line 72 of file:/C:/temp/src/saml-schema-assertion-2.0.xsd
+     * line 74 of file:/C:/projects/grails-cxf-client-complex-wsdl/docs/saml-schema-assertion-2.0.xsd
+     * line 72 of file:/C:/projects/grails-cxf-client-complex-wsdl/docs/saml-schema-assertion-2.0.xsd
      * <p>
      * To get rid of this property, apply a property customization to one 
      * of both of the following declarations to change their names: 
@@ -80,10 +80,10 @@ public class SubjectType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.NameIDType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.EncryptedElementType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.SubjectConfirmationType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._2_0.assertion.BaseIDAbstractType }{@code >}
+     * {@link JAXBElement }{@code <}{@link SubjectConfirmationType }{@code >}
+     * {@link JAXBElement }{@code <}{@link NameIDType }{@code >}
+     * {@link JAXBElement }{@code <}{@link EncryptedElementType }{@code >}
+     * {@link JAXBElement }{@code <}{@link BaseIDAbstractType }{@code >}
      * 
      * 
      */

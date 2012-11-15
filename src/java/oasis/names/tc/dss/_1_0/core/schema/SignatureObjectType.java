@@ -76,7 +76,7 @@ public class SignatureObjectType {
     @XmlElement(name = "SignaturePtr")
     protected SignaturePtr signaturePtr;
     @XmlElement(name = "Other")
-    protected Other other;
+    protected SignatureObjectType.Other other;
     @XmlAttribute(name = "SchemaRefs")
     @XmlIDREF
     @XmlSchemaType(name = "IDREFS")
@@ -87,7 +87,7 @@ public class SignatureObjectType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public SignatureType getSignature() {
@@ -99,7 +99,7 @@ public class SignatureObjectType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public void setSignature(SignatureType value) {
@@ -135,7 +135,7 @@ public class SignatureObjectType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.Base64Signature }
+     *     {@link Base64Signature }
      *     
      */
     public Base64Signature getBase64Signature() {
@@ -147,7 +147,7 @@ public class SignatureObjectType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.Base64Signature }
+     *     {@link Base64Signature }
      *     
      */
     public void setBase64Signature(Base64Signature value) {
@@ -183,10 +183,10 @@ public class SignatureObjectType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType.Other }
+     *     {@link SignatureObjectType.Other }
      *     
      */
-    public Other getOther() {
+    public SignatureObjectType.Other getOther() {
         return other;
     }
 
@@ -195,10 +195,10 @@ public class SignatureObjectType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType.Other }
+     *     {@link SignatureObjectType.Other }
      *     
      */
-    public void setOther(Other value) {
+    public void setOther(SignatureObjectType.Other value) {
         this.other = value;
     }
 
@@ -265,7 +265,7 @@ public class SignatureObjectType {
          * 
          * @return
          *     possible object is
-         *     {@link org.w3._2000._09.xmldsig.X509DataType }
+         *     {@link X509DataType }
          *     
          */
         public X509DataType getX509Data() {
@@ -277,7 +277,7 @@ public class SignatureObjectType {
          * 
          * @param value
          *     allowed object is
-         *     {@link org.w3._2000._09.xmldsig.X509DataType }
+         *     {@link X509DataType }
          *     
          */
         public void setX509Data(X509DataType value) {

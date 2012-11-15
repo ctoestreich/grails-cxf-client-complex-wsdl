@@ -56,7 +56,7 @@ public class TimeStampTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }
+     *     {@link CertificateTrustTreesType }
      *     
      */
     public CertificateTrustTreesType getTtsCertificateTrustTrees() {
@@ -68,7 +68,7 @@ public class TimeStampTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }
+     *     {@link CertificateTrustTreesType }
      *     
      */
     public void setTtsCertificateTrustTrees(CertificateTrustTreesType value) {
@@ -80,7 +80,7 @@ public class TimeStampTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateRevReqType }
+     *     {@link CertificateRevReqType }
      *     
      */
     public CertificateRevReqType getTtsRevReq() {
@@ -92,7 +92,7 @@ public class TimeStampTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateRevReqType }
+     *     {@link CertificateRevReqType }
      *     
      */
     public void setTtsRevReq(CertificateRevReqType value) {
@@ -104,7 +104,7 @@ public class TimeStampTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.NameConstraintsType }
+     *     {@link NameConstraintsType }
      *     
      */
     public NameConstraintsType getTtsNameConstraints() {
@@ -116,7 +116,7 @@ public class TimeStampTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.NameConstraintsType }
+     *     {@link NameConstraintsType }
      *     
      */
     public void setTtsNameConstraints(NameConstraintsType value) {
@@ -128,7 +128,7 @@ public class TimeStampTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.DeltaTimeType }
+     *     {@link DeltaTimeType }
      *     
      */
     public DeltaTimeType getCautionPeriod() {
@@ -140,7 +140,7 @@ public class TimeStampTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.DeltaTimeType }
+     *     {@link DeltaTimeType }
      *     
      */
     public void setCautionPeriod(DeltaTimeType value) {
@@ -152,7 +152,7 @@ public class TimeStampTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.DeltaTimeType }
+     *     {@link DeltaTimeType }
      *     
      */
     public DeltaTimeType getSignatureTimeStampDelay() {
@@ -164,7 +164,7 @@ public class TimeStampTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.DeltaTimeType }
+     *     {@link DeltaTimeType }
      *     
      */
     public void setSignatureTimeStampDelay(DeltaTimeType value) {

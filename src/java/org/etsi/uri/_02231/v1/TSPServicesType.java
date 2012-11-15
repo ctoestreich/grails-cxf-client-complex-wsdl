@@ -44,7 +44,7 @@ public class TSPServicesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.TSPServiceInformationType }
+     *     {@link TSPServiceInformationType }
      *     
      */
     public TSPServiceInformationType getServiceInformation() {
@@ -56,7 +56,7 @@ public class TSPServicesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.TSPServiceInformationType }
+     *     {@link TSPServiceInformationType }
      *     
      */
     public void setServiceInformation(TSPServiceInformationType value) {
@@ -68,7 +68,7 @@ public class TSPServicesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.ServiceHistoryType }
+     *     {@link ServiceHistoryType }
      *     
      */
     public ServiceHistoryType getServiceHistory() {
@@ -80,7 +80,7 @@ public class TSPServicesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.ServiceHistoryType }
+     *     {@link ServiceHistoryType }
      *     
      */
     public void setServiceHistory(ServiceHistoryType value) {

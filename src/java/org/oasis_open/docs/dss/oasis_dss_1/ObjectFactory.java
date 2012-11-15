@@ -36,7 +36,15 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link org.oasis_open.docs.dss.oasis_dss_1.Commitment }
+     * Create an instance of {@link DocReferencesType }
+     * 
+     */
+    public DocReferencesType createDocReferencesType() {
+        return new DocReferencesType();
+    }
+
+    /**
+     * Create an instance of {@link Commitment }
      * 
      */
     public Commitment createCommitment() {
@@ -44,11 +52,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link org.oasis_open.docs.dss.oasis_dss_1.DocsFormatType }
+     * Create an instance of {@link DocReferenceType }
      * 
      */
-    public DocsFormatType createDocsFormatType() {
-        return new DocsFormatType();
+    public DocReferenceType createDocReferenceType() {
+        return new DocReferenceType();
     }
 
     /**
@@ -60,23 +68,15 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link org.oasis_open.docs.dss.oasis_dss_1.DocReferencesType }
+     * Create an instance of {@link DocsFormatType }
      * 
      */
-    public DocReferencesType createDocReferencesType() {
-        return new DocReferencesType();
+    public DocsFormatType createDocsFormatType() {
+        return new DocsFormatType();
     }
 
     /**
-     * Create an instance of {@link org.oasis_open.docs.dss.oasis_dss_1.DocReferenceType }
-     * 
-     */
-    public DocReferenceType createDocReferenceType() {
-        return new DocReferenceType();
-    }
-
-    /**
-     * Create an instance of {@link org.oasis_open.docs.dss.oasis_dss_1.DocFormatType }
+     * Create an instance of {@link DocFormatType }
      * 
      */
     public DocFormatType createDocFormatType() {
@@ -84,7 +84,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.oasis_open.docs.dss.oasis_dss_1.DocsFormatType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DocsFormatType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#", name = "DocsFormat")
@@ -93,7 +93,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.oasis_open.docs.dss.oasis_dss_1.DocReferencesType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DocReferencesType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#", name = "DocsToBeTimeStamped")
@@ -102,7 +102,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#", name = "SignatureForm")

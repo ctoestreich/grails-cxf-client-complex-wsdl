@@ -54,7 +54,7 @@ public class TSPInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public InternationalNamesType getTSPName() {
@@ -66,7 +66,7 @@ public class TSPInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public void setTSPName(InternationalNamesType value) {
@@ -78,7 +78,7 @@ public class TSPInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public InternationalNamesType getTSPTradeName() {
@@ -90,7 +90,7 @@ public class TSPInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public void setTSPTradeName(InternationalNamesType value) {
@@ -102,7 +102,7 @@ public class TSPInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.AddressType }
+     *     {@link AddressType }
      *     
      */
     public AddressType getTSPAddress() {
@@ -114,7 +114,7 @@ public class TSPInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.AddressType }
+     *     {@link AddressType }
      *     
      */
     public void setTSPAddress(AddressType value) {

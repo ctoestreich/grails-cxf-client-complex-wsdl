@@ -62,7 +62,7 @@ public class ArchiveSubmitRequest {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public OptionalInputs getOptionalInputs() {
@@ -74,7 +74,7 @@ public class ArchiveSubmitRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public void setOptionalInputs(OptionalInputs value) {
@@ -86,7 +86,7 @@ public class ArchiveSubmitRequest {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.InputDocuments }
+     *     {@link InputDocuments }
      *     
      */
     public InputDocuments getInputDocuments() {
@@ -98,7 +98,7 @@ public class ArchiveSubmitRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.InputDocuments }
+     *     {@link InputDocuments }
      *     
      */
     public void setInputDocuments(InputDocuments value) {
@@ -110,7 +110,7 @@ public class ArchiveSubmitRequest {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType }
+     *     {@link SignatureObjectType }
      *     
      */
     public SignatureObjectType getSignatureObject() {
@@ -122,7 +122,7 @@ public class ArchiveSubmitRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType }
+     *     {@link SignatureObjectType }
      *     
      */
     public void setSignatureObject(SignatureObjectType value) {

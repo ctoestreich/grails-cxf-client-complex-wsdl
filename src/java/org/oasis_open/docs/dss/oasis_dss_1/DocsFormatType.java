@@ -61,7 +61,7 @@ public class DocsFormatType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.oasis_open.docs.dss.oasis_dss_1.DocFormatType }
+     * {@link DocFormatType }
      * 
      * 
      */
@@ -91,7 +91,7 @@ public class DocsFormatType {
      *     byte[]
      */
     public void setBinaryValue(byte[] value) {
-        this.binaryValue = value;
+        this.binaryValue = ((byte[]) value);
     }
 
 }

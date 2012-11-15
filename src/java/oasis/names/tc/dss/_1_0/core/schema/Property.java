@@ -72,7 +72,7 @@ public class Property {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public AnyType getValue() {
@@ -84,7 +84,7 @@ public class Property {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public void setValue(AnyType value) {

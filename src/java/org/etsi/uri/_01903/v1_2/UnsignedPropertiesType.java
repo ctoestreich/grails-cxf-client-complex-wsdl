@@ -79,7 +79,7 @@ public class UnsignedPropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.UnsignedDataObjectPropertiesType }
+     *     {@link UnsignedDataObjectPropertiesType }
      *     
      */
     public UnsignedDataObjectPropertiesType getUnsignedDataObjectProperties() {
@@ -91,7 +91,7 @@ public class UnsignedPropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.UnsignedDataObjectPropertiesType }
+     *     {@link UnsignedDataObjectPropertiesType }
      *     
      */
     public void setUnsignedDataObjectProperties(UnsignedDataObjectPropertiesType value) {

@@ -44,7 +44,7 @@ public class SigningCertTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }
+     *     {@link CertificateTrustTreesType }
      *     
      */
     public CertificateTrustTreesType getSignerTrustTrees() {
@@ -56,7 +56,7 @@ public class SigningCertTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }
+     *     {@link CertificateTrustTreesType }
      *     
      */
     public void setSignerTrustTrees(CertificateTrustTreesType value) {
@@ -68,7 +68,7 @@ public class SigningCertTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateRevReqType }
+     *     {@link CertificateRevReqType }
      *     
      */
     public CertificateRevReqType getSignerRevReq() {
@@ -80,7 +80,7 @@ public class SigningCertTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateRevReqType }
+     *     {@link CertificateRevReqType }
      *     
      */
     public void setSignerRevReq(CertificateRevReqType value) {

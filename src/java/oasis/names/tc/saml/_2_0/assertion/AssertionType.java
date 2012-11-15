@@ -71,9 +71,9 @@ public class AssertionType {
     @XmlElement(name = "Advice")
     protected AdviceType advice;
     @XmlElements({
-        @XmlElement(name = "Statement"),
-        @XmlElement(name = "AuthnStatement", type = AuthnStatementType.class),
         @XmlElement(name = "AuthzDecisionStatement", type = AuthzDecisionStatementType.class),
+        @XmlElement(name = "AuthnStatement", type = AuthnStatementType.class),
+        @XmlElement(name = "Statement"),
         @XmlElement(name = "AttributeStatement", type = AttributeStatementType.class)
     })
     protected List<StatementAbstractType> statementOrAuthnStatementOrAuthzDecisionStatement;
@@ -117,7 +117,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public SignatureType getSignature() {
@@ -129,7 +129,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public void setSignature(SignatureType value) {
@@ -189,7 +189,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.AdviceType }
+     *     {@link AdviceType }
      *     
      */
     public AdviceType getAdvice() {
@@ -201,7 +201,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.AdviceType }
+     *     {@link AdviceType }
      *     
      */
     public void setAdvice(AdviceType value) {
@@ -226,9 +226,9 @@ public class AssertionType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link StatementAbstractType }
-     * {@link AuthnStatementType }
      * {@link AuthzDecisionStatementType }
+     * {@link AuthnStatementType }
+     * {@link StatementAbstractType }
      * {@link AttributeStatementType }
      * 
      * 
@@ -293,7 +293,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getIssueInstant() {
@@ -305,7 +305,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setIssueInstant(XMLGregorianCalendar value) {

@@ -72,7 +72,7 @@ public class RoleTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.HowCertRoleType }
+     *     {@link HowCertRoleType }
      *     
      */
     public HowCertRoleType getHowCertRole() {
@@ -84,7 +84,7 @@ public class RoleTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.HowCertRoleType }
+     *     {@link HowCertRoleType }
      *     
      */
     public void setHowCertRole(HowCertRoleType value) {
@@ -96,7 +96,7 @@ public class RoleTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }
+     *     {@link CertificateTrustTreesType }
      *     
      */
     public CertificateTrustTreesType getAttrCertTrustTrees() {
@@ -108,7 +108,7 @@ public class RoleTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }
+     *     {@link CertificateTrustTreesType }
      *     
      */
     public void setAttrCertTrustTrees(CertificateTrustTreesType value) {
@@ -120,7 +120,7 @@ public class RoleTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateRevReqType }
+     *     {@link CertificateRevReqType }
      *     
      */
     public CertificateRevReqType getRoleRevReq() {
@@ -132,7 +132,7 @@ public class RoleTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateRevReqType }
+     *     {@link CertificateRevReqType }
      *     
      */
     public void setRoleRevReq(CertificateRevReqType value) {
@@ -144,7 +144,7 @@ public class RoleTrustConditionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.RoleConstraintsType }
+     *     {@link RoleConstraintsType }
      *     
      */
     public RoleConstraintsType getRoleConstraints() {
@@ -156,7 +156,7 @@ public class RoleTrustConditionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.RoleConstraintsType }
+     *     {@link RoleConstraintsType }
      *     
      */
     public void setRoleConstraints(RoleConstraintsType value) {

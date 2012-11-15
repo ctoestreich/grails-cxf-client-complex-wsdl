@@ -93,11 +93,10 @@ log4j = {
 cxf {
     client {
         dssServiceClient {
-            wsdl = 'wsdl/dss.wsdl'
-            namespace = "net.psis.carcert.dss"
-            outputDir = "src/java/temp"
-            wsdlArgs = ["-autoNameResolution","-fe jaxws21"]
-            clientInterface  = "oasis.names.tc.dss._1_0.core.wsdl.SOAPport"
+            wsdl = 'docs/dss.wsdl'
+            //namespace = "net.psis.carcert.dss"
+            wsdlArgs = ["-fe","jaxws21"]
+            clientInterface = oasis.names.tc.dss._1_0.core.wsdl.SOAPport
 //            serviceEndpointAddress = "http://psis.catcert.net/wsdl/dss"
             serviceEndpointAddress = "http://psis.catcert.net/psis/catcert/dss"
         }

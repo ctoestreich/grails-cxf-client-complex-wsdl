@@ -64,7 +64,7 @@ public class SignaturePolicyInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getSignPolicyIdentifier() {
@@ -76,7 +76,7 @@ public class SignaturePolicyInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public void setSignPolicyIdentifier(ObjectIdentifierType value) {
@@ -88,7 +88,7 @@ public class SignaturePolicyInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getDateOfIssue() {
@@ -100,7 +100,7 @@ public class SignaturePolicyInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setDateOfIssue(XMLGregorianCalendar value) {

@@ -45,7 +45,7 @@ public class PolicyConstraintsType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getRequireExplicitPolicy() {
@@ -57,7 +57,7 @@ public class PolicyConstraintsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setRequireExplicitPolicy(BigInteger value) {
@@ -69,7 +69,7 @@ public class PolicyConstraintsType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getInhibitExplicitPolicy() {
@@ -81,7 +81,7 @@ public class PolicyConstraintsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setInhibitExplicitPolicy(BigInteger value) {

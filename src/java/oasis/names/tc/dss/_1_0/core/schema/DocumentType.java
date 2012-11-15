@@ -94,7 +94,7 @@ public class DocumentType
      *     byte[]
      */
     public void setBase64XML(byte[] value) {
-        this.base64XML = value;
+        this.base64XML = ((byte[]) value);
     }
 
     /**
@@ -126,7 +126,7 @@ public class DocumentType
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.Base64Data }
+     *     {@link Base64Data }
      *     
      */
     public Base64Data getBase64Data() {
@@ -138,7 +138,7 @@ public class DocumentType
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.Base64Data }
+     *     {@link Base64Data }
      *     
      */
     public void setBase64Data(Base64Data value) {

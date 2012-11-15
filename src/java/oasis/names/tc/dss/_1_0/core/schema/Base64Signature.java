@@ -59,7 +59,7 @@ public class Base64Signature {
      *     byte[]
      */
     public void setValue(byte[] value) {
-        this.value = value;
+        this.value = ((byte[]) value);
     }
 
     /**

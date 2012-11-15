@@ -48,17 +48,17 @@ import org.etsi.uri._2038.v1_1.CommitmentType;
 public class ReturnSignedResponse {
 
     @XmlElement(name = "RequiredCommitments")
-    protected RequiredCommitments requiredCommitments;
+    protected ReturnSignedResponse.RequiredCommitments requiredCommitments;
 
     /**
      * Gets the value of the requiredCommitments property.
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.profiles.xss.ReturnSignedResponse.RequiredCommitments }
+     *     {@link ReturnSignedResponse.RequiredCommitments }
      *     
      */
-    public RequiredCommitments getRequiredCommitments() {
+    public ReturnSignedResponse.RequiredCommitments getRequiredCommitments() {
         return requiredCommitments;
     }
 
@@ -67,10 +67,10 @@ public class ReturnSignedResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.profiles.xss.ReturnSignedResponse.RequiredCommitments }
+     *     {@link ReturnSignedResponse.RequiredCommitments }
      *     
      */
-    public void setRequiredCommitments(RequiredCommitments value) {
+    public void setRequiredCommitments(ReturnSignedResponse.RequiredCommitments value) {
         this.requiredCommitments = value;
     }
 
@@ -121,7 +121,7 @@ public class ReturnSignedResponse {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link org.etsi.uri._2038.v1_1.CommitmentType }
+         * {@link CommitmentType }
          * 
          * 
          */

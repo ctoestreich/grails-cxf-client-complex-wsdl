@@ -51,7 +51,7 @@ public class CompleteCertificateRefsType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CertIDListType }
+     *     {@link CertIDListType }
      *     
      */
     public CertIDListType getCertRefs() {
@@ -63,7 +63,7 @@ public class CompleteCertificateRefsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CertIDListType }
+     *     {@link CertIDListType }
      *     
      */
     public void setCertRefs(CertIDListType value) {

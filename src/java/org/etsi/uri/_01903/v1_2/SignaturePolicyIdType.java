@@ -53,7 +53,7 @@ public class SignaturePolicyIdType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getSigPolicyId() {
@@ -65,7 +65,7 @@ public class SignaturePolicyIdType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public void setSigPolicyId(ObjectIdentifierType value) {
@@ -101,7 +101,7 @@ public class SignaturePolicyIdType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.DigestAlgAndValueType }
+     *     {@link DigestAlgAndValueType }
      *     
      */
     public DigestAlgAndValueType getSigPolicyHash() {
@@ -113,7 +113,7 @@ public class SignaturePolicyIdType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.DigestAlgAndValueType }
+     *     {@link DigestAlgAndValueType }
      *     
      */
     public void setSigPolicyHash(DigestAlgAndValueType value) {

@@ -42,7 +42,7 @@ public class DocumentWithSignature {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.DocumentType }
+     *     {@link DocumentType }
      *     
      */
     public DocumentType getDocument() {
@@ -54,7 +54,7 @@ public class DocumentWithSignature {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.DocumentType }
+     *     {@link DocumentType }
      *     
      */
     public void setDocument(DocumentType value) {

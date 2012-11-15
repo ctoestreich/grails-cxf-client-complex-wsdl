@@ -47,7 +47,7 @@ public class SignerRole {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.SignerRoleType }
+     *     {@link SignerRoleType }
      *     
      */
     public SignerRoleType getSignerRole() {
@@ -59,7 +59,7 @@ public class SignerRole {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.SignerRoleType }
+     *     {@link SignerRoleType }
      *     
      */
     public void setSignerRole(SignerRoleType value) {
@@ -85,7 +85,7 @@ public class SignerRole {
      *     byte[]
      */
     public void setBinaryValue(byte[] value) {
-        this.binaryValue = value;
+        this.binaryValue = ((byte[]) value);
     }
 
 }

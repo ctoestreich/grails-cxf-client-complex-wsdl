@@ -49,7 +49,7 @@ public class CommitmentType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getCommitmentIdentifier() {
@@ -61,7 +61,7 @@ public class CommitmentType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public void setCommitmentIdentifier(ObjectIdentifierType value) {

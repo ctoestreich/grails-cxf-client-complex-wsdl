@@ -46,7 +46,7 @@ public class ArchiveRetrievalResponse
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType }
+     *     {@link SignatureObjectType }
      *     
      */
     public SignatureObjectType getSignatureObject() {
@@ -58,7 +58,7 @@ public class ArchiveRetrievalResponse
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType }
+     *     {@link SignatureObjectType }
      *     
      */
     public void setSignatureObject(SignatureObjectType value) {

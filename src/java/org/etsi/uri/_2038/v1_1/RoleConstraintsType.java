@@ -61,7 +61,7 @@ public class RoleConstraintsType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     * {@link ObjectIdentifierType }
      * 
      * 
      */
@@ -90,7 +90,7 @@ public class RoleConstraintsType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.AnyType }
+     * {@link AnyType }
      * 
      * 
      */

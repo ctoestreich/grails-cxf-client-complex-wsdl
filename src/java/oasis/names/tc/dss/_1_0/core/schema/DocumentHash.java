@@ -54,7 +54,7 @@ public class DocumentHash
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.TransformsType }
+     *     {@link TransformsType }
      *     
      */
     public TransformsType getTransforms() {
@@ -66,7 +66,7 @@ public class DocumentHash
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.TransformsType }
+     *     {@link TransformsType }
      *     
      */
     public void setTransforms(TransformsType value) {
@@ -78,7 +78,7 @@ public class DocumentHash
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.DigestMethodType }
+     *     {@link DigestMethodType }
      *     
      */
     public DigestMethodType getDigestMethod() {
@@ -90,7 +90,7 @@ public class DocumentHash
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.DigestMethodType }
+     *     {@link DigestMethodType }
      *     
      */
     public void setDigestMethod(DigestMethodType value) {
@@ -116,7 +116,7 @@ public class DocumentHash
      *     byte[]
      */
     public void setDigestValue(byte[] value) {
-        this.digestValue = value;
+        this.digestValue = ((byte[]) value);
     }
 
 }

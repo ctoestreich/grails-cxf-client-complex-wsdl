@@ -47,7 +47,7 @@ public class Commitment {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CommitmentTypeIndicationType }
+     *     {@link CommitmentTypeIndicationType }
      *     
      */
     public CommitmentTypeIndicationType getCommitmentTypeIndication() {
@@ -59,7 +59,7 @@ public class Commitment {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CommitmentTypeIndicationType }
+     *     {@link CommitmentTypeIndicationType }
      *     
      */
     public void setCommitmentTypeIndication(CommitmentTypeIndicationType value) {
@@ -85,7 +85,7 @@ public class Commitment {
      *     byte[]
      */
     public void setBinaryValue(byte[] value) {
-        this.binaryValue = value;
+        this.binaryValue = ((byte[]) value);
     }
 
 }

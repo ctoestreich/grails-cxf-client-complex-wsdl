@@ -102,7 +102,7 @@ public class SignaturePolicyType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.SignaturePolicyInfoType }
+     *     {@link SignaturePolicyInfoType }
      *     
      */
     public SignaturePolicyInfoType getSignPolicyInfo() {
@@ -114,7 +114,7 @@ public class SignaturePolicyType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.SignaturePolicyInfoType }
+     *     {@link SignaturePolicyInfoType }
      *     
      */
     public void setSignPolicyInfo(SignaturePolicyInfoType value) {
@@ -140,7 +140,7 @@ public class SignaturePolicyType {
      *     byte[]
      */
     public void setSignPolicyDigest(byte[] value) {
-        this.signPolicyDigest = value;
+        this.signPolicyDigest = ((byte[]) value);
     }
 
 }

@@ -56,7 +56,7 @@ public class IntegerListType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link java.math.BigInteger }
+     * {@link BigInteger }
      * 
      * 
      */

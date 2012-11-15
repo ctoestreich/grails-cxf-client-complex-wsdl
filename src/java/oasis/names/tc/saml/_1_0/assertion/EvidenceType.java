@@ -61,8 +61,8 @@ public class EvidenceType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._1_0.assertion.AssertionType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link AssertionType }{@code >}
      * 
      * 
      */

@@ -76,7 +76,7 @@ public class OCSPIdentifierType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getProducedAt() {
@@ -88,7 +88,7 @@ public class OCSPIdentifierType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setProducedAt(XMLGregorianCalendar value) {

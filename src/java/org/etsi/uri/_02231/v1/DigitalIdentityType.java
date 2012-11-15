@@ -66,7 +66,7 @@ public class DigitalIdentityType {
      *     byte[]
      */
     public void setX509Certificate(byte[] value) {
-        this.x509Certificate = value;
+        this.x509Certificate = ((byte[]) value);
     }
 
     /**

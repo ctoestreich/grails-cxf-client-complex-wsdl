@@ -53,7 +53,7 @@ public class DeltaTimeType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getDeltaSeconds() {
@@ -65,7 +65,7 @@ public class DeltaTimeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setDeltaSeconds(BigInteger value) {
@@ -77,7 +77,7 @@ public class DeltaTimeType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getDeltaMinutes() {
@@ -89,7 +89,7 @@ public class DeltaTimeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setDeltaMinutes(BigInteger value) {
@@ -101,7 +101,7 @@ public class DeltaTimeType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getDeltaHours() {
@@ -113,7 +113,7 @@ public class DeltaTimeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setDeltaHours(BigInteger value) {
@@ -125,7 +125,7 @@ public class DeltaTimeType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getDeltaDays() {
@@ -137,7 +137,7 @@ public class DeltaTimeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setDeltaDays(BigInteger value) {

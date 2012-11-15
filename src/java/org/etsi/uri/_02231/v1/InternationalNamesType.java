@@ -45,7 +45,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class InternationalNamesType {
 
     @XmlElement(name = "Name", required = true)
-    protected List<Name> name;
+    protected List<InternationalNamesType.Name> name;
 
     /**
      * Gets the value of the name property.
@@ -65,13 +65,13 @@ public class InternationalNamesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._02231.v1.InternationalNamesType.Name }
+     * {@link InternationalNamesType.Name }
      * 
      * 
      */
-    public List<Name> getName() {
+    public List<InternationalNamesType.Name> getName() {
         if (name == null) {
-            name = new ArrayList<Name>();
+            name = new ArrayList<InternationalNamesType.Name>();
         }
         return this.name;
     }

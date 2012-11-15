@@ -68,7 +68,7 @@ public class NoticeReferenceType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.IntegerListType }
+     *     {@link IntegerListType }
      *     
      */
     public IntegerListType getNoticeNumbers() {
@@ -80,7 +80,7 @@ public class NoticeReferenceType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.IntegerListType }
+     *     {@link IntegerListType }
      *     
      */
     public void setNoticeNumbers(IntegerListType value) {

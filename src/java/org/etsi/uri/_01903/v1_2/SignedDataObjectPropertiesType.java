@@ -67,7 +67,7 @@ public class SignedDataObjectPropertiesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.DataObjectFormatType }
+     * {@link DataObjectFormatType }
      * 
      * 
      */
@@ -96,7 +96,7 @@ public class SignedDataObjectPropertiesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.CommitmentTypeIndicationType }
+     * {@link CommitmentTypeIndicationType }
      * 
      * 
      */

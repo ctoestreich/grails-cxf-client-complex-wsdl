@@ -81,7 +81,7 @@ public class CRLIdentifierType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getIssueTime() {
@@ -93,7 +93,7 @@ public class CRLIdentifierType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setIssueTime(XMLGregorianCalendar value) {
@@ -105,7 +105,7 @@ public class CRLIdentifierType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getNumber() {
@@ -117,7 +117,7 @@ public class CRLIdentifierType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setNumber(BigInteger value) {

@@ -43,7 +43,7 @@ public class DocFormatType
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.DataObjectFormatType }
+     *     {@link DataObjectFormatType }
      *     
      */
     public DataObjectFormatType getDataObjectFormat() {
@@ -55,7 +55,7 @@ public class DocFormatType
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.DataObjectFormatType }
+     *     {@link DataObjectFormatType }
      *     
      */
     public void setDataObjectFormat(DataObjectFormatType value) {

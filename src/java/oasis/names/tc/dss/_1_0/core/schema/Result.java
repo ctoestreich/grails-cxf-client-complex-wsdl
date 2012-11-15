@@ -101,7 +101,7 @@ public class Result {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.InternationalStringType }
+     *     {@link InternationalStringType }
      *     
      */
     public InternationalStringType getResultMessage() {
@@ -113,7 +113,7 @@ public class Result {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.InternationalStringType }
+     *     {@link InternationalStringType }
      *     
      */
     public void setResultMessage(InternationalStringType value) {

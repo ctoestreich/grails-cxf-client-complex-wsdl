@@ -75,7 +75,7 @@ public class AlgAndLengthType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getMinKeyLength() {
@@ -87,7 +87,7 @@ public class AlgAndLengthType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setMinKeyLength(BigInteger value) {

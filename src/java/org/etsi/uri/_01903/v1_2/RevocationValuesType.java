@@ -59,7 +59,7 @@ public class RevocationValuesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CRLValuesType }
+     *     {@link CRLValuesType }
      *     
      */
     public CRLValuesType getCRLValues() {
@@ -71,7 +71,7 @@ public class RevocationValuesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CRLValuesType }
+     *     {@link CRLValuesType }
      *     
      */
     public void setCRLValues(CRLValuesType value) {
@@ -83,7 +83,7 @@ public class RevocationValuesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.OCSPValuesType }
+     *     {@link OCSPValuesType }
      *     
      */
     public OCSPValuesType getOCSPValues() {
@@ -95,7 +95,7 @@ public class RevocationValuesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.OCSPValuesType }
+     *     {@link OCSPValuesType }
      *     
      */
     public void setOCSPValues(OCSPValuesType value) {
@@ -107,7 +107,7 @@ public class RevocationValuesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.OtherCertStatusValuesType }
+     *     {@link OtherCertStatusValuesType }
      *     
      */
     public OtherCertStatusValuesType getOtherValues() {
@@ -119,7 +119,7 @@ public class RevocationValuesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.OtherCertStatusValuesType }
+     *     {@link OtherCertStatusValuesType }
      *     
      */
     public void setOtherValues(OtherCertStatusValuesType value) {

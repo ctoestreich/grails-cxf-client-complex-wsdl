@@ -71,7 +71,7 @@ public class CompoundRequest {
     @XmlElement(name = "OptionalInputs", namespace = "urn:oasis:names:tc:dss:1.0:core:schema")
     protected OptionalInputs optionalInputs;
     @XmlElement(name = "Requests", required = true)
-    protected Requests requests;
+    protected CompoundRequest.Requests requests;
     @XmlAttribute(name = "RequestID")
     protected String requestID;
     @XmlAttribute(name = "Profile")
@@ -83,7 +83,7 @@ public class CompoundRequest {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public OptionalInputs getOptionalInputs() {
@@ -95,7 +95,7 @@ public class CompoundRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public void setOptionalInputs(OptionalInputs value) {
@@ -107,10 +107,10 @@ public class CompoundRequest {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundRequest.Requests }
+     *     {@link CompoundRequest.Requests }
      *     
      */
-    public Requests getRequests() {
+    public CompoundRequest.Requests getRequests() {
         return requests;
     }
 
@@ -119,10 +119,10 @@ public class CompoundRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundRequest.Requests }
+     *     {@link CompoundRequest.Requests }
      *     
      */
-    public void setRequests(Requests value) {
+    public void setRequests(CompoundRequest.Requests value) {
         this.requests = value;
     }
 
@@ -209,13 +209,13 @@ public class CompoundRequest {
     public static class Requests {
 
         @XmlElementRefs({
-            @XmlElementRef(name = "SignRequest", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignRequest.class),
-            @XmlElementRef(name = "ArchiveVerifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveModifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
             @XmlElementRef(name = "ArchiveDeleteRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
             @XmlElementRef(name = "ArchiveRetrievalRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveSubmitRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitRequest.class),
-            @XmlElementRef(name = "VerifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyRequest.class)
+            @XmlElementRef(name = "ArchiveVerifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "ArchiveModifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "SignRequest", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignRequest.class),
+            @XmlElementRef(name = "VerifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyRequest.class),
+            @XmlElementRef(name = "ArchiveSubmitRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitRequest.class)
         })
         protected List<Object> verifyRequestOrSignRequestOrArchiveSubmitRequest;
 
@@ -237,13 +237,13 @@ public class CompoundRequest {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link oasis.names.tc.dss._1_0.core.schema.SignRequest }
-         * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}
-         * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}
-         * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}
-         * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}
-         * {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveSubmitRequest }
-         * {@link oasis.names.tc.dss._1_0.core.schema.VerifyRequest }
+         * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
+         * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
+         * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
+         * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
+         * {@link SignRequest }
+         * {@link VerifyRequest }
+         * {@link ArchiveSubmitRequest }
          * 
          * 
          */

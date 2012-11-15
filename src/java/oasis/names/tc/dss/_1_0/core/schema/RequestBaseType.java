@@ -58,7 +58,7 @@ public class RequestBaseType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public OptionalInputs getOptionalInputs() {
@@ -70,7 +70,7 @@ public class RequestBaseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public void setOptionalInputs(OptionalInputs value) {
@@ -82,7 +82,7 @@ public class RequestBaseType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.InputDocuments }
+     *     {@link InputDocuments }
      *     
      */
     public InputDocuments getInputDocuments() {
@@ -94,7 +94,7 @@ public class RequestBaseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.InputDocuments }
+     *     {@link InputDocuments }
      *     
      */
     public void setInputDocuments(InputDocuments value) {

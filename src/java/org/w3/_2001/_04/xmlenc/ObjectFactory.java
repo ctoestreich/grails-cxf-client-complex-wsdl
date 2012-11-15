@@ -26,8 +26,6 @@ import org.w3._2000._09.xmldsig.KeyInfoType;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ReferenceListDataReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "DataReference");
-    private final static QName _ReferenceListKeyReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeyReference");
     private final static QName _EncryptionProperty_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptionProperty");
     private final static QName _EncryptedKey_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptedKey");
     private final static QName _CipherData_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "CipherData");
@@ -35,6 +33,8 @@ public class ObjectFactory {
     private final static QName _EncryptedData_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptedData");
     private final static QName _EncryptionProperties_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptionProperties");
     private final static QName _AgreementMethod_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "AgreementMethod");
+    private final static QName _ReferenceListDataReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "DataReference");
+    private final static QName _ReferenceListKeyReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeyReference");
     private final static QName _AgreementMethodTypeOriginatorKeyInfo_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "OriginatorKeyInfo");
     private final static QName _AgreementMethodTypeRecipientKeyInfo_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "RecipientKeyInfo");
     private final static QName _AgreementMethodTypeKANonce_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KA-Nonce");
@@ -49,83 +49,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReferenceList }
-     * 
-     */
-    public ReferenceList createReferenceList() {
-        return new ReferenceList();
-    }
-
-    /**
-     * Create an instance of {@link ReferenceType }
-     * 
-     */
-    public ReferenceType createReferenceType() {
-        return new ReferenceType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.AgreementMethodType }
-     * 
-     */
-    public AgreementMethodType createAgreementMethodType() {
-        return new AgreementMethodType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.CipherReferenceType }
-     * 
-     */
-    public CipherReferenceType createCipherReferenceType() {
-        return new CipherReferenceType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.EncryptedKeyType }
-     * 
-     */
-    public EncryptedKeyType createEncryptedKeyType() {
-        return new EncryptedKeyType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.CipherDataType }
-     * 
-     */
-    public CipherDataType createCipherDataType() {
-        return new CipherDataType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.EncryptionPropertyType }
-     * 
-     */
-    public EncryptionPropertyType createEncryptionPropertyType() {
-        return new EncryptionPropertyType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.EncryptionPropertiesType }
-     * 
-     */
-    public EncryptionPropertiesType createEncryptionPropertiesType() {
-        return new EncryptionPropertiesType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.EncryptedDataType }
-     * 
-     */
-    public EncryptedDataType createEncryptedDataType() {
-        return new EncryptedDataType();
-    }
-
-    /**
-     * Create an instance of {@link org.w3._2001._04.xmlenc.EncryptionMethodType }
+     * Create an instance of {@link EncryptionMethodType }
      * 
      */
     public EncryptionMethodType createEncryptionMethodType() {
         return new EncryptionMethodType();
+    }
+
+    /**
+     * Create an instance of {@link AgreementMethodType }
+     * 
+     */
+    public AgreementMethodType createAgreementMethodType() {
+        return new AgreementMethodType();
     }
 
     /**
@@ -137,25 +73,71 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}}
+     * Create an instance of {@link EncryptedKeyType }
      * 
      */
-    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "DataReference", scope = ReferenceList.class)
-    public JAXBElement<ReferenceType> createReferenceListDataReference(ReferenceType value) {
-        return new JAXBElement<ReferenceType>(_ReferenceListDataReference_QNAME, ReferenceType.class, ReferenceList.class, value);
+    public EncryptedKeyType createEncryptedKeyType() {
+        return new EncryptedKeyType();
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}}
+     * Create an instance of {@link ReferenceList }
      * 
      */
-    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KeyReference", scope = ReferenceList.class)
-    public JAXBElement<ReferenceType> createReferenceListKeyReference(ReferenceType value) {
-        return new JAXBElement<ReferenceType>(_ReferenceListKeyReference_QNAME, ReferenceType.class, ReferenceList.class, value);
+    public ReferenceList createReferenceList() {
+        return new ReferenceList();
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2001._04.xmlenc.EncryptionPropertyType }{@code >}}
+     * Create an instance of {@link EncryptionPropertiesType }
+     * 
+     */
+    public EncryptionPropertiesType createEncryptionPropertiesType() {
+        return new EncryptionPropertiesType();
+    }
+
+    /**
+     * Create an instance of {@link EncryptionPropertyType }
+     * 
+     */
+    public EncryptionPropertyType createEncryptionPropertyType() {
+        return new EncryptionPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link ReferenceType }
+     * 
+     */
+    public ReferenceType createReferenceType() {
+        return new ReferenceType();
+    }
+
+    /**
+     * Create an instance of {@link EncryptedDataType }
+     * 
+     */
+    public EncryptedDataType createEncryptedDataType() {
+        return new EncryptedDataType();
+    }
+
+    /**
+     * Create an instance of {@link CipherReferenceType }
+     * 
+     */
+    public CipherReferenceType createCipherReferenceType() {
+        return new CipherReferenceType();
+    }
+
+    /**
+     * Create an instance of {@link CipherDataType }
+     * 
+     */
+    public CipherDataType createCipherDataType() {
+        return new CipherDataType();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncryptionPropertyType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "EncryptionProperty")
@@ -164,7 +146,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2001._04.xmlenc.EncryptedKeyType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncryptedKeyType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "EncryptedKey")
@@ -173,7 +155,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2001._04.xmlenc.CipherDataType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CipherDataType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "CipherData")
@@ -182,7 +164,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2001._04.xmlenc.CipherReferenceType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CipherReferenceType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "CipherReference")
@@ -191,7 +173,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2001._04.xmlenc.EncryptedDataType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncryptedDataType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "EncryptedData")
@@ -200,7 +182,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2001._04.xmlenc.EncryptionPropertiesType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncryptionPropertiesType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "EncryptionProperties")
@@ -209,7 +191,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2001._04.xmlenc.AgreementMethodType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AgreementMethodType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "AgreementMethod")
@@ -218,7 +200,25 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2000._09.xmldsig.KeyInfoType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReferenceType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "DataReference", scope = ReferenceList.class)
+    public JAXBElement<ReferenceType> createReferenceListDataReference(ReferenceType value) {
+        return new JAXBElement<ReferenceType>(_ReferenceListDataReference_QNAME, ReferenceType.class, ReferenceList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReferenceType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KeyReference", scope = ReferenceList.class)
+    public JAXBElement<ReferenceType> createReferenceListKeyReference(ReferenceType value) {
+        return new JAXBElement<ReferenceType>(_ReferenceListKeyReference_QNAME, ReferenceType.class, ReferenceList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link KeyInfoType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "OriginatorKeyInfo", scope = AgreementMethodType.class)
@@ -227,7 +227,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2000._09.xmldsig.KeyInfoType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link KeyInfoType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "RecipientKeyInfo", scope = AgreementMethodType.class)
@@ -236,7 +236,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KA-Nonce", scope = AgreementMethodType.class)
@@ -245,7 +245,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link java.math.BigInteger }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KeySize", scope = EncryptionMethodType.class)
@@ -254,7 +254,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "OAEPparams", scope = EncryptionMethodType.class)

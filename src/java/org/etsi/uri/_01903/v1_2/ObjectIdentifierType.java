@@ -53,7 +53,7 @@ public class ObjectIdentifierType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.IdentifierType }
+     *     {@link IdentifierType }
      *     
      */
     public IdentifierType getIdentifier() {
@@ -65,7 +65,7 @@ public class ObjectIdentifierType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.IdentifierType }
+     *     {@link IdentifierType }
      *     
      */
     public void setIdentifier(IdentifierType value) {
@@ -101,7 +101,7 @@ public class ObjectIdentifierType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.DocumentationReferencesType }
+     *     {@link DocumentationReferencesType }
      *     
      */
     public DocumentationReferencesType getDocumentationReferences() {
@@ -113,7 +113,7 @@ public class ObjectIdentifierType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.DocumentationReferencesType }
+     *     {@link DocumentationReferencesType }
      *     
      */
     public void setDocumentationReferences(DocumentationReferencesType value) {

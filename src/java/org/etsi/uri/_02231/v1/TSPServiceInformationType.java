@@ -51,7 +51,7 @@ public class TSPServiceInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.ServiceStatusInformationType }
+     *     {@link ServiceStatusInformationType }
      *     
      */
     public ServiceStatusInformationType getServiceStatusInformation() {
@@ -63,7 +63,7 @@ public class TSPServiceInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.ServiceStatusInformationType }
+     *     {@link ServiceStatusInformationType }
      *     
      */
     public void setServiceStatusInformation(ServiceStatusInformationType value) {

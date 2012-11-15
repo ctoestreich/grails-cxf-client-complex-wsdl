@@ -57,7 +57,7 @@ public class SchemeInfo {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public InternationalNamesType getSchemeName() {
@@ -69,7 +69,7 @@ public class SchemeInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public void setSchemeName(InternationalNamesType value) {
@@ -81,7 +81,7 @@ public class SchemeInfo {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getTSLSequenceNumber() {
@@ -93,7 +93,7 @@ public class SchemeInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setTSLSequenceNumber(BigInteger value) {
@@ -105,7 +105,7 @@ public class SchemeInfo {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getTSLDigestAlgorithm() {
@@ -117,7 +117,7 @@ public class SchemeInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public void setTSLDigestAlgorithm(ObjectIdentifierType value) {
@@ -143,7 +143,7 @@ public class SchemeInfo {
      *     byte[]
      */
     public void setTSLDigestValue(byte[] value) {
-        this.tslDigestValue = value;
+        this.tslDigestValue = ((byte[]) value);
     }
 
 }

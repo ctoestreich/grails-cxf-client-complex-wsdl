@@ -65,11 +65,11 @@ public class AssertionType {
     @XmlElement(name = "Advice")
     protected AdviceType advice;
     @XmlElements({
-        @XmlElement(name = "Statement"),
-        @XmlElement(name = "SubjectStatement", type = SubjectStatementAbstractType.class),
+        @XmlElement(name = "AttributeStatement", type = AttributeStatementType.class),
         @XmlElement(name = "AuthenticationStatement", type = AuthenticationStatementType.class),
-        @XmlElement(name = "AuthorizationDecisionStatement", type = AuthorizationDecisionStatementType.class),
-        @XmlElement(name = "AttributeStatement", type = AttributeStatementType.class)
+        @XmlElement(name = "SubjectStatement", type = SubjectStatementAbstractType.class),
+        @XmlElement(name = "Statement"),
+        @XmlElement(name = "AuthorizationDecisionStatement", type = AuthorizationDecisionStatementType.class)
     })
     protected List<StatementAbstractType> statementOrSubjectStatementOrAuthenticationStatement;
     @XmlElement(name = "Signature", namespace = "http://www.w3.org/2000/09/xmldsig#")
@@ -118,7 +118,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.saml._1_0.assertion.AdviceType }
+     *     {@link AdviceType }
      *     
      */
     public AdviceType getAdvice() {
@@ -130,7 +130,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.saml._1_0.assertion.AdviceType }
+     *     {@link AdviceType }
      *     
      */
     public void setAdvice(AdviceType value) {
@@ -155,11 +155,11 @@ public class AssertionType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link StatementAbstractType }
-     * {@link SubjectStatementAbstractType }
-     * {@link AuthenticationStatementType }
-     * {@link AuthorizationDecisionStatementType }
      * {@link AttributeStatementType }
+     * {@link AuthenticationStatementType }
+     * {@link SubjectStatementAbstractType }
+     * {@link StatementAbstractType }
+     * {@link AuthorizationDecisionStatementType }
      * 
      * 
      */
@@ -175,7 +175,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public SignatureType getSignature() {
@@ -187,7 +187,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public void setSignature(SignatureType value) {
@@ -199,7 +199,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getMajorVersion() {
@@ -211,7 +211,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setMajorVersion(BigInteger value) {
@@ -223,7 +223,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getMinorVersion() {
@@ -235,7 +235,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setMinorVersion(BigInteger value) {
@@ -295,7 +295,7 @@ public class AssertionType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getIssueInstant() {
@@ -307,7 +307,7 @@ public class AssertionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setIssueInstant(XMLGregorianCalendar value) {

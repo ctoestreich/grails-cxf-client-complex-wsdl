@@ -81,7 +81,7 @@ public class ProxyRestrictionType
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getCount() {
@@ -93,7 +93,7 @@ public class ProxyRestrictionType
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setCount(BigInteger value) {

@@ -47,7 +47,7 @@ public class TransformedDocument {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.DocumentType }
+     *     {@link DocumentType }
      *     
      */
     public DocumentType getDocument() {
@@ -59,7 +59,7 @@ public class TransformedDocument {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.DocumentType }
+     *     {@link DocumentType }
      *     
      */
     public void setDocument(DocumentType value) {
@@ -71,7 +71,7 @@ public class TransformedDocument {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getWhichReference() {
@@ -83,7 +83,7 @@ public class TransformedDocument {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setWhichReference(BigInteger value) {

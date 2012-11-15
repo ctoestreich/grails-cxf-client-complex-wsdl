@@ -59,7 +59,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getSigningTime() {
@@ -71,7 +71,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setSigningTime(XMLGregorianCalendar value) {
@@ -83,7 +83,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CertIDListType }
+     *     {@link CertIDListType }
      *     
      */
     public CertIDListType getSigningCertificate() {
@@ -95,7 +95,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CertIDListType }
+     *     {@link CertIDListType }
      *     
      */
     public void setSigningCertificate(CertIDListType value) {
@@ -107,7 +107,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.SignaturePolicyIdentifierType }
+     *     {@link SignaturePolicyIdentifierType }
      *     
      */
     public SignaturePolicyIdentifierType getSignaturePolicyIdentifier() {
@@ -119,7 +119,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.SignaturePolicyIdentifierType }
+     *     {@link SignaturePolicyIdentifierType }
      *     
      */
     public void setSignaturePolicyIdentifier(SignaturePolicyIdentifierType value) {
@@ -131,7 +131,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.SignatureProductionPlaceType }
+     *     {@link SignatureProductionPlaceType }
      *     
      */
     public SignatureProductionPlaceType getSignatureProductionPlace() {
@@ -143,7 +143,7 @@ public class SignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.SignatureProductionPlaceType }
+     *     {@link SignatureProductionPlaceType }
      *     
      */
     public void setSignatureProductionPlace(SignatureProductionPlaceType value) {

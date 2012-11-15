@@ -37,11 +37,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link X509CertificateInfo }
+     * 
+     */
+    public X509CertificateInfo createX509CertificateInfo() {
+        return new X509CertificateInfo();
+    }
+
+    /**
+     * Create an instance of {@link CounterSignature }
+     * 
+     */
+    public CounterSignature createCounterSignature() {
+        return new CounterSignature();
+    }
+
+    /**
+     * Create an instance of {@link BinaryAttributeValueType }
+     * 
+     */
+    public BinaryAttributeValueType createBinaryAttributeValueType() {
+        return new BinaryAttributeValueType();
+    }
+
+    /**
      * Create an instance of {@link ReturnSignedResponse }
      * 
      */
     public ReturnSignedResponse createReturnSignedResponse() {
         return new ReturnSignedResponse();
+    }
+
+    /**
+     * Create an instance of {@link SignaturePolicyInfo }
+     * 
+     */
+    public SignaturePolicyInfo createSignaturePolicyInfo() {
+        return new SignaturePolicyInfo();
     }
 
     /**
@@ -61,38 +93,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SignaturePolicyInfo }
-     * 
-     */
-    public SignaturePolicyInfo createSignaturePolicyInfo() {
-        return new SignaturePolicyInfo();
-    }
-
-    /**
-     * Create an instance of {@link ReturnSignedResponse.RequiredCommitments }
-     * 
-     */
-    public ReturnSignedResponse.RequiredCommitments createReturnSignedResponseRequiredCommitments() {
-        return new ReturnSignedResponse.RequiredCommitments();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.xss.ArchiveInfo }
-     * 
-     */
-    public ArchiveInfo createArchiveInfo() {
-        return new ArchiveInfo();
-    }
-
-    /**
-     * Create an instance of {@link SchemeInfo }
-     * 
-     */
-    public SchemeInfo createSchemeInfo() {
-        return new SchemeInfo();
-    }
-
-    /**
      * Create an instance of {@link ReturnX509CertificateInfo }
      * 
      */
@@ -109,11 +109,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link X509CertificateInfo }
+     * Create an instance of {@link SignatureInfo }
      * 
      */
-    public X509CertificateInfo createX509CertificateInfo() {
-        return new X509CertificateInfo();
+    public SignatureInfo createSignatureInfo() {
+        return new SignatureInfo();
+    }
+
+    /**
+     * Create an instance of {@link ReturnSignedResponse.RequiredCommitments }
+     * 
+     */
+    public ReturnSignedResponse.RequiredCommitments createReturnSignedResponseRequiredCommitments() {
+        return new ReturnSignedResponse.RequiredCommitments();
+    }
+
+    /**
+     * Create an instance of {@link ArchiveInfo }
+     * 
+     */
+    public ArchiveInfo createArchiveInfo() {
+        return new ArchiveInfo();
     }
 
     /**
@@ -125,31 +141,15 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SignatureInfo }
+     * Create an instance of {@link SchemeInfo }
      * 
      */
-    public SignatureInfo createSignatureInfo() {
-        return new SignatureInfo();
+    public SchemeInfo createSchemeInfo() {
+        return new SchemeInfo();
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.xss.CounterSignature }
-     * 
-     */
-    public CounterSignature createCounterSignature() {
-        return new CounterSignature();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.xss.BinaryAttributeValueType }
-     * 
-     */
-    public BinaryAttributeValueType createBinaryAttributeValueType() {
-        return new BinaryAttributeValueType();
-    }
-
-    /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", name = "RequireQualifiedCertificate")
@@ -158,7 +158,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", name = "ParallelSignature")
@@ -167,7 +167,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.etsi.uri._2038.v1_1.CertificateTrustTreesType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CertificateTrustTreesType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", name = "X509CertificateValidationOptions")

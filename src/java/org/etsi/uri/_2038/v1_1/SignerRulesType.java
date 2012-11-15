@@ -84,7 +84,7 @@ public class SignerRulesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.QPropertiesListType }
+     *     {@link QPropertiesListType }
      *     
      */
     public QPropertiesListType getMandatedSignedQProperties() {
@@ -96,7 +96,7 @@ public class SignerRulesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.QPropertiesListType }
+     *     {@link QPropertiesListType }
      *     
      */
     public void setMandatedSignedQProperties(QPropertiesListType value) {
@@ -108,7 +108,7 @@ public class SignerRulesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.QPropertiesListType }
+     *     {@link QPropertiesListType }
      *     
      */
     public QPropertiesListType getMandatedUnsignedQProperties() {
@@ -120,7 +120,7 @@ public class SignerRulesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.QPropertiesListType }
+     *     {@link QPropertiesListType }
      *     
      */
     public void setMandatedUnsignedQProperties(QPropertiesListType value) {
@@ -132,7 +132,7 @@ public class SignerRulesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateReqType }
+     *     {@link CertificateReqType }
      *     
      */
     public CertificateReqType getMandatedCertificateRef() {
@@ -144,7 +144,7 @@ public class SignerRulesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateReqType }
+     *     {@link CertificateReqType }
      *     
      */
     public void setMandatedCertificateRef(CertificateReqType value) {
@@ -156,7 +156,7 @@ public class SignerRulesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateReqType }
+     *     {@link CertificateReqType }
      *     
      */
     public CertificateReqType getMandatedCertificateInfo() {
@@ -168,7 +168,7 @@ public class SignerRulesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CertificateReqType }
+     *     {@link CertificateReqType }
      *     
      */
     public void setMandatedCertificateInfo(CertificateReqType value) {

@@ -45,15 +45,23 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }
+     * Create an instance of {@link ArchiveSubmitResponse }
      * 
      */
-    public ArchiveIdentifierRequest createArchiveIdentifierRequest() {
-        return new ArchiveIdentifierRequest();
+    public ArchiveSubmitResponse createArchiveSubmitResponse() {
+        return new ArchiveSubmitResponse();
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveRetrievalResponse }
+     * Create an instance of {@link ArchiveSubmitRequest }
+     * 
+     */
+    public ArchiveSubmitRequest createArchiveSubmitRequest() {
+        return new ArchiveSubmitRequest();
+    }
+
+    /**
+     * Create an instance of {@link ArchiveRetrievalResponse }
      * 
      */
     public ArchiveRetrievalResponse createArchiveRetrievalResponse() {
@@ -61,19 +69,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveDeleteResponse }
+     * Create an instance of {@link ArchiveDeleteResponse }
      * 
      */
     public ArchiveDeleteResponse createArchiveDeleteResponse() {
         return new ArchiveDeleteResponse();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveSubmitResponse }
-     * 
-     */
-    public ArchiveSubmitResponse createArchiveSubmitResponse() {
-        return new ArchiveSubmitResponse();
     }
 
     /**
@@ -85,15 +85,15 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveSubmitRequest }
+     * Create an instance of {@link ArchiveIdentifierRequest }
      * 
      */
-    public ArchiveSubmitRequest createArchiveSubmitRequest() {
-        return new ArchiveSubmitRequest();
+    public ArchiveIdentifierRequest createArchiveIdentifierRequest() {
+        return new ArchiveIdentifierRequest();
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObjectIdentifierType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchivePolicy")
@@ -102,7 +102,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchiveMode")
@@ -111,7 +111,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.ResponseBaseType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResponseBaseType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchiveVerifyResponse")
@@ -120,7 +120,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.ResponseBaseType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResponseBaseType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchiveModifyResponse")
@@ -129,7 +129,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link javax.xml.datatype.Duration }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Duration }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "RetentionPeriod")
@@ -138,7 +138,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchiveRetrievalRequest")
@@ -147,7 +147,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchiveDeleteRequest")
@@ -156,7 +156,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchiveModifyRequest")
@@ -165,7 +165,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.profiles.archive.ArchiveIdentifierRequest }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", name = "ArchiveVerifyRequest")

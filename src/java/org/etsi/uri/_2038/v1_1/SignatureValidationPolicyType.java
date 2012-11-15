@@ -76,7 +76,7 @@ public class SignatureValidationPolicyType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CommonRulesType }
+     *     {@link CommonRulesType }
      *     
      */
     public CommonRulesType getCommonRules() {
@@ -88,7 +88,7 @@ public class SignatureValidationPolicyType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CommonRulesType }
+     *     {@link CommonRulesType }
      *     
      */
     public void setCommonRules(CommonRulesType value) {
@@ -100,7 +100,7 @@ public class SignatureValidationPolicyType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CommitmentRulesListType }
+     *     {@link CommitmentRulesListType }
      *     
      */
     public CommitmentRulesListType getCommitmentRules() {
@@ -112,7 +112,7 @@ public class SignatureValidationPolicyType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CommitmentRulesListType }
+     *     {@link CommitmentRulesListType }
      *     
      */
     public void setCommitmentRules(CommitmentRulesListType value) {

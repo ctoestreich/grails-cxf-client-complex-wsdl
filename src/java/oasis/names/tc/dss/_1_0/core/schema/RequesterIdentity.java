@@ -71,7 +71,7 @@ public class RequesterIdentity {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public AnyType getSupportingInfo() {
@@ -83,7 +83,7 @@ public class RequesterIdentity {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public void setSupportingInfo(AnyType value) {

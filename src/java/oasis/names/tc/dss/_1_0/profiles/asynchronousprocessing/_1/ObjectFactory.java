@@ -42,7 +42,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing:1.0", name = "ResponseID")

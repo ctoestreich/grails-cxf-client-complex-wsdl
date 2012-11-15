@@ -43,8 +43,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class CertificateValuesType {
 
     @XmlElements({
-        @XmlElement(name = "EncapsulatedX509Certificate", type = EncapsulatedPKIDataType.class),
-        @XmlElement(name = "OtherCertificate", type = AnyType.class)
+        @XmlElement(name = "OtherCertificate", type = AnyType.class),
+        @XmlElement(name = "EncapsulatedX509Certificate", type = EncapsulatedPKIDataType.class)
     })
     protected List<Object> encapsulatedX509CertificateOrOtherCertificate;
     @XmlAttribute(name = "Id")
@@ -71,8 +71,8 @@ public class CertificateValuesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link AnyType }
      * {@link EncapsulatedPKIDataType }
-     * {@link org.etsi.uri._01903.v1_2.AnyType }
      * 
      * 
      */

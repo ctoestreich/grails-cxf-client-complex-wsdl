@@ -84,7 +84,7 @@ public class SignaturePolicyInfo {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getSignaturePolicyIdentifier() {
@@ -96,7 +96,7 @@ public class SignaturePolicyInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public void setSignaturePolicyIdentifier(ObjectIdentifierType value) {
@@ -108,7 +108,7 @@ public class SignaturePolicyInfo {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public ObjectIdentifierType getSignaturePolicyDigestAlgorithm() {
@@ -120,7 +120,7 @@ public class SignaturePolicyInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.ObjectIdentifierType }
+     *     {@link ObjectIdentifierType }
      *     
      */
     public void setSignaturePolicyDigestAlgorithm(ObjectIdentifierType value) {
@@ -146,7 +146,7 @@ public class SignaturePolicyInfo {
      *     byte[]
      */
     public void setSignaturePolicyDigestValue(byte[] value) {
-        this.signaturePolicyDigestValue = value;
+        this.signaturePolicyDigestValue = ((byte[]) value);
     }
 
     /**
@@ -154,7 +154,7 @@ public class SignaturePolicyInfo {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.TransformsType }
+     *     {@link TransformsType }
      *     
      */
     public TransformsType getTransforms() {
@@ -166,7 +166,7 @@ public class SignaturePolicyInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.TransformsType }
+     *     {@link TransformsType }
      *     
      */
     public void setTransforms(TransformsType value) {

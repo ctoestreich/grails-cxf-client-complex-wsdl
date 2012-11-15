@@ -81,7 +81,7 @@ public class TimeStampType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.IncludeType }
+     * {@link IncludeType }
      * 
      * 
      */
@@ -121,7 +121,7 @@ public class TimeStampType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.EncapsulatedPKIDataType }
+     *     {@link EncapsulatedPKIDataType }
      *     
      */
     public EncapsulatedPKIDataType getEncapsulatedTimeStamp() {
@@ -133,7 +133,7 @@ public class TimeStampType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.EncapsulatedPKIDataType }
+     *     {@link EncapsulatedPKIDataType }
      *     
      */
     public void setEncapsulatedTimeStamp(EncapsulatedPKIDataType value) {
@@ -145,7 +145,7 @@ public class TimeStampType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.AnyType }
+     *     {@link AnyType }
      *     
      */
     public AnyType getXMLTimeStamp() {
@@ -157,7 +157,7 @@ public class TimeStampType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.AnyType }
+     *     {@link AnyType }
      *     
      */
     public void setXMLTimeStamp(AnyType value) {

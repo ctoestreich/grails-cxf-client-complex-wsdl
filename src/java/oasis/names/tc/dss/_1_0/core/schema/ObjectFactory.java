@@ -56,107 +56,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SignatureObjectType }
+     * Create an instance of {@link Timestamp }
      * 
      */
-    public SignatureObjectType createSignatureObjectType() {
-        return new SignatureObjectType();
+    public Timestamp createTimestamp() {
+        return new Timestamp();
     }
 
     /**
-     * Create an instance of {@link ResponseBaseType }
+     * Create an instance of {@link KeySelector }
      * 
      */
-    public ResponseBaseType createResponseBaseType() {
-        return new ResponseBaseType();
-    }
-
-    /**
-     * Create an instance of {@link Result }
-     * 
-     */
-    public Result createResult() {
-        return new Result();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.InternationalStringType }
-     * 
-     */
-    public InternationalStringType createInternationalStringType() {
-        return new InternationalStringType();
-    }
-
-    /**
-     * Create an instance of {@link OptionalOutputs }
-     * 
-     */
-    public OptionalOutputs createOptionalOutputs() {
-        return new OptionalOutputs();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.DocumentWithSignature }
-     * 
-     */
-    public DocumentWithSignature createDocumentWithSignature() {
-        return new DocumentWithSignature();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.DocumentType }
-     * 
-     */
-    public DocumentType createDocumentType() {
-        return new DocumentType();
-    }
-
-    /**
-     * Create an instance of {@link VerifyManifestResultsType }
-     * 
-     */
-    public VerifyManifestResultsType createVerifyManifestResultsType() {
-        return new VerifyManifestResultsType();
-    }
-
-    /**
-     * Create an instance of {@link ProcessingDetails }
-     * 
-     */
-    public ProcessingDetails createProcessingDetails() {
-        return new ProcessingDetails();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.DetailType }
-     * 
-     */
-    public DetailType createDetailType() {
-        return new DetailType();
-    }
-
-    /**
-     * Create an instance of {@link SigningTime }
-     * 
-     */
-    public SigningTime createSigningTime() {
-        return new SigningTime();
-    }
-
-    /**
-     * Create an instance of {@link UpdatedSignature }
-     * 
-     */
-    public UpdatedSignature createUpdatedSignature() {
-        return new UpdatedSignature();
-    }
-
-    /**
-     * Create an instance of {@link TransformedDocument }
-     * 
-     */
-    public TransformedDocument createTransformedDocument() {
-        return new TransformedDocument();
+    public KeySelector createKeySelector() {
+        return new KeySelector();
     }
 
     /**
@@ -168,131 +80,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.ClaimedIdentity }
+     * Create an instance of {@link RequestBaseType }
      * 
      */
-    public ClaimedIdentity createClaimedIdentity() {
-        return new ClaimedIdentity();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
-     * 
-     */
-    public AnyType createAnyType() {
-        return new AnyType();
-    }
-
-    /**
-     * Create an instance of {@link SchemasType }
-     * 
-     */
-    public SchemasType createSchemasType() {
-        return new SchemasType();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.AddTimestamp }
-     * 
-     */
-    public AddTimestamp createAddTimestamp() {
-        return new AddTimestamp();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.IntendedAudience }
-     * 
-     */
-    public IntendedAudience createIntendedAudience() {
-        return new IntendedAudience();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.KeySelector }
-     * 
-     */
-    public KeySelector createKeySelector() {
-        return new KeySelector();
-    }
-
-    /**
-     * Create an instance of {@link Properties }
-     * 
-     */
-    public Properties createProperties() {
-        return new Properties();
-    }
-
-    /**
-     * Create an instance of {@link PropertiesType }
-     * 
-     */
-    public PropertiesType createPropertiesType() {
-        return new PropertiesType();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.IncludeObject }
-     * 
-     */
-    public IncludeObject createIncludeObject() {
-        return new IncludeObject();
-    }
-
-    /**
-     * Create an instance of {@link SignaturePlacement }
-     * 
-     */
-    public SignaturePlacement createSignaturePlacement() {
-        return new SignaturePlacement();
-    }
-
-    /**
-     * Create an instance of {@link SignedReferences }
-     * 
-     */
-    public SignedReferences createSignedReferences() {
-        return new SignedReferences();
-    }
-
-    /**
-     * Create an instance of {@link SignedReference }
-     * 
-     */
-    public SignedReference createSignedReference() {
-        return new SignedReference();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.AdditionalKeyInfo }
-     * 
-     */
-    public AdditionalKeyInfo createAdditionalKeyInfo() {
-        return new AdditionalKeyInfo();
-    }
-
-    /**
-     * Create an instance of {@link ReturnUpdatedSignature }
-     * 
-     */
-    public ReturnUpdatedSignature createReturnUpdatedSignature() {
-        return new ReturnUpdatedSignature();
-    }
-
-    /**
-     * Create an instance of {@link ReturnTransformedDocument }
-     * 
-     */
-    public ReturnTransformedDocument createReturnTransformedDocument() {
-        return new ReturnTransformedDocument();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.InputDocuments }
-     * 
-     */
-    public InputDocuments createInputDocuments() {
-        return new InputDocuments();
+    public RequestBaseType createRequestBaseType() {
+        return new RequestBaseType();
     }
 
     /**
@@ -304,35 +96,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.Base64Data }
+     * Create an instance of {@link TstInfo }
      * 
      */
-    public Base64Data createBase64Data() {
-        return new Base64Data();
+    public TstInfo createTstInfo() {
+        return new TstInfo();
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.DocumentHash }
+     * Create an instance of {@link DocumentWithSignature }
      * 
      */
-    public DocumentHash createDocumentHash() {
-        return new DocumentHash();
-    }
-
-    /**
-     * Create an instance of {@link SignRequest }
-     * 
-     */
-    public SignRequest createSignRequest() {
-        return new SignRequest();
-    }
-
-    /**
-     * Create an instance of {@link RequestBaseType }
-     * 
-     */
-    public RequestBaseType createRequestBaseType() {
-        return new RequestBaseType();
+    public DocumentWithSignature createDocumentWithSignature() {
+        return new DocumentWithSignature();
     }
 
     /**
@@ -344,43 +120,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RequesterIdentity }
+     * Create an instance of {@link Base64Signature }
      * 
      */
-    public RequesterIdentity createRequesterIdentity() {
-        return new RequesterIdentity();
+    public Base64Signature createBase64Signature() {
+        return new Base64Signature();
     }
 
     /**
-     * Create an instance of {@link TstInfo }
+     * Create an instance of {@link VerifyManifestResultsType }
      * 
      */
-    public TstInfo createTstInfo() {
-        return new TstInfo();
+    public VerifyManifestResultsType createVerifyManifestResultsType() {
+        return new VerifyManifestResultsType();
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.ManifestResult }
+     * Create an instance of {@link ResponseBaseType }
      * 
      */
-    public ManifestResult createManifestResult() {
-        return new ManifestResult();
+    public ResponseBaseType createResponseBaseType() {
+        return new ResponseBaseType();
     }
 
     /**
-     * Create an instance of {@link VerifyResponse }
+     * Create an instance of {@link InputDocuments }
      * 
      */
-    public VerifyResponse createVerifyResponse() {
-        return new VerifyResponse();
+    public InputDocuments createInputDocuments() {
+        return new InputDocuments();
     }
 
     /**
-     * Create an instance of {@link SignResponse }
+     * Create an instance of {@link ReturnUpdatedSignature }
      * 
      */
-    public SignResponse createSignResponse() {
-        return new SignResponse();
+    public ReturnUpdatedSignature createReturnUpdatedSignature() {
+        return new ReturnUpdatedSignature();
+    }
+
+    /**
+     * Create an instance of {@link SignaturePlacement }
+     * 
+     */
+    public SignaturePlacement createSignaturePlacement() {
+        return new SignaturePlacement();
     }
 
     /**
@@ -392,35 +176,139 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link VerifyRequest }
+     * Create an instance of {@link PropertiesType }
      * 
      */
-    public VerifyRequest createVerifyRequest() {
-        return new VerifyRequest();
+    public PropertiesType createPropertiesType() {
+        return new PropertiesType();
     }
 
     /**
-     * Create an instance of {@link Timestamp }
+     * Create an instance of {@link OptionalOutputs }
      * 
      */
-    public Timestamp createTimestamp() {
-        return new Timestamp();
+    public OptionalOutputs createOptionalOutputs() {
+        return new OptionalOutputs();
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.Base64Signature }
+     * Create an instance of {@link Result }
      * 
      */
-    public Base64Signature createBase64Signature() {
-        return new Base64Signature();
+    public Result createResult() {
+        return new Result();
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.core.schema.InlineXMLType }
+     * Create an instance of {@link IncludeObject }
      * 
      */
-    public InlineXMLType createInlineXMLType() {
-        return new InlineXMLType();
+    public IncludeObject createIncludeObject() {
+        return new IncludeObject();
+    }
+
+    /**
+     * Create an instance of {@link SignRequest }
+     * 
+     */
+    public SignRequest createSignRequest() {
+        return new SignRequest();
+    }
+
+    /**
+     * Create an instance of {@link SignatureObjectType }
+     * 
+     */
+    public SignatureObjectType createSignatureObjectType() {
+        return new SignatureObjectType();
+    }
+
+    /**
+     * Create an instance of {@link ProcessingDetails }
+     * 
+     */
+    public ProcessingDetails createProcessingDetails() {
+        return new ProcessingDetails();
+    }
+
+    /**
+     * Create an instance of {@link SchemasType }
+     * 
+     */
+    public SchemasType createSchemasType() {
+        return new SchemasType();
+    }
+
+    /**
+     * Create an instance of {@link ClaimedIdentity }
+     * 
+     */
+    public ClaimedIdentity createClaimedIdentity() {
+        return new ClaimedIdentity();
+    }
+
+    /**
+     * Create an instance of {@link AdditionalKeyInfo }
+     * 
+     */
+    public AdditionalKeyInfo createAdditionalKeyInfo() {
+        return new AdditionalKeyInfo();
+    }
+
+    /**
+     * Create an instance of {@link SignedReference }
+     * 
+     */
+    public SignedReference createSignedReference() {
+        return new SignedReference();
+    }
+
+    /**
+     * Create an instance of {@link SignResponse }
+     * 
+     */
+    public SignResponse createSignResponse() {
+        return new SignResponse();
+    }
+
+    /**
+     * Create an instance of {@link DetailType }
+     * 
+     */
+    public DetailType createDetailType() {
+        return new DetailType();
+    }
+
+    /**
+     * Create an instance of {@link IntendedAudience }
+     * 
+     */
+    public IntendedAudience createIntendedAudience() {
+        return new IntendedAudience();
+    }
+
+    /**
+     * Create an instance of {@link AddTimestamp }
+     * 
+     */
+    public AddTimestamp createAddTimestamp() {
+        return new AddTimestamp();
+    }
+
+    /**
+     * Create an instance of {@link UpdatedSignature }
+     * 
+     */
+    public UpdatedSignature createUpdatedSignature() {
+        return new UpdatedSignature();
+    }
+
+    /**
+     * Create an instance of {@link RequesterIdentity }
+     * 
+     */
+    public RequesterIdentity createRequesterIdentity() {
+        return new RequesterIdentity();
     }
 
     /**
@@ -432,7 +320,119 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link Base64Data }
+     * 
+     */
+    public Base64Data createBase64Data() {
+        return new Base64Data();
+    }
+
+    /**
+     * Create an instance of {@link InlineXMLType }
+     * 
+     */
+    public InlineXMLType createInlineXMLType() {
+        return new InlineXMLType();
+    }
+
+    /**
+     * Create an instance of {@link ManifestResult }
+     * 
+     */
+    public ManifestResult createManifestResult() {
+        return new ManifestResult();
+    }
+
+    /**
+     * Create an instance of {@link SigningTime }
+     * 
+     */
+    public SigningTime createSigningTime() {
+        return new SigningTime();
+    }
+
+    /**
+     * Create an instance of {@link DocumentType }
+     * 
+     */
+    public DocumentType createDocumentType() {
+        return new DocumentType();
+    }
+
+    /**
+     * Create an instance of {@link VerifyResponse }
+     * 
+     */
+    public VerifyResponse createVerifyResponse() {
+        return new VerifyResponse();
+    }
+
+    /**
+     * Create an instance of {@link VerifyRequest }
+     * 
+     */
+    public VerifyRequest createVerifyRequest() {
+        return new VerifyRequest();
+    }
+
+    /**
+     * Create an instance of {@link TransformedDocument }
+     * 
+     */
+    public TransformedDocument createTransformedDocument() {
+        return new TransformedDocument();
+    }
+
+    /**
+     * Create an instance of {@link InternationalStringType }
+     * 
+     */
+    public InternationalStringType createInternationalStringType() {
+        return new InternationalStringType();
+    }
+
+    /**
+     * Create an instance of {@link SignedReferences }
+     * 
+     */
+    public SignedReferences createSignedReferences() {
+        return new SignedReferences();
+    }
+
+    /**
+     * Create an instance of {@link DocumentHash }
+     * 
+     */
+    public DocumentHash createDocumentHash() {
+        return new DocumentHash();
+    }
+
+    /**
+     * Create an instance of {@link ReturnTransformedDocument }
+     * 
+     */
+    public ReturnTransformedDocument createReturnTransformedDocument() {
+        return new ReturnTransformedDocument();
+    }
+
+    /**
+     * Create an instance of {@link Properties }
+     * 
+     */
+    public Properties createProperties() {
+        return new Properties();
+    }
+
+    /**
+     * Create an instance of {@link AnyType }
+     * 
+     */
+    public AnyType createAnyType() {
+        return new AnyType();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "ReturnSigningTime")
@@ -441,7 +441,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "SignatureType")
@@ -450,7 +450,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link SchemasType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SchemasType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "Schemas")
@@ -459,7 +459,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "IncludeEContent")
@@ -468,7 +468,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "AdditionalProfile")
@@ -477,7 +477,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "ReturnProcessingDetails")
@@ -486,7 +486,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.DocumentType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DocumentType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "Schema")
@@ -495,7 +495,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "VerifyManifests")
@@ -504,7 +504,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "ReturnSignerIdentity")
@@ -513,7 +513,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ResponseBaseType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResponseBaseType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "Response")
@@ -522,7 +522,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link SignatureObjectType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SignatureObjectType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "SignatureObject")
@@ -531,7 +531,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "Language")
@@ -541,7 +541,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "ReturnTimestampTime")
@@ -550,7 +550,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "ServicePolicy")
@@ -559,7 +559,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link javax.xml.datatype.XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "VerificationTime")
@@ -568,7 +568,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link NameIdentifierType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NameIdentifierType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "SignerIdentity")
@@ -577,7 +577,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link VerifyManifestResultsType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VerifyManifestResultsType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "VerifyManifestResults")
@@ -586,7 +586,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link javax.xml.datatype.XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "TimestampTime")
@@ -595,7 +595,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.dss._1_0.core.schema.DocumentType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DocumentType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "urn:oasis:names:tc:dss:1.0:core:schema", name = "Document")

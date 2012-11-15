@@ -68,7 +68,7 @@ public class SelectedCommitmentType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.CommitmentType }
+     *     {@link CommitmentType }
      *     
      */
     public CommitmentType getRecognizedCommitmentType() {
@@ -80,7 +80,7 @@ public class SelectedCommitmentType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.CommitmentType }
+     *     {@link CommitmentType }
      *     
      */
     public void setRecognizedCommitmentType(CommitmentType value) {

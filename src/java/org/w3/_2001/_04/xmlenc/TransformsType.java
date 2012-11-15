@@ -56,7 +56,7 @@ public class TransformsType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.w3._2000._09.xmldsig.TransformType }
+     * {@link TransformType }
      * 
      * 
      */

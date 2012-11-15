@@ -44,7 +44,7 @@ public class NameConstraintsType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.GeneralSubTreesListType }
+     *     {@link GeneralSubTreesListType }
      *     
      */
     public GeneralSubTreesListType getPermittedSubtrees() {
@@ -56,7 +56,7 @@ public class NameConstraintsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.GeneralSubTreesListType }
+     *     {@link GeneralSubTreesListType }
      *     
      */
     public void setPermittedSubtrees(GeneralSubTreesListType value) {
@@ -68,7 +68,7 @@ public class NameConstraintsType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.GeneralSubTreesListType }
+     *     {@link GeneralSubTreesListType }
      *     
      */
     public GeneralSubTreesListType getExcludedSubtrees() {
@@ -80,7 +80,7 @@ public class NameConstraintsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.GeneralSubTreesListType }
+     *     {@link GeneralSubTreesListType }
      *     
      */
     public void setExcludedSubtrees(GeneralSubTreesListType value) {

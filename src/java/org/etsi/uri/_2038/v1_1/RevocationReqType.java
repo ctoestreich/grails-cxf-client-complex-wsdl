@@ -43,7 +43,7 @@ public class RevocationReqType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.EnuRevReqType }
+     *     {@link EnuRevReqType }
      *     
      */
     public EnuRevReqType getEnuRevReq() {
@@ -55,7 +55,7 @@ public class RevocationReqType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.EnuRevReqType }
+     *     {@link EnuRevReqType }
      *     
      */
     public void setEnuRevReq(EnuRevReqType value) {

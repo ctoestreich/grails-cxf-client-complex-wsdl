@@ -43,7 +43,7 @@ public class PendingRequest {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public OptionalInputs getOptionalInputs() {
@@ -55,7 +55,7 @@ public class PendingRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public void setOptionalInputs(OptionalInputs value) {

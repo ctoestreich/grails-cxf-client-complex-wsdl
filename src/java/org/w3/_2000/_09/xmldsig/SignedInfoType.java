@@ -61,7 +61,7 @@ public class SignedInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.CanonicalizationMethodType }
+     *     {@link CanonicalizationMethodType }
      *     
      */
     public CanonicalizationMethodType getCanonicalizationMethod() {
@@ -73,7 +73,7 @@ public class SignedInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.CanonicalizationMethodType }
+     *     {@link CanonicalizationMethodType }
      *     
      */
     public void setCanonicalizationMethod(CanonicalizationMethodType value) {
@@ -85,7 +85,7 @@ public class SignedInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureMethodType }
+     *     {@link SignatureMethodType }
      *     
      */
     public SignatureMethodType getSignatureMethod() {
@@ -97,7 +97,7 @@ public class SignedInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureMethodType }
+     *     {@link SignatureMethodType }
      *     
      */
     public void setSignatureMethod(SignatureMethodType value) {
@@ -122,7 +122,7 @@ public class SignedInfoType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.w3._2000._09.xmldsig.ReferenceType }
+     * {@link ReferenceType }
      * 
      * 
      */

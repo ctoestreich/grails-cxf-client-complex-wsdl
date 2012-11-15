@@ -53,7 +53,7 @@ public class Timestamp {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public SignatureType getSignature() {
@@ -65,7 +65,7 @@ public class Timestamp {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.SignatureType }
+     *     {@link SignatureType }
      *     
      */
     public void setSignature(SignatureType value) {
@@ -91,7 +91,7 @@ public class Timestamp {
      *     byte[]
      */
     public void setRFC3161TimeStampToken(byte[] value) {
-        this.rfc3161TimeStampToken = value;
+        this.rfc3161TimeStampToken = ((byte[]) value);
     }
 
     /**
@@ -99,7 +99,7 @@ public class Timestamp {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public AnyType getOther() {
@@ -111,7 +111,7 @@ public class Timestamp {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.AnyType }
+     *     {@link AnyType }
      *     
      */
     public void setOther(AnyType value) {

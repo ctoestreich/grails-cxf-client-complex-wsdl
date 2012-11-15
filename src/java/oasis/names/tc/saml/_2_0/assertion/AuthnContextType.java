@@ -50,10 +50,10 @@ import javax.xml.bind.annotation.XmlType;
 public class AuthnContextType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "AuthnContextDeclRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "AuthenticatingAuthority", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
         @XmlElementRef(name = "AuthnContextDecl", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "AuthnContextClassRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
+        @XmlElementRef(name = "AuthenticatingAuthority", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "AuthnContextClassRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "AuthnContextDeclRef", namespace = "urn:oasis:names:tc:SAML:2.0:assertion", type = JAXBElement.class)
     })
     protected List<JAXBElement<?>> content;
 
@@ -63,8 +63,8 @@ public class AuthnContextType {
      * <p>
      * You are getting this "catch-all" property because of the following reason: 
      * The field name "AuthnContextDecl" is used by two different parts of a schema. See: 
-     * line 199 of file:/C:/temp/src/saml-schema-assertion-2.0.xsd
-     * line 194 of file:/C:/temp/src/saml-schema-assertion-2.0.xsd
+     * line 199 of file:/C:/projects/grails-cxf-client-complex-wsdl/docs/saml-schema-assertion-2.0.xsd
+     * line 194 of file:/C:/projects/grails-cxf-client-complex-wsdl/docs/saml-schema-assertion-2.0.xsd
      * <p>
      * To get rid of this property, apply a property customization to one 
      * of both of the following declarations to change their names: 
@@ -85,10 +85,10 @@ public class AuthnContextType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link Object }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
      * 
      */

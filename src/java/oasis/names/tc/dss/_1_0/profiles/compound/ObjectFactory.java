@@ -30,15 +30,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundRequest }
-     * 
-     */
-    public CompoundRequest createCompoundRequest() {
-        return new CompoundRequest();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundResponse }
+     * Create an instance of {@link CompoundResponse }
      * 
      */
     public CompoundResponse createCompoundResponse() {
@@ -46,19 +38,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundRequest.Requests }
-     * 
-     */
-    public CompoundRequest.Requests createCompoundRequestRequests() {
-        return new CompoundRequest.Requests();
-    }
-
-    /**
-     * Create an instance of {@link oasis.names.tc.dss._1_0.profiles.compound.CompoundResponse.Responses }
+     * Create an instance of {@link CompoundResponse.Responses }
      * 
      */
     public CompoundResponse.Responses createCompoundResponseResponses() {
         return new CompoundResponse.Responses();
+    }
+
+    /**
+     * Create an instance of {@link CompoundRequest }
+     * 
+     */
+    public CompoundRequest createCompoundRequest() {
+        return new CompoundRequest();
+    }
+
+    /**
+     * Create an instance of {@link CompoundRequest.Requests }
+     * 
+     */
+    public CompoundRequest.Requests createCompoundRequestRequests() {
+        return new CompoundRequest.Requests();
     }
 
 }

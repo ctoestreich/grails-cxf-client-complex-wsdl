@@ -69,7 +69,7 @@ public class X509IssuerSerialType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getX509SerialNumber() {
@@ -81,7 +81,7 @@ public class X509IssuerSerialType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setX509SerialNumber(BigInteger value) {

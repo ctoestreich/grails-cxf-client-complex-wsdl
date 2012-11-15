@@ -39,7 +39,7 @@ public class ReturnTransformedDocument {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getWhichReference() {
@@ -51,7 +51,7 @@ public class ReturnTransformedDocument {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setWhichReference(BigInteger value) {

@@ -44,7 +44,7 @@ public class VerifierRulesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.QPropertiesListType }
+     *     {@link QPropertiesListType }
      *     
      */
     public QPropertiesListType getMandatedQUnsignedProperties() {
@@ -56,7 +56,7 @@ public class VerifierRulesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.QPropertiesListType }
+     *     {@link QPropertiesListType }
      *     
      */
     public void setMandatedQUnsignedProperties(QPropertiesListType value) {
@@ -68,7 +68,7 @@ public class VerifierRulesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.SignPolExtensionsListType }
+     *     {@link SignPolExtensionsListType }
      *     
      */
     public SignPolExtensionsListType getSignPolicyExtensions() {
@@ -80,7 +80,7 @@ public class VerifierRulesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.SignPolExtensionsListType }
+     *     {@link SignPolExtensionsListType }
      *     
      */
     public void setSignPolicyExtensions(SignPolExtensionsListType value) {

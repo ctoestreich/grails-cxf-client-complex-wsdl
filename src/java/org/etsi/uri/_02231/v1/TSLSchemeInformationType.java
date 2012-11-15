@@ -95,7 +95,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getTSLVersionIdentifier() {
@@ -107,7 +107,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setTSLVersionIdentifier(BigInteger value) {
@@ -119,7 +119,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getTSLSequenceNumber() {
@@ -131,7 +131,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setTSLSequenceNumber(BigInteger value) {
@@ -143,7 +143,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public InternationalNamesType getSchemeName() {
@@ -155,7 +155,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     *     {@link InternationalNamesType }
      *     
      */
     public void setSchemeName(InternationalNamesType value) {
@@ -167,7 +167,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.AddressType }
+     *     {@link AddressType }
      *     
      */
     public AddressType getSchemeOperatorAddress() {
@@ -179,7 +179,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.AddressType }
+     *     {@link AddressType }
      *     
      */
     public void setSchemeOperatorAddress(AddressType value) {
@@ -215,7 +215,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getStatusDeterminationApproach() {
@@ -227,7 +227,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setStatusDeterminationApproach(BigInteger value) {
@@ -287,7 +287,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.PolicyOrLegalnoticeType }
+     *     {@link PolicyOrLegalnoticeType }
      *     
      */
     public PolicyOrLegalnoticeType getPolicyOrLegalNotice() {
@@ -299,7 +299,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.PolicyOrLegalnoticeType }
+     *     {@link PolicyOrLegalnoticeType }
      *     
      */
     public void setPolicyOrLegalNotice(PolicyOrLegalnoticeType value) {
@@ -311,7 +311,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getHistoricalInformationPeriod() {
@@ -323,7 +323,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setHistoricalInformationPeriod(BigInteger value) {
@@ -335,7 +335,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.OtherTSLPointersType }
+     *     {@link OtherTSLPointersType }
      *     
      */
     public OtherTSLPointersType getPointersToOtherTSL() {
@@ -347,7 +347,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.OtherTSLPointersType }
+     *     {@link OtherTSLPointersType }
      *     
      */
     public void setPointersToOtherTSL(OtherTSLPointersType value) {
@@ -359,7 +359,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getListIssueDateTime() {
@@ -371,7 +371,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setListIssueDateTime(XMLGregorianCalendar value) {
@@ -383,7 +383,7 @@ public class TSLSchemeInformationType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getNextUpdate() {
@@ -395,7 +395,7 @@ public class TSLSchemeInformationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setNextUpdate(XMLGregorianCalendar value) {

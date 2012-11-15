@@ -88,7 +88,7 @@ public class ResponseBaseType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalOutputs }
+     *     {@link OptionalOutputs }
      *     
      */
     public OptionalOutputs getOptionalOutputs() {
@@ -100,7 +100,7 @@ public class ResponseBaseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalOutputs }
+     *     {@link OptionalOutputs }
      *     
      */
     public void setOptionalOutputs(OptionalOutputs value) {

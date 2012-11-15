@@ -104,7 +104,7 @@ public abstract class EncryptedType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2000._09.xmldsig.KeyInfoType }
+     *     {@link KeyInfoType }
      *     
      */
     public KeyInfoType getKeyInfo() {
@@ -116,7 +116,7 @@ public abstract class EncryptedType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2000._09.xmldsig.KeyInfoType }
+     *     {@link KeyInfoType }
      *     
      */
     public void setKeyInfo(KeyInfoType value) {
@@ -128,7 +128,7 @@ public abstract class EncryptedType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3._2001._04.xmlenc.CipherDataType }
+     *     {@link CipherDataType }
      *     
      */
     public CipherDataType getCipherData() {
@@ -140,7 +140,7 @@ public abstract class EncryptedType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3._2001._04.xmlenc.CipherDataType }
+     *     {@link CipherDataType }
      *     
      */
     public void setCipherData(CipherDataType value) {

@@ -56,7 +56,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public AlgConstraintsListType getSignerAlgConstraints() {
@@ -68,7 +68,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public void setSignerAlgConstraints(AlgConstraintsListType value) {
@@ -80,7 +80,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public AlgConstraintsListType getEeCertAlgConstraints() {
@@ -92,7 +92,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public void setEeCertAlgConstraints(AlgConstraintsListType value) {
@@ -104,7 +104,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public AlgConstraintsListType getCACertAlgConstraints() {
@@ -116,7 +116,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public void setCACertAlgConstraints(AlgConstraintsListType value) {
@@ -128,7 +128,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public AlgConstraintsListType getAaCertAlgConstraints() {
@@ -140,7 +140,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public void setAaCertAlgConstraints(AlgConstraintsListType value) {
@@ -152,7 +152,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public AlgConstraintsListType getTSACertAlgConstraints() {
@@ -164,7 +164,7 @@ public class AlgorithmConstraintSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgConstraintsListType }
+     *     {@link AlgConstraintsListType }
      *     
      */
     public void setTSACertAlgConstraints(AlgConstraintsListType value) {

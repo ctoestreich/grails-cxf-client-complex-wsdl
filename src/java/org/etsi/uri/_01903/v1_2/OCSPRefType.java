@@ -44,7 +44,7 @@ public class OCSPRefType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.OCSPIdentifierType }
+     *     {@link OCSPIdentifierType }
      *     
      */
     public OCSPIdentifierType getOCSPIdentifier() {
@@ -56,7 +56,7 @@ public class OCSPRefType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.OCSPIdentifierType }
+     *     {@link OCSPIdentifierType }
      *     
      */
     public void setOCSPIdentifier(OCSPIdentifierType value) {
@@ -68,7 +68,7 @@ public class OCSPRefType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.DigestAlgAndValueType }
+     *     {@link DigestAlgAndValueType }
      *     
      */
     public DigestAlgAndValueType getDigestAlgAndValue() {
@@ -80,7 +80,7 @@ public class OCSPRefType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.DigestAlgAndValueType }
+     *     {@link DigestAlgAndValueType }
      *     
      */
     public void setDigestAlgAndValue(DigestAlgAndValueType value) {

@@ -48,7 +48,7 @@ public class TSPType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._02231.v1.TSPInformationType }
+     *     {@link TSPInformationType }
      *     
      */
     public TSPInformationType getTSPInformation() {
@@ -60,7 +60,7 @@ public class TSPType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._02231.v1.TSPInformationType }
+     *     {@link TSPInformationType }
      *     
      */
     public void setTSPInformation(TSPInformationType value) {
@@ -85,7 +85,7 @@ public class TSPType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._02231.v1.TSPServicesType }
+     * {@link TSPServicesType }
      * 
      * 
      */

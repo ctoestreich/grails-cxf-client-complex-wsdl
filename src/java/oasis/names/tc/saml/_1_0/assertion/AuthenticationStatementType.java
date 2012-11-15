@@ -136,7 +136,7 @@ public class AuthenticationStatementType
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getAuthenticationInstant() {
@@ -148,7 +148,7 @@ public class AuthenticationStatementType
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setAuthenticationInstant(XMLGregorianCalendar value) {

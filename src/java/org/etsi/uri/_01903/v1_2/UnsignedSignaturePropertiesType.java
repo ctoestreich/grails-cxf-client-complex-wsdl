@@ -97,7 +97,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.CounterSignatureType }
+     * {@link CounterSignatureType }
      * 
      * 
      */
@@ -126,7 +126,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.TimeStampType }
+     * {@link TimeStampType }
      * 
      * 
      */
@@ -142,7 +142,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteCertificateRefsType }
+     *     {@link CompleteCertificateRefsType }
      *     
      */
     public CompleteCertificateRefsType getCompleteCertificateRefs() {
@@ -154,7 +154,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteCertificateRefsType }
+     *     {@link CompleteCertificateRefsType }
      *     
      */
     public void setCompleteCertificateRefs(CompleteCertificateRefsType value) {
@@ -166,7 +166,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteRevocationRefsType }
+     *     {@link CompleteRevocationRefsType }
      *     
      */
     public CompleteRevocationRefsType getCompleteRevocationRefs() {
@@ -178,7 +178,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteRevocationRefsType }
+     *     {@link CompleteRevocationRefsType }
      *     
      */
     public void setCompleteRevocationRefs(CompleteRevocationRefsType value) {
@@ -190,7 +190,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteCertificateRefsType }
+     *     {@link CompleteCertificateRefsType }
      *     
      */
     public CompleteCertificateRefsType getAttributeCertificateRefs() {
@@ -202,7 +202,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteCertificateRefsType }
+     *     {@link CompleteCertificateRefsType }
      *     
      */
     public void setAttributeCertificateRefs(CompleteCertificateRefsType value) {
@@ -214,7 +214,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteRevocationRefsType }
+     *     {@link CompleteRevocationRefsType }
      *     
      */
     public CompleteRevocationRefsType getAttributeRevocationRefs() {
@@ -226,7 +226,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CompleteRevocationRefsType }
+     *     {@link CompleteRevocationRefsType }
      *     
      */
     public void setAttributeRevocationRefs(CompleteRevocationRefsType value) {
@@ -251,7 +251,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.TimeStampType }
+     * {@link TimeStampType }
      * 
      * 
      */
@@ -280,7 +280,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.TimeStampType }
+     * {@link TimeStampType }
      * 
      * 
      */
@@ -296,7 +296,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CertificateValuesType }
+     *     {@link CertificateValuesType }
      *     
      */
     public CertificateValuesType getCertificateValues() {
@@ -308,7 +308,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CertificateValuesType }
+     *     {@link CertificateValuesType }
      *     
      */
     public void setCertificateValues(CertificateValuesType value) {
@@ -320,7 +320,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.RevocationValuesType }
+     *     {@link RevocationValuesType }
      *     
      */
     public RevocationValuesType getRevocationValues() {
@@ -332,7 +332,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.RevocationValuesType }
+     *     {@link RevocationValuesType }
      *     
      */
     public void setRevocationValues(RevocationValuesType value) {
@@ -357,7 +357,7 @@ public class UnsignedSignaturePropertiesType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._01903.v1_2.TimeStampType }
+     * {@link TimeStampType }
      * 
      * 
      */

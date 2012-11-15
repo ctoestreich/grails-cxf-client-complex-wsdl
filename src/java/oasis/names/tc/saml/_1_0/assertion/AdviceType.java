@@ -66,9 +66,9 @@ public class AdviceType {
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Object }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link AssertionType }{@code >}
-     * {@link org.w3c.dom.Element }
+     * {@link JAXBElement }{@code <}{@link AssertionType }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link Element }
      * 
      * 
      */

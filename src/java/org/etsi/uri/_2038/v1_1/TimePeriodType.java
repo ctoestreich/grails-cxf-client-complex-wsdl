@@ -48,7 +48,7 @@ public class TimePeriodType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getNotBefore() {
@@ -60,7 +60,7 @@ public class TimePeriodType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setNotBefore(XMLGregorianCalendar value) {
@@ -72,7 +72,7 @@ public class TimePeriodType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getNotAfter() {
@@ -84,7 +84,7 @@ public class TimePeriodType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setNotAfter(XMLGregorianCalendar value) {

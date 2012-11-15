@@ -60,7 +60,7 @@ public class SubjectConfirmationType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.BaseIDAbstractType }
+     *     {@link BaseIDAbstractType }
      *     
      */
     public BaseIDAbstractType getBaseID() {
@@ -72,7 +72,7 @@ public class SubjectConfirmationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.BaseIDAbstractType }
+     *     {@link BaseIDAbstractType }
      *     
      */
     public void setBaseID(BaseIDAbstractType value) {
@@ -84,7 +84,7 @@ public class SubjectConfirmationType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.NameIDType }
+     *     {@link NameIDType }
      *     
      */
     public NameIDType getNameID() {
@@ -96,7 +96,7 @@ public class SubjectConfirmationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.NameIDType }
+     *     {@link NameIDType }
      *     
      */
     public void setNameID(NameIDType value) {
@@ -108,7 +108,7 @@ public class SubjectConfirmationType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.EncryptedElementType }
+     *     {@link EncryptedElementType }
      *     
      */
     public EncryptedElementType getEncryptedID() {
@@ -120,7 +120,7 @@ public class SubjectConfirmationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.EncryptedElementType }
+     *     {@link EncryptedElementType }
      *     
      */
     public void setEncryptedID(EncryptedElementType value) {
@@ -132,7 +132,7 @@ public class SubjectConfirmationType {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.SubjectConfirmationDataType }
+     *     {@link SubjectConfirmationDataType }
      *     
      */
     public SubjectConfirmationDataType getSubjectConfirmationData() {
@@ -144,7 +144,7 @@ public class SubjectConfirmationType {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.SubjectConfirmationDataType }
+     *     {@link SubjectConfirmationDataType }
      *     
      */
     public void setSubjectConfirmationData(SubjectConfirmationDataType value) {

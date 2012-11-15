@@ -48,7 +48,7 @@ public class UpdatedSignature {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType }
+     *     {@link SignatureObjectType }
      *     
      */
     public SignatureObjectType getSignatureObject() {
@@ -60,7 +60,7 @@ public class UpdatedSignature {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.SignatureObjectType }
+     *     {@link SignatureObjectType }
      *     
      */
     public void setSignatureObject(SignatureObjectType value) {

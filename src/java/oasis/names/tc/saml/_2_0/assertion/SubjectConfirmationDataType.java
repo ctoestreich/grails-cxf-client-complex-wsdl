@@ -94,9 +94,9 @@ public class SubjectConfirmationDataType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * {@link org.w3c.dom.Element }
      * {@link Object }
+     * {@link String }
+     * {@link Element }
      * 
      * 
      */
@@ -112,7 +112,7 @@ public class SubjectConfirmationDataType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getNotBefore() {
@@ -124,7 +124,7 @@ public class SubjectConfirmationDataType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setNotBefore(XMLGregorianCalendar value) {
@@ -136,7 +136,7 @@ public class SubjectConfirmationDataType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getNotOnOrAfter() {
@@ -148,7 +148,7 @@ public class SubjectConfirmationDataType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setNotOnOrAfter(XMLGregorianCalendar value) {

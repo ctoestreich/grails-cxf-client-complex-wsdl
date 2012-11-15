@@ -69,7 +69,7 @@ public class TstInfo {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getSerialNumber() {
@@ -81,7 +81,7 @@ public class TstInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setSerialNumber(BigInteger value) {
@@ -93,7 +93,7 @@ public class TstInfo {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getCreationTime() {
@@ -105,7 +105,7 @@ public class TstInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setCreationTime(XMLGregorianCalendar value) {
@@ -141,7 +141,7 @@ public class TstInfo {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.Duration }
+     *     {@link Duration }
      *     
      */
     public Duration getErrorBound() {
@@ -153,7 +153,7 @@ public class TstInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.Duration }
+     *     {@link Duration }
      *     
      */
     public void setErrorBound(Duration value) {

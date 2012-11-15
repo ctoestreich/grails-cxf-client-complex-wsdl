@@ -54,7 +54,7 @@ public class ArchiveIdentifierRequest {
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public OptionalInputs getOptionalInputs() {
@@ -66,7 +66,7 @@ public class ArchiveIdentifierRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.dss._1_0.core.schema.OptionalInputs }
+     *     {@link OptionalInputs }
      *     
      */
     public void setOptionalInputs(OptionalInputs value) {

@@ -44,7 +44,7 @@ public class SignerRoleType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.ClaimedRolesListType }
+     *     {@link ClaimedRolesListType }
      *     
      */
     public ClaimedRolesListType getClaimedRoles() {
@@ -56,7 +56,7 @@ public class SignerRoleType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.ClaimedRolesListType }
+     *     {@link ClaimedRolesListType }
      *     
      */
     public void setClaimedRoles(ClaimedRolesListType value) {
@@ -68,7 +68,7 @@ public class SignerRoleType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CertifiedRolesListType }
+     *     {@link CertifiedRolesListType }
      *     
      */
     public CertifiedRolesListType getCertifiedRoles() {
@@ -80,7 +80,7 @@ public class SignerRoleType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CertifiedRolesListType }
+     *     {@link CertifiedRolesListType }
      *     
      */
     public void setCertifiedRoles(CertifiedRolesListType value) {

@@ -84,7 +84,7 @@ public class AuthnStatementType
      * 
      * @return
      *     possible object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.AuthnContextType }
+     *     {@link AuthnContextType }
      *     
      */
     public AuthnContextType getAuthnContext() {
@@ -96,7 +96,7 @@ public class AuthnStatementType
      * 
      * @param value
      *     allowed object is
-     *     {@link oasis.names.tc.saml._2_0.assertion.AuthnContextType }
+     *     {@link AuthnContextType }
      *     
      */
     public void setAuthnContext(AuthnContextType value) {
@@ -108,7 +108,7 @@ public class AuthnStatementType
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getAuthnInstant() {
@@ -120,7 +120,7 @@ public class AuthnStatementType
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setAuthnInstant(XMLGregorianCalendar value) {
@@ -156,7 +156,7 @@ public class AuthnStatementType
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public XMLGregorianCalendar getSessionNotOnOrAfter() {
@@ -168,7 +168,7 @@ public class AuthnStatementType
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     {@link XMLGregorianCalendar }
      *     
      */
     public void setSessionNotOnOrAfter(XMLGregorianCalendar value) {

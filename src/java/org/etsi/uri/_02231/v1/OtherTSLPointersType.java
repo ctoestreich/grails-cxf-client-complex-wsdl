@@ -55,7 +55,7 @@ public class OtherTSLPointersType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link org.etsi.uri._02231.v1.OtherTSLPointer }
+     * {@link OtherTSLPointer }
      * 
      * 
      */

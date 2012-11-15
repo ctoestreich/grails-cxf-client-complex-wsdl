@@ -79,7 +79,7 @@ public class SignedPropertiesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.SignedDataObjectPropertiesType }
+     *     {@link SignedDataObjectPropertiesType }
      *     
      */
     public SignedDataObjectPropertiesType getSignedDataObjectProperties() {
@@ -91,7 +91,7 @@ public class SignedPropertiesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.SignedDataObjectPropertiesType }
+     *     {@link SignedDataObjectPropertiesType }
      *     
      */
     public void setSignedDataObjectProperties(SignedDataObjectPropertiesType value) {

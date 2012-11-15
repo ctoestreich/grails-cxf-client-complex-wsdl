@@ -83,7 +83,7 @@ public class DigestAlgAndValueType {
      *     byte[]
      */
     public void setDigestValue(byte[] value) {
-        this.digestValue = value;
+        this.digestValue = ((byte[]) value);
     }
 
 }

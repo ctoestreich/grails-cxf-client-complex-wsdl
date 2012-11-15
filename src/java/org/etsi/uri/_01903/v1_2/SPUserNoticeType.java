@@ -44,7 +44,7 @@ public class SPUserNoticeType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.NoticeReferenceType }
+     *     {@link NoticeReferenceType }
      *     
      */
     public NoticeReferenceType getNoticeRef() {
@@ -56,7 +56,7 @@ public class SPUserNoticeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.NoticeReferenceType }
+     *     {@link NoticeReferenceType }
      *     
      */
     public void setNoticeRef(NoticeReferenceType value) {

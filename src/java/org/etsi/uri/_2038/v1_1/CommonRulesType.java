@@ -156,7 +156,7 @@ public class CommonRulesType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgorithmConstraintSetType }
+     *     {@link AlgorithmConstraintSetType }
      *     
      */
     public AlgorithmConstraintSetType getAlgorithmConstraintSet() {
@@ -168,7 +168,7 @@ public class CommonRulesType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._2038.v1_1.AlgorithmConstraintSetType }
+     *     {@link AlgorithmConstraintSetType }
      *     
      */
     public void setAlgorithmConstraintSet(AlgorithmConstraintSetType value) {

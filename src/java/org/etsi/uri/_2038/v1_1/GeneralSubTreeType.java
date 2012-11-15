@@ -73,7 +73,7 @@ public class GeneralSubTreeType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getMinimum() {
@@ -85,7 +85,7 @@ public class GeneralSubTreeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setMinimum(BigInteger value) {
@@ -97,7 +97,7 @@ public class GeneralSubTreeType {
      * 
      * @return
      *     possible object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public BigInteger getMaximum() {
@@ -109,7 +109,7 @@ public class GeneralSubTreeType {
      * 
      * @param value
      *     allowed object is
-     *     {@link java.math.BigInteger }
+     *     {@link BigInteger }
      *     
      */
     public void setMaximum(BigInteger value) {

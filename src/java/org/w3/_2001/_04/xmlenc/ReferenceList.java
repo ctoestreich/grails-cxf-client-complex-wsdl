@@ -40,8 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 public class ReferenceList {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "KeyReference", namespace = "http://www.w3.org/2001/04/xmlenc#", type = JAXBElement.class),
-        @XmlElementRef(name = "DataReference", namespace = "http://www.w3.org/2001/04/xmlenc#", type = JAXBElement.class)
+        @XmlElementRef(name = "DataReference", namespace = "http://www.w3.org/2001/04/xmlenc#", type = JAXBElement.class),
+        @XmlElementRef(name = "KeyReference", namespace = "http://www.w3.org/2001/04/xmlenc#", type = JAXBElement.class)
     })
     protected List<JAXBElement<ReferenceType>> dataReferenceOrKeyReference;
 
@@ -63,8 +63,8 @@ public class ReferenceList {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link ReferenceType }{@code >}
+     * {@link JAXBElement }{@code <}{@link ReferenceType }{@code >}
+     * {@link JAXBElement }{@code <}{@link ReferenceType }{@code >}
      * 
      * 
      */

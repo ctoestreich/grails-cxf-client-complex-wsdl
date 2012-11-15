@@ -40,35 +40,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link org.etsi.uri._02231.v1.InternationalNamesType }
+     * Create an instance of {@link AddressType }
      * 
      */
-    public InternationalNamesType createInternationalNamesType() {
-        return new InternationalNamesType();
-    }
-
-    /**
-     * Create an instance of {@link TSPType }
-     * 
-     */
-    public TSPType createTSPType() {
-        return new TSPType();
-    }
-
-    /**
-     * Create an instance of {@link TSLSchemeInformationType }
-     * 
-     */
-    public TSLSchemeInformationType createTSLSchemeInformationType() {
-        return new TSLSchemeInformationType();
-    }
-
-    /**
-     * Create an instance of {@link TSPServiceInformationType }
-     * 
-     */
-    public TSPServiceInformationType createTSPServiceInformationType() {
-        return new TSPServiceInformationType();
+    public AddressType createAddressType() {
+        return new AddressType();
     }
 
     /**
@@ -80,11 +56,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServiceStatusInformationType }
+     * Create an instance of {@link TSPInformationType }
      * 
      */
-    public ServiceStatusInformationType createServiceStatusInformationType() {
-        return new ServiceStatusInformationType();
+    public TSPInformationType createTSPInformationType() {
+        return new TSPInformationType();
+    }
+
+    /**
+     * Create an instance of {@link DigitalIdentityType }
+     * 
+     */
+    public DigitalIdentityType createDigitalIdentityType() {
+        return new DigitalIdentityType();
     }
 
     /**
@@ -104,6 +88,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ServiceHistoryType }
+     * 
+     */
+    public ServiceHistoryType createServiceHistoryType() {
+        return new ServiceHistoryType();
+    }
+
+    /**
+     * Create an instance of {@link TSPType }
+     * 
+     */
+    public TSPType createTSPType() {
+        return new TSPType();
+    }
+
+    /**
      * Create an instance of {@link PostalAddressType }
      * 
      */
@@ -112,11 +112,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OtherTSLPointersType }
+     * Create an instance of {@link InternationalNamesType.Name }
      * 
      */
-    public OtherTSLPointersType createOtherTSLPointersType() {
-        return new OtherTSLPointersType();
+    public InternationalNamesType.Name createInternationalNamesTypeName() {
+        return new InternationalNamesType.Name();
     }
 
     /**
@@ -128,11 +128,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link org.etsi.uri._02231.v1.DigitalIdentityListType }
+     * Create an instance of {@link ElectronicAddressType }
+     * 
+     */
+    public ElectronicAddressType createElectronicAddressType() {
+        return new ElectronicAddressType();
+    }
+
+    /**
+     * Create an instance of {@link TSPServiceInformationType }
+     * 
+     */
+    public TSPServiceInformationType createTSPServiceInformationType() {
+        return new TSPServiceInformationType();
+    }
+
+    /**
+     * Create an instance of {@link ServiceStatusInformationType }
+     * 
+     */
+    public ServiceStatusInformationType createServiceStatusInformationType() {
+        return new ServiceStatusInformationType();
+    }
+
+    /**
+     * Create an instance of {@link DigitalIdentityListType }
      * 
      */
     public DigitalIdentityListType createDigitalIdentityListType() {
         return new DigitalIdentityListType();
+    }
+
+    /**
+     * Create an instance of {@link InternationalNamesType }
+     * 
+     */
+    public InternationalNamesType createInternationalNamesType() {
+        return new InternationalNamesType();
+    }
+
+    /**
+     * Create an instance of {@link TSLSchemeInformationType }
+     * 
+     */
+    public TSLSchemeInformationType createTSLSchemeInformationType() {
+        return new TSLSchemeInformationType();
+    }
+
+    /**
+     * Create an instance of {@link OtherTSLPointersType }
+     * 
+     */
+    public OtherTSLPointersType createOtherTSLPointersType() {
+        return new OtherTSLPointersType();
     }
 
     /**
@@ -144,55 +192,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link org.etsi.uri._02231.v1.ElectronicAddressType }
-     * 
-     */
-    public ElectronicAddressType createElectronicAddressType() {
-        return new ElectronicAddressType();
-    }
-
-    /**
-     * Create an instance of {@link TSPInformationType }
-     * 
-     */
-    public TSPInformationType createTSPInformationType() {
-        return new TSPInformationType();
-    }
-
-    /**
-     * Create an instance of {@link ServiceHistoryType }
-     * 
-     */
-    public ServiceHistoryType createServiceHistoryType() {
-        return new ServiceHistoryType();
-    }
-
-    /**
-     * Create an instance of {@link org.etsi.uri._02231.v1.AddressType }
-     * 
-     */
-    public AddressType createAddressType() {
-        return new AddressType();
-    }
-
-    /**
-     * Create an instance of {@link org.etsi.uri._02231.v1.DigitalIdentityType }
-     * 
-     */
-    public DigitalIdentityType createDigitalIdentityType() {
-        return new DigitalIdentityType();
-    }
-
-    /**
-     * Create an instance of {@link org.etsi.uri._02231.v1.InternationalNamesType.Name }
-     * 
-     */
-    public InternationalNamesType.Name createInternationalNamesTypeName() {
-        return new InternationalNamesType.Name();
-    }
-
-    /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link TSPServiceInformationType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TSPServiceInformationType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v1.0bis-2005-04#", name = "ServiceInformation")
@@ -201,7 +201,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link TSPType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TSPType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v1.0bis-2005-04#", name = "TrustServiceProvider")
@@ -210,7 +210,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v1.0bis-2005-04#", name = "TSLTag")
@@ -219,7 +219,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link TSPServicesType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TSPServicesType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v1.0bis-2005-04#", name = "TSPServices")
@@ -228,7 +228,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link TrustStatusListType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TrustStatusListType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v1.0bis-2005-04#", name = "TrustStatusList")
@@ -237,7 +237,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link ServiceStatusInformationType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceStatusInformationType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v1.0bis-2005-04#", name = "ServiceStatusInformation")
@@ -246,7 +246,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link javax.xml.bind.JAXBElement }{@code <}{@link TSLSchemeInformationType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TSLSchemeInformationType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v1.0bis-2005-04#", name = "SchemeInformation")

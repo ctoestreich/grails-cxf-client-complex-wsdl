@@ -46,7 +46,7 @@ public class AuthorityBindingType {
      * 
      * @return
      *     possible object is
-     *     {@link javax.xml.namespace.QName }
+     *     {@link QName }
      *     
      */
     public QName getAuthorityKind() {
@@ -58,7 +58,7 @@ public class AuthorityBindingType {
      * 
      * @param value
      *     allowed object is
-     *     {@link javax.xml.namespace.QName }
+     *     {@link QName }
      *     
      */
     public void setAuthorityKind(QName value) {

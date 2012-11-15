@@ -57,8 +57,8 @@ public class InlineXMLType {
      * 
      * @return
      *     possible object is
-     *     {@link org.w3c.dom.Element }
      *     {@link Object }
+     *     {@link Element }
      *     
      */
     public Object getAny() {
@@ -70,8 +70,8 @@ public class InlineXMLType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.w3c.dom.Element }
      *     {@link Object }
+     *     {@link Element }
      *     
      */
     public void setAny(Object value) {

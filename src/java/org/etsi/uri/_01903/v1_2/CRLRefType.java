@@ -68,7 +68,7 @@ public class CRLRefType {
      * 
      * @return
      *     possible object is
-     *     {@link org.etsi.uri._01903.v1_2.CRLIdentifierType }
+     *     {@link CRLIdentifierType }
      *     
      */
     public CRLIdentifierType getCRLIdentifier() {
@@ -80,7 +80,7 @@ public class CRLRefType {
      * 
      * @param value
      *     allowed object is
-     *     {@link org.etsi.uri._01903.v1_2.CRLIdentifierType }
+     *     {@link CRLIdentifierType }
      *     
      */
     public void setCRLIdentifier(CRLIdentifierType value) {

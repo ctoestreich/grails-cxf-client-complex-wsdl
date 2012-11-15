@@ -52,8 +52,8 @@ public class SubjectType {
      * <p>
      * You are getting this "catch-all" property because of the following reason: 
      * The field name "SubjectConfirmation" is used by two different parts of a schema. See: 
-     * line 99 of file:/C:/temp/src/oasis-sstc-saml-schema-protocol-1.1.xsd
-     * line 97 of file:/C:/temp/src/oasis-sstc-saml-schema-protocol-1.1.xsd
+     * line 99 of file:/C:/projects/grails-cxf-client-complex-wsdl/docs/oasis-sstc-saml-schema-protocol-1.1.xsd
+     * line 97 of file:/C:/projects/grails-cxf-client-complex-wsdl/docs/oasis-sstc-saml-schema-protocol-1.1.xsd
      * <p>
      * To get rid of this property, apply a property customization to one 
      * of both of the following declarations to change their names: 
@@ -74,8 +74,8 @@ public class SubjectType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._1_0.assertion.NameIdentifierType }{@code >}
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link oasis.names.tc.saml._1_0.assertion.SubjectConfirmationType }{@code >}
+     * {@link JAXBElement }{@code <}{@link NameIdentifierType }{@code >}
+     * {@link JAXBElement }{@code <}{@link SubjectConfirmationType }{@code >}
      * 
      * 
      */

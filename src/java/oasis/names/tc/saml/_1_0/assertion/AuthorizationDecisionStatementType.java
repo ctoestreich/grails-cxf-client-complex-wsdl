@@ -70,7 +70,7 @@ public class AuthorizationDecisionStatementType
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link oasis.names.tc.saml._1_0.assertion.ActionType }
+     * {@link ActionType }
      * 
      * 
      */

@@ -75,11 +75,11 @@ public class AgreementMethodType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2000._09.xmldsig.KeyInfoType }{@code >}
-     * {@link String }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link org.w3._2000._09.xmldsig.KeyInfoType }{@code >}
      * {@link Object }
-     * {@link javax.xml.bind.JAXBElement }{@code <}{@link byte[]}{@code >}
+     * {@link String }
+     * {@link JAXBElement }{@code <}{@link KeyInfoType }{@code >}
+     * {@link JAXBElement }{@code <}{@link KeyInfoType }{@code >}
+     * {@link JAXBElement }{@code <}{@link byte[]}{@code >}
      * 
      * 
      */
