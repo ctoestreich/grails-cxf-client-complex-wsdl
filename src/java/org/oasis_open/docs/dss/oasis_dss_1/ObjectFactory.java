@@ -44,11 +44,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DocsFormatType }
+     * 
+     */
+    public DocsFormatType createDocsFormatType() {
+        return new DocsFormatType();
+    }
+
+    /**
      * Create an instance of {@link Commitment }
      * 
      */
     public Commitment createCommitment() {
         return new Commitment();
+    }
+
+    /**
+     * Create an instance of {@link DocFormatType }
+     * 
+     */
+    public DocFormatType createDocFormatType() {
+        return new DocFormatType();
     }
 
     /**
@@ -65,22 +81,6 @@ public class ObjectFactory {
      */
     public SignerRole createSignerRole() {
         return new SignerRole();
-    }
-
-    /**
-     * Create an instance of {@link DocsFormatType }
-     * 
-     */
-    public DocsFormatType createDocsFormatType() {
-        return new DocsFormatType();
-    }
-
-    /**
-     * Create an instance of {@link DocFormatType }
-     * 
-     */
-    public DocFormatType createDocFormatType() {
-        return new DocFormatType();
     }
 
     /**

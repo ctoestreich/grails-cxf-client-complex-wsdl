@@ -43,9 +43,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class ConditionsType {
 
     @XmlElements({
-        @XmlElement(name = "Condition"),
         @XmlElement(name = "DoNotCacheCondition", type = DoNotCacheConditionType.class),
-        @XmlElement(name = "AudienceRestrictionCondition", type = AudienceRestrictionConditionType.class)
+        @XmlElement(name = "AudienceRestrictionCondition", type = AudienceRestrictionConditionType.class),
+        @XmlElement(name = "Condition")
     })
     protected List<ConditionAbstractType> audienceRestrictionConditionOrDoNotCacheConditionOrCondition;
     @XmlAttribute(name = "NotBefore")
@@ -73,9 +73,9 @@ public class ConditionsType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ConditionAbstractType }
      * {@link DoNotCacheConditionType }
      * {@link AudienceRestrictionConditionType }
+     * {@link ConditionAbstractType }
      * 
      * 
      */

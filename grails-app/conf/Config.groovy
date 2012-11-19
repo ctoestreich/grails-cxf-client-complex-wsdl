@@ -98,6 +98,7 @@ cxf {
             wsdlArgs = ["-fe","jaxws21"]
             clientInterface = oasis.names.tc.dss._1_0.core.wsdl.SOAPport
 //            serviceEndpointAddress = "http://psis.catcert.net/wsdl/dss"
+            client = true
             serviceEndpointAddress = "http://psis.catcert.net/psis/catcert/dss"
         }
     }

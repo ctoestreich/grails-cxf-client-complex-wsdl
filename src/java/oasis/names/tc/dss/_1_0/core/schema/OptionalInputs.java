@@ -89,44 +89,44 @@ import org.etsi.uri._2038.v1_1.CertificateTrustTreesType;
 public class OptionalInputs {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "RequireQualifiedCertificate", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = JAXBElement.class),
-        @XmlElementRef(name = "Scheme", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = Scheme.class),
-        @XmlElementRef(name = "RetentionPeriod", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnUpdatedSignature", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ReturnUpdatedSignature.class),
-        @XmlElementRef(name = "SignedReferences", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignedReferences.class),
-        @XmlElementRef(name = "SignaturePlacement", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignaturePlacement.class),
-        @XmlElementRef(name = "IntendedAudience", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = IntendedAudience.class),
-        @XmlElementRef(name = "AddTimestamp", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = AddTimestamp.class),
-        @XmlElementRef(name = "VerifyManifests", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "IncludeEContent", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "X509CertificateValidationOptions", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnSigningTime", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "ClaimedIdentity", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ClaimedIdentity.class),
-        @XmlElementRef(name = "AdditionalProfile", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnTransformedDocument", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ReturnTransformedDocument.class),
-        @XmlElementRef(name = "ReturnX509CertificateInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ReturnX509CertificateInfo.class),
-        @XmlElementRef(name = "Schemas", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnSignatureInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ReturnSignatureInfo.class),
         @XmlElementRef(name = "Properties", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = Properties.class),
         @XmlElementRef(name = "AdditionalKeyInfo", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = AdditionalKeyInfo.class),
-        @XmlElementRef(name = "ParallelSignature", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnSignerIdentity", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "SignatureForm", namespace = "http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#", type = JAXBElement.class),
-        @XmlElementRef(name = "ArchiveMode", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-        @XmlElementRef(name = "CounterSignature", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = CounterSignature.class),
-        @XmlElementRef(name = "ResponseID", namespace = "urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing:1.0", type = JAXBElement.class),
-        @XmlElementRef(name = "KeySelector", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = KeySelector.class),
-        @XmlElementRef(name = "IncludeObject", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = IncludeObject.class),
-        @XmlElementRef(name = "SignatureType", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnProcessingDetails", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
         @XmlElementRef(name = "Language", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnSignatureReason", namespace = "urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF", type = JAXBElement.class),
-        @XmlElementRef(name = "ReturnSignedResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ReturnSignedResponse.class),
-        @XmlElementRef(name = "VerificationTime", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
-        @XmlElementRef(name = "SignaturePolicy", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = SignaturePolicy.class),
-        @XmlElementRef(name = "ArchivePolicy", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+        @XmlElementRef(name = "ReturnProcessingDetails", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
         @XmlElementRef(name = "UpdateSignature", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = UpdateSignature.class),
-        @XmlElementRef(name = "ServicePolicy", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class)
+        @XmlElementRef(name = "Scheme", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = Scheme.class),
+        @XmlElementRef(name = "ReturnSignatureInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ReturnSignatureInfo.class),
+        @XmlElementRef(name = "ReturnTransformedDocument", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ReturnTransformedDocument.class),
+        @XmlElementRef(name = "Schemas", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "ReturnSignedResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ReturnSignedResponse.class),
+        @XmlElementRef(name = "AdditionalProfile", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "ClaimedIdentity", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ClaimedIdentity.class),
+        @XmlElementRef(name = "ParallelSignature", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = JAXBElement.class),
+        @XmlElementRef(name = "ReturnSignatureReason", namespace = "urn:oasis:names:tc:dss:1.0:profiles:DSS_PDF", type = JAXBElement.class),
+        @XmlElementRef(name = "ReturnX509CertificateInfo", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = ReturnX509CertificateInfo.class),
+        @XmlElementRef(name = "X509CertificateValidationOptions", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = JAXBElement.class),
+        @XmlElementRef(name = "VerificationTime", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "ResponseID", namespace = "urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing:1.0", type = JAXBElement.class),
+        @XmlElementRef(name = "SignedReferences", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignedReferences.class),
+        @XmlElementRef(name = "ReturnSignerIdentity", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "ServicePolicy", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "IncludeEContent", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "ArchivePolicy", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+        @XmlElementRef(name = "CounterSignature", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = CounterSignature.class),
+        @XmlElementRef(name = "SignatureType", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "ArchiveMode", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+        @XmlElementRef(name = "IncludeObject", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = IncludeObject.class),
+        @XmlElementRef(name = "SignaturePolicy", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = SignaturePolicy.class),
+        @XmlElementRef(name = "VerifyManifests", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class),
+        @XmlElementRef(name = "SignatureForm", namespace = "http://www.docs.oasis-open.org/dss/oasis-dss-1.0-profiles-XAdES-cd-01#", type = JAXBElement.class),
+        @XmlElementRef(name = "ReturnUpdatedSignature", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = ReturnUpdatedSignature.class),
+        @XmlElementRef(name = "RetentionPeriod", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+        @XmlElementRef(name = "KeySelector", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = KeySelector.class),
+        @XmlElementRef(name = "AddTimestamp", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = AddTimestamp.class),
+        @XmlElementRef(name = "SignaturePlacement", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignaturePlacement.class),
+        @XmlElementRef(name = "RequireQualifiedCertificate", namespace = "urn:oasis:names:tc:dss:1.0:profiles:XSS", type = JAXBElement.class),
+        @XmlElementRef(name = "IntendedAudience", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = IntendedAudience.class),
+        @XmlElementRef(name = "ReturnSigningTime", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = JAXBElement.class)
     })
     protected List<Object> servicePolicyOrClaimedIdentityOrLanguage;
 
@@ -148,44 +148,44 @@ public class OptionalInputs {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link AdditionalKeyInfo }
+     * {@link Properties }
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * {@link UpdateSignature }
      * {@link Scheme }
-     * {@link JAXBElement }{@code <}{@link Duration }{@code >}
-     * {@link ReturnUpdatedSignature }
-     * {@link IntendedAudience }
-     * {@link SignaturePlacement }
-     * {@link SignedReferences }
-     * {@link AddTimestamp }
+     * {@link ReturnTransformedDocument }
+     * {@link ReturnSignatureInfo }
+     * {@link ReturnSignedResponse }
+     * {@link JAXBElement }{@code <}{@link SchemasType }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link ClaimedIdentity }
+     * {@link JAXBElement }{@code <}{@link Object }{@code >}
      * {@link JAXBElement }{@code <}{@link Object }{@code >}
      * {@link JAXBElement }{@code <}{@link CertificateTrustTreesType }{@code >}
-     * {@link JAXBElement }{@code <}{@link Object }{@code >}
-     * {@link JAXBElement }{@code <}{@link Object }{@code >}
-     * {@link ClaimedIdentity }
-     * {@link ReturnTransformedDocument }
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link SchemasType }{@code >}
      * {@link ReturnX509CertificateInfo }
-     * {@link Properties }
-     * {@link ReturnSignatureInfo }
-     * {@link AdditionalKeyInfo }
+     * {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link SignedReferences }
      * {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * {@link JAXBElement }{@code <}{@link ObjectIdentifierType }{@code >}
      * {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link CounterSignature }
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link KeySelector }
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link SignaturePolicy }
      * {@link IncludeObject }
      * {@link JAXBElement }{@code <}{@link Object }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Duration }{@code >}
+     * {@link ReturnUpdatedSignature }
+     * {@link KeySelector }
+     * {@link SignaturePlacement }
+     * {@link AddTimestamp }
      * {@link JAXBElement }{@code <}{@link Object }{@code >}
-     * {@link ReturnSignedResponse }
-     * {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-     * {@link SignaturePolicy }
-     * {@link JAXBElement }{@code <}{@link ObjectIdentifierType }{@code >}
-     * {@link UpdateSignature }
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * {@link IntendedAudience }
      * 
      * 
      */

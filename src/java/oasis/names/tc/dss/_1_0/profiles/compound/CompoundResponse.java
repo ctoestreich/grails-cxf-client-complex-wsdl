@@ -154,13 +154,13 @@ public class CompoundResponse {
     public static class Responses {
 
         @XmlElementRefs({
-            @XmlElementRef(name = "ArchiveRetrievalResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveRetrievalResponse.class),
+            @XmlElementRef(name = "ArchiveSubmitResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitResponse.class),
             @XmlElementRef(name = "ArchiveModifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveDeleteResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveDeleteResponse.class),
             @XmlElementRef(name = "SignResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignResponse.class),
             @XmlElementRef(name = "ArchiveVerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveSubmitResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitResponse.class),
-            @XmlElementRef(name = "VerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyResponse.class)
+            @XmlElementRef(name = "VerifyResponse", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyResponse.class),
+            @XmlElementRef(name = "ArchiveDeleteResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveDeleteResponse.class),
+            @XmlElementRef(name = "ArchiveRetrievalResponse", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveRetrievalResponse.class)
         })
         protected List<Object> verifyResponseOrSignResponseOrArchiveSubmitResponse;
 
@@ -182,13 +182,13 @@ public class CompoundResponse {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link ArchiveRetrievalResponse }
+         * {@link ArchiveSubmitResponse }
          * {@link JAXBElement }{@code <}{@link ResponseBaseType }{@code >}
-         * {@link ArchiveDeleteResponse }
          * {@link SignResponse }
          * {@link JAXBElement }{@code <}{@link ResponseBaseType }{@code >}
-         * {@link ArchiveSubmitResponse }
          * {@link VerifyResponse }
+         * {@link ArchiveDeleteResponse }
+         * {@link ArchiveRetrievalResponse }
          * 
          * 
          */

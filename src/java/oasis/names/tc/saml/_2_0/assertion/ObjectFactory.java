@@ -68,19 +68,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AudienceRestrictionType }
+     * Create an instance of {@link AssertionType }
      * 
      */
-    public AudienceRestrictionType createAudienceRestrictionType() {
-        return new AudienceRestrictionType();
+    public AssertionType createAssertionType() {
+        return new AssertionType();
     }
 
     /**
-     * Create an instance of {@link NameIDType }
+     * Create an instance of {@link OneTimeUseType }
      * 
      */
-    public NameIDType createNameIDType() {
-        return new NameIDType();
+    public OneTimeUseType createOneTimeUseType() {
+        return new OneTimeUseType();
+    }
+
+    /**
+     * Create an instance of {@link AttributeType }
+     * 
+     */
+    public AttributeType createAttributeType() {
+        return new AttributeType();
+    }
+
+    /**
+     * Create an instance of {@link AuthzDecisionStatementType }
+     * 
+     */
+    public AuthzDecisionStatementType createAuthzDecisionStatementType() {
+        return new AuthzDecisionStatementType();
+    }
+
+    /**
+     * Create an instance of {@link EncryptedElementType }
+     * 
+     */
+    public EncryptedElementType createEncryptedElementType() {
+        return new EncryptedElementType();
     }
 
     /**
@@ -92,11 +116,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link EvidenceType }
+     * Create an instance of {@link SubjectConfirmationDataType }
      * 
      */
-    public EvidenceType createEvidenceType() {
-        return new EvidenceType();
+    public SubjectConfirmationDataType createSubjectConfirmationDataType() {
+        return new SubjectConfirmationDataType();
+    }
+
+    /**
+     * Create an instance of {@link NameIDType }
+     * 
+     */
+    public NameIDType createNameIDType() {
+        return new NameIDType();
     }
 
     /**
@@ -116,27 +148,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OneTimeUseType }
+     * Create an instance of {@link AttributeStatementType }
      * 
      */
-    public OneTimeUseType createOneTimeUseType() {
-        return new OneTimeUseType();
+    public AttributeStatementType createAttributeStatementType() {
+        return new AttributeStatementType();
     }
 
     /**
-     * Create an instance of {@link SubjectConfirmationDataType }
+     * Create an instance of {@link EvidenceType }
      * 
      */
-    public SubjectConfirmationDataType createSubjectConfirmationDataType() {
-        return new SubjectConfirmationDataType();
+    public EvidenceType createEvidenceType() {
+        return new EvidenceType();
     }
 
     /**
-     * Create an instance of {@link AuthzDecisionStatementType }
+     * Create an instance of {@link SubjectConfirmationType }
      * 
      */
-    public AuthzDecisionStatementType createAuthzDecisionStatementType() {
-        return new AuthzDecisionStatementType();
+    public SubjectConfirmationType createSubjectConfirmationType() {
+        return new SubjectConfirmationType();
+    }
+
+    /**
+     * Create an instance of {@link SubjectLocalityType }
+     * 
+     */
+    public SubjectLocalityType createSubjectLocalityType() {
+        return new SubjectLocalityType();
+    }
+
+    /**
+     * Create an instance of {@link AuthnContextType }
+     * 
+     */
+    public AuthnContextType createAuthnContextType() {
+        return new AuthnContextType();
     }
 
     /**
@@ -156,51 +204,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubjectConfirmationType }
+     * Create an instance of {@link AudienceRestrictionType }
      * 
      */
-    public SubjectConfirmationType createSubjectConfirmationType() {
-        return new SubjectConfirmationType();
-    }
-
-    /**
-     * Create an instance of {@link AuthnContextType }
-     * 
-     */
-    public AuthnContextType createAuthnContextType() {
-        return new AuthnContextType();
-    }
-
-    /**
-     * Create an instance of {@link AttributeStatementType }
-     * 
-     */
-    public AttributeStatementType createAttributeStatementType() {
-        return new AttributeStatementType();
-    }
-
-    /**
-     * Create an instance of {@link EncryptedElementType }
-     * 
-     */
-    public EncryptedElementType createEncryptedElementType() {
-        return new EncryptedElementType();
-    }
-
-    /**
-     * Create an instance of {@link SubjectType }
-     * 
-     */
-    public SubjectType createSubjectType() {
-        return new SubjectType();
-    }
-
-    /**
-     * Create an instance of {@link AttributeType }
-     * 
-     */
-    public AttributeType createAttributeType() {
-        return new AttributeType();
+    public AudienceRestrictionType createAudienceRestrictionType() {
+        return new AudienceRestrictionType();
     }
 
     /**
@@ -212,19 +220,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AssertionType }
+     * Create an instance of {@link SubjectType }
      * 
      */
-    public AssertionType createAssertionType() {
-        return new AssertionType();
-    }
-
-    /**
-     * Create an instance of {@link SubjectLocalityType }
-     * 
-     */
-    public SubjectLocalityType createSubjectLocalityType() {
-        return new SubjectLocalityType();
+    public SubjectType createSubjectType() {
+        return new SubjectType();
     }
 
     /**

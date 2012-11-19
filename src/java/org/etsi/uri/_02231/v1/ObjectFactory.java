@@ -40,27 +40,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddressType }
+     * Create an instance of {@link ElectronicAddressType }
      * 
      */
-    public AddressType createAddressType() {
-        return new AddressType();
-    }
-
-    /**
-     * Create an instance of {@link TSPServicesType }
-     * 
-     */
-    public TSPServicesType createTSPServicesType() {
-        return new TSPServicesType();
-    }
-
-    /**
-     * Create an instance of {@link TSPInformationType }
-     * 
-     */
-    public TSPInformationType createTSPInformationType() {
-        return new TSPInformationType();
+    public ElectronicAddressType createElectronicAddressType() {
+        return new ElectronicAddressType();
     }
 
     /**
@@ -72,43 +56,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DigitalIdentityListType }
+     * 
+     */
+    public DigitalIdentityListType createDigitalIdentityListType() {
+        return new DigitalIdentityListType();
+    }
+
+    /**
+     * Create an instance of {@link AddressType }
+     * 
+     */
+    public AddressType createAddressType() {
+        return new AddressType();
+    }
+
+    /**
      * Create an instance of {@link TrustStatusListType }
      * 
      */
     public TrustStatusListType createTrustStatusListType() {
         return new TrustStatusListType();
-    }
-
-    /**
-     * Create an instance of {@link PolicyOrLegalnoticeType }
-     * 
-     */
-    public PolicyOrLegalnoticeType createPolicyOrLegalnoticeType() {
-        return new PolicyOrLegalnoticeType();
-    }
-
-    /**
-     * Create an instance of {@link ServiceHistoryType }
-     * 
-     */
-    public ServiceHistoryType createServiceHistoryType() {
-        return new ServiceHistoryType();
-    }
-
-    /**
-     * Create an instance of {@link TSPType }
-     * 
-     */
-    public TSPType createTSPType() {
-        return new TSPType();
-    }
-
-    /**
-     * Create an instance of {@link PostalAddressType }
-     * 
-     */
-    public PostalAddressType createPostalAddressType() {
-        return new PostalAddressType();
     }
 
     /**
@@ -120,19 +88,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PostalAddressListType }
+     * Create an instance of {@link TSPInformationType }
      * 
      */
-    public PostalAddressListType createPostalAddressListType() {
-        return new PostalAddressListType();
-    }
-
-    /**
-     * Create an instance of {@link ElectronicAddressType }
-     * 
-     */
-    public ElectronicAddressType createElectronicAddressType() {
-        return new ElectronicAddressType();
+    public TSPInformationType createTSPInformationType() {
+        return new TSPInformationType();
     }
 
     /**
@@ -144,27 +104,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServiceStatusInformationType }
-     * 
-     */
-    public ServiceStatusInformationType createServiceStatusInformationType() {
-        return new ServiceStatusInformationType();
-    }
-
-    /**
-     * Create an instance of {@link DigitalIdentityListType }
-     * 
-     */
-    public DigitalIdentityListType createDigitalIdentityListType() {
-        return new DigitalIdentityListType();
-    }
-
-    /**
      * Create an instance of {@link InternationalNamesType }
      * 
      */
     public InternationalNamesType createInternationalNamesType() {
         return new InternationalNamesType();
+    }
+
+    /**
+     * Create an instance of {@link ServiceStatusInformationType }
+     * 
+     */
+    public ServiceStatusInformationType createServiceStatusInformationType() {
+        return new ServiceStatusInformationType();
     }
 
     /**
@@ -176,11 +128,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OtherTSLPointersType }
+     * Create an instance of {@link PostalAddressType }
      * 
      */
-    public OtherTSLPointersType createOtherTSLPointersType() {
-        return new OtherTSLPointersType();
+    public PostalAddressType createPostalAddressType() {
+        return new PostalAddressType();
     }
 
     /**
@@ -189,6 +141,54 @@ public class ObjectFactory {
      */
     public OtherTSLPointer createOtherTSLPointer() {
         return new OtherTSLPointer();
+    }
+
+    /**
+     * Create an instance of {@link PostalAddressListType }
+     * 
+     */
+    public PostalAddressListType createPostalAddressListType() {
+        return new PostalAddressListType();
+    }
+
+    /**
+     * Create an instance of {@link OtherTSLPointersType }
+     * 
+     */
+    public OtherTSLPointersType createOtherTSLPointersType() {
+        return new OtherTSLPointersType();
+    }
+
+    /**
+     * Create an instance of {@link TSPServicesType }
+     * 
+     */
+    public TSPServicesType createTSPServicesType() {
+        return new TSPServicesType();
+    }
+
+    /**
+     * Create an instance of {@link PolicyOrLegalnoticeType }
+     * 
+     */
+    public PolicyOrLegalnoticeType createPolicyOrLegalnoticeType() {
+        return new PolicyOrLegalnoticeType();
+    }
+
+    /**
+     * Create an instance of {@link TSPType }
+     * 
+     */
+    public TSPType createTSPType() {
+        return new TSPType();
+    }
+
+    /**
+     * Create an instance of {@link ServiceHistoryType }
+     * 
+     */
+    public ServiceHistoryType createServiceHistoryType() {
+        return new ServiceHistoryType();
     }
 
     /**

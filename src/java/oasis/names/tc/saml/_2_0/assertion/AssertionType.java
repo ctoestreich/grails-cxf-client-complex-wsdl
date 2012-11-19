@@ -71,9 +71,9 @@ public class AssertionType {
     @XmlElement(name = "Advice")
     protected AdviceType advice;
     @XmlElements({
-        @XmlElement(name = "AuthzDecisionStatement", type = AuthzDecisionStatementType.class),
         @XmlElement(name = "AuthnStatement", type = AuthnStatementType.class),
         @XmlElement(name = "Statement"),
+        @XmlElement(name = "AuthzDecisionStatement", type = AuthzDecisionStatementType.class),
         @XmlElement(name = "AttributeStatement", type = AttributeStatementType.class)
     })
     protected List<StatementAbstractType> statementOrAuthnStatementOrAuthzDecisionStatement;
@@ -226,9 +226,9 @@ public class AssertionType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AuthzDecisionStatementType }
      * {@link AuthnStatementType }
      * {@link StatementAbstractType }
+     * {@link AuthzDecisionStatementType }
      * {@link AttributeStatementType }
      * 
      * 

@@ -30,11 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CompoundResponse }
+     * Create an instance of {@link CompoundRequest }
      * 
      */
-    public CompoundResponse createCompoundResponse() {
-        return new CompoundResponse();
+    public CompoundRequest createCompoundRequest() {
+        return new CompoundRequest();
     }
 
     /**
@@ -46,11 +46,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CompoundRequest }
+     * Create an instance of {@link CompoundResponse }
      * 
      */
-    public CompoundRequest createCompoundRequest() {
-        return new CompoundRequest();
+    public CompoundResponse createCompoundResponse() {
+        return new CompoundResponse();
     }
 
     /**

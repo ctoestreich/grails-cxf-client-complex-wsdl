@@ -45,19 +45,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArchiveSubmitResponse }
+     * Create an instance of {@link UpdateSignature }
      * 
      */
-    public ArchiveSubmitResponse createArchiveSubmitResponse() {
-        return new ArchiveSubmitResponse();
-    }
-
-    /**
-     * Create an instance of {@link ArchiveSubmitRequest }
-     * 
-     */
-    public ArchiveSubmitRequest createArchiveSubmitRequest() {
-        return new ArchiveSubmitRequest();
+    public UpdateSignature createUpdateSignature() {
+        return new UpdateSignature();
     }
 
     /**
@@ -77,11 +69,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateSignature }
+     * Create an instance of {@link ArchiveSubmitResponse }
      * 
      */
-    public UpdateSignature createUpdateSignature() {
-        return new UpdateSignature();
+    public ArchiveSubmitResponse createArchiveSubmitResponse() {
+        return new ArchiveSubmitResponse();
+    }
+
+    /**
+     * Create an instance of {@link ArchiveSubmitRequest }
+     * 
+     */
+    public ArchiveSubmitRequest createArchiveSubmitRequest() {
+        return new ArchiveSubmitRequest();
     }
 
     /**

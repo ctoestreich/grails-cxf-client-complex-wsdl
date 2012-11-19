@@ -43,10 +43,10 @@ import javax.xml.bind.annotation.XmlType;
 public class InputDocuments {
 
     @XmlElements({
-        @XmlElement(name = "Other", type = AnyType.class),
-        @XmlElement(name = "DocumentHash", type = DocumentHash.class),
+        @XmlElement(name = "Document", type = DocumentType.class),
         @XmlElement(name = "TransformedData", type = TransformedData.class),
-        @XmlElement(name = "Document", type = DocumentType.class)
+        @XmlElement(name = "DocumentHash", type = DocumentHash.class),
+        @XmlElement(name = "Other", type = AnyType.class)
     })
     protected List<Object> documentOrTransformedDataOrDocumentHash;
 
@@ -68,10 +68,10 @@ public class InputDocuments {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AnyType }
-     * {@link DocumentHash }
-     * {@link TransformedData }
      * {@link DocumentType }
+     * {@link TransformedData }
+     * {@link DocumentHash }
+     * {@link AnyType }
      * 
      * 
      */

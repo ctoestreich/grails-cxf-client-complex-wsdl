@@ -68,8 +68,8 @@ public class AssertionType {
         @XmlElement(name = "AttributeStatement", type = AttributeStatementType.class),
         @XmlElement(name = "AuthenticationStatement", type = AuthenticationStatementType.class),
         @XmlElement(name = "SubjectStatement", type = SubjectStatementAbstractType.class),
-        @XmlElement(name = "Statement"),
-        @XmlElement(name = "AuthorizationDecisionStatement", type = AuthorizationDecisionStatementType.class)
+        @XmlElement(name = "AuthorizationDecisionStatement", type = AuthorizationDecisionStatementType.class),
+        @XmlElement(name = "Statement")
     })
     protected List<StatementAbstractType> statementOrSubjectStatementOrAuthenticationStatement;
     @XmlElement(name = "Signature", namespace = "http://www.w3.org/2000/09/xmldsig#")
@@ -158,8 +158,8 @@ public class AssertionType {
      * {@link AttributeStatementType }
      * {@link AuthenticationStatementType }
      * {@link SubjectStatementAbstractType }
-     * {@link StatementAbstractType }
      * {@link AuthorizationDecisionStatementType }
+     * {@link StatementAbstractType }
      * 
      * 
      */

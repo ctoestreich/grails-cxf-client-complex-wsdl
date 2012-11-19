@@ -33,75 +33,19 @@ public class ObjectFactory {
     private final static QName _EncryptedData_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptedData");
     private final static QName _EncryptionProperties_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "EncryptionProperties");
     private final static QName _AgreementMethod_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "AgreementMethod");
+    private final static QName _EncryptionMethodTypeKeySize_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeySize");
+    private final static QName _EncryptionMethodTypeOAEPparams_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "OAEPparams");
     private final static QName _ReferenceListDataReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "DataReference");
     private final static QName _ReferenceListKeyReference_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeyReference");
     private final static QName _AgreementMethodTypeOriginatorKeyInfo_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "OriginatorKeyInfo");
     private final static QName _AgreementMethodTypeRecipientKeyInfo_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "RecipientKeyInfo");
     private final static QName _AgreementMethodTypeKANonce_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KA-Nonce");
-    private final static QName _EncryptionMethodTypeKeySize_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "KeySize");
-    private final static QName _EncryptionMethodTypeOAEPparams_QNAME = new QName("http://www.w3.org/2001/04/xmlenc#", "OAEPparams");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.w3._2001._04.xmlenc
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link EncryptionMethodType }
-     * 
-     */
-    public EncryptionMethodType createEncryptionMethodType() {
-        return new EncryptionMethodType();
-    }
-
-    /**
-     * Create an instance of {@link AgreementMethodType }
-     * 
-     */
-    public AgreementMethodType createAgreementMethodType() {
-        return new AgreementMethodType();
-    }
-
-    /**
-     * Create an instance of {@link TransformsType }
-     * 
-     */
-    public TransformsType createTransformsType() {
-        return new TransformsType();
-    }
-
-    /**
-     * Create an instance of {@link EncryptedKeyType }
-     * 
-     */
-    public EncryptedKeyType createEncryptedKeyType() {
-        return new EncryptedKeyType();
-    }
-
-    /**
-     * Create an instance of {@link ReferenceList }
-     * 
-     */
-    public ReferenceList createReferenceList() {
-        return new ReferenceList();
-    }
-
-    /**
-     * Create an instance of {@link EncryptionPropertiesType }
-     * 
-     */
-    public EncryptionPropertiesType createEncryptionPropertiesType() {
-        return new EncryptionPropertiesType();
-    }
-
-    /**
-     * Create an instance of {@link EncryptionPropertyType }
-     * 
-     */
-    public EncryptionPropertyType createEncryptionPropertyType() {
-        return new EncryptionPropertyType();
     }
 
     /**
@@ -113,11 +57,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link EncryptedDataType }
+     * Create an instance of {@link CipherDataType }
      * 
      */
-    public EncryptedDataType createEncryptedDataType() {
-        return new EncryptedDataType();
+    public CipherDataType createCipherDataType() {
+        return new CipherDataType();
     }
 
     /**
@@ -129,11 +73,67 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CipherDataType }
+     * Create an instance of {@link EncryptionMethodType }
      * 
      */
-    public CipherDataType createCipherDataType() {
-        return new CipherDataType();
+    public EncryptionMethodType createEncryptionMethodType() {
+        return new EncryptionMethodType();
+    }
+
+    /**
+     * Create an instance of {@link EncryptionPropertyType }
+     * 
+     */
+    public EncryptionPropertyType createEncryptionPropertyType() {
+        return new EncryptionPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link EncryptionPropertiesType }
+     * 
+     */
+    public EncryptionPropertiesType createEncryptionPropertiesType() {
+        return new EncryptionPropertiesType();
+    }
+
+    /**
+     * Create an instance of {@link TransformsType }
+     * 
+     */
+    public TransformsType createTransformsType() {
+        return new TransformsType();
+    }
+
+    /**
+     * Create an instance of {@link AgreementMethodType }
+     * 
+     */
+    public AgreementMethodType createAgreementMethodType() {
+        return new AgreementMethodType();
+    }
+
+    /**
+     * Create an instance of {@link EncryptedDataType }
+     * 
+     */
+    public EncryptedDataType createEncryptedDataType() {
+        return new EncryptedDataType();
+    }
+
+    /**
+     * Create an instance of {@link ReferenceList }
+     * 
+     */
+    public ReferenceList createReferenceList() {
+        return new ReferenceList();
+    }
+
+    /**
+     * Create an instance of {@link EncryptedKeyType }
+     * 
+     */
+    public EncryptedKeyType createEncryptedKeyType() {
+        return new EncryptedKeyType();
     }
 
     /**
@@ -200,6 +200,24 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KeySize", scope = EncryptionMethodType.class)
+    public JAXBElement<BigInteger> createEncryptionMethodTypeKeySize(BigInteger value) {
+        return new JAXBElement<BigInteger>(_EncryptionMethodTypeKeySize_QNAME, BigInteger.class, EncryptionMethodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "OAEPparams", scope = EncryptionMethodType.class)
+    public JAXBElement<byte[]> createEncryptionMethodTypeOAEPparams(byte[] value) {
+        return new JAXBElement<byte[]>(_EncryptionMethodTypeOAEPparams_QNAME, byte[].class, EncryptionMethodType.class, ((byte[]) value));
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReferenceType }{@code >}}
      * 
      */
@@ -242,24 +260,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KA-Nonce", scope = AgreementMethodType.class)
     public JAXBElement<byte[]> createAgreementMethodTypeKANonce(byte[] value) {
         return new JAXBElement<byte[]>(_AgreementMethodTypeKANonce_QNAME, byte[].class, AgreementMethodType.class, ((byte[]) value));
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "KeySize", scope = EncryptionMethodType.class)
-    public JAXBElement<BigInteger> createEncryptionMethodTypeKeySize(BigInteger value) {
-        return new JAXBElement<BigInteger>(_EncryptionMethodTypeKeySize_QNAME, BigInteger.class, EncryptionMethodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.w3.org/2001/04/xmlenc#", name = "OAEPparams", scope = EncryptionMethodType.class)
-    public JAXBElement<byte[]> createEncryptionMethodTypeOAEPparams(byte[] value) {
-        return new JAXBElement<byte[]>(_EncryptionMethodTypeOAEPparams_QNAME, byte[].class, EncryptionMethodType.class, ((byte[]) value));
     }
 
 }

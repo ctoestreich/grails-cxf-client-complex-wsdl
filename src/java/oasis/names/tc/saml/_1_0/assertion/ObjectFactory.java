@@ -60,43 +60,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AttributeStatementType }
-     * 
-     */
-    public AttributeStatementType createAttributeStatementType() {
-        return new AttributeStatementType();
-    }
-
-    /**
-     * Create an instance of {@link EvidenceType }
-     * 
-     */
-    public EvidenceType createEvidenceType() {
-        return new EvidenceType();
-    }
-
-    /**
      * Create an instance of {@link AudienceRestrictionConditionType }
      * 
      */
     public AudienceRestrictionConditionType createAudienceRestrictionConditionType() {
         return new AudienceRestrictionConditionType();
-    }
-
-    /**
-     * Create an instance of {@link AuthorizationDecisionStatementType }
-     * 
-     */
-    public AuthorizationDecisionStatementType createAuthorizationDecisionStatementType() {
-        return new AuthorizationDecisionStatementType();
-    }
-
-    /**
-     * Create an instance of {@link AttributeType }
-     * 
-     */
-    public AttributeType createAttributeType() {
-        return new AttributeType();
     }
 
     /**
@@ -108,19 +76,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubjectLocalityType }
+     * Create an instance of {@link AttributeType }
      * 
      */
-    public SubjectLocalityType createSubjectLocalityType() {
-        return new SubjectLocalityType();
-    }
-
-    /**
-     * Create an instance of {@link DoNotCacheConditionType }
-     * 
-     */
-    public DoNotCacheConditionType createDoNotCacheConditionType() {
-        return new DoNotCacheConditionType();
+    public AttributeType createAttributeType() {
+        return new AttributeType();
     }
 
     /**
@@ -132,43 +92,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link NameIdentifierType }
-     * 
-     */
-    public NameIdentifierType createNameIdentifierType() {
-        return new NameIdentifierType();
-    }
-
-    /**
-     * Create an instance of {@link SubjectType }
-     * 
-     */
-    public SubjectType createSubjectType() {
-        return new SubjectType();
-    }
-
-    /**
-     * Create an instance of {@link SubjectConfirmationType }
-     * 
-     */
-    public SubjectConfirmationType createSubjectConfirmationType() {
-        return new SubjectConfirmationType();
-    }
-
-    /**
      * Create an instance of {@link AdviceType }
      * 
      */
     public AdviceType createAdviceType() {
         return new AdviceType();
-    }
-
-    /**
-     * Create an instance of {@link ConditionsType }
-     * 
-     */
-    public ConditionsType createConditionsType() {
-        return new ConditionsType();
     }
 
     /**
@@ -180,11 +108,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AuthorityBindingType }
+     * Create an instance of {@link SubjectLocalityType }
      * 
      */
-    public AuthorityBindingType createAuthorityBindingType() {
-        return new AuthorityBindingType();
+    public SubjectLocalityType createSubjectLocalityType() {
+        return new SubjectLocalityType();
+    }
+
+    /**
+     * Create an instance of {@link SubjectConfirmationType }
+     * 
+     */
+    public SubjectConfirmationType createSubjectConfirmationType() {
+        return new SubjectConfirmationType();
+    }
+
+    /**
+     * Create an instance of {@link AttributeStatementType }
+     * 
+     */
+    public AttributeStatementType createAttributeStatementType() {
+        return new AttributeStatementType();
+    }
+
+    /**
+     * Create an instance of {@link NameIdentifierType }
+     * 
+     */
+    public NameIdentifierType createNameIdentifierType() {
+        return new NameIdentifierType();
+    }
+
+    /**
+     * Create an instance of {@link DoNotCacheConditionType }
+     * 
+     */
+    public DoNotCacheConditionType createDoNotCacheConditionType() {
+        return new DoNotCacheConditionType();
     }
 
     /**
@@ -193,6 +153,46 @@ public class ObjectFactory {
      */
     public AttributeDesignatorType createAttributeDesignatorType() {
         return new AttributeDesignatorType();
+    }
+
+    /**
+     * Create an instance of {@link AuthorityBindingType }
+     * 
+     */
+    public AuthorityBindingType createAuthorityBindingType() {
+        return new AuthorityBindingType();
+    }
+
+    /**
+     * Create an instance of {@link ConditionsType }
+     * 
+     */
+    public ConditionsType createConditionsType() {
+        return new ConditionsType();
+    }
+
+    /**
+     * Create an instance of {@link EvidenceType }
+     * 
+     */
+    public EvidenceType createEvidenceType() {
+        return new EvidenceType();
+    }
+
+    /**
+     * Create an instance of {@link SubjectType }
+     * 
+     */
+    public SubjectType createSubjectType() {
+        return new SubjectType();
+    }
+
+    /**
+     * Create an instance of {@link AuthorizationDecisionStatementType }
+     * 
+     */
+    public AuthorizationDecisionStatementType createAuthorizationDecisionStatementType() {
+        return new AuthorizationDecisionStatementType();
     }
 
     /**

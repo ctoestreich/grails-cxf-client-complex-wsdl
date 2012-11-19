@@ -37,94 +37,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link X509CertificateInfo }
-     * 
-     */
-    public X509CertificateInfo createX509CertificateInfo() {
-        return new X509CertificateInfo();
-    }
-
-    /**
-     * Create an instance of {@link CounterSignature }
-     * 
-     */
-    public CounterSignature createCounterSignature() {
-        return new CounterSignature();
-    }
-
-    /**
-     * Create an instance of {@link BinaryAttributeValueType }
-     * 
-     */
-    public BinaryAttributeValueType createBinaryAttributeValueType() {
-        return new BinaryAttributeValueType();
-    }
-
-    /**
-     * Create an instance of {@link ReturnSignedResponse }
-     * 
-     */
-    public ReturnSignedResponse createReturnSignedResponse() {
-        return new ReturnSignedResponse();
-    }
-
-    /**
-     * Create an instance of {@link SignaturePolicyInfo }
-     * 
-     */
-    public SignaturePolicyInfo createSignaturePolicyInfo() {
-        return new SignaturePolicyInfo();
-    }
-
-    /**
-     * Create an instance of {@link SignaturePolicy }
-     * 
-     */
-    public SignaturePolicy createSignaturePolicy() {
-        return new SignaturePolicy();
-    }
-
-    /**
-     * Create an instance of {@link Scheme }
-     * 
-     */
-    public Scheme createScheme() {
-        return new Scheme();
-    }
-
-    /**
-     * Create an instance of {@link ReturnX509CertificateInfo }
-     * 
-     */
-    public ReturnX509CertificateInfo createReturnX509CertificateInfo() {
-        return new ReturnX509CertificateInfo();
-    }
-
-    /**
-     * Create an instance of {@link ReturnSignatureInfo }
-     * 
-     */
-    public ReturnSignatureInfo createReturnSignatureInfo() {
-        return new ReturnSignatureInfo();
-    }
-
-    /**
-     * Create an instance of {@link SignatureInfo }
-     * 
-     */
-    public SignatureInfo createSignatureInfo() {
-        return new SignatureInfo();
-    }
-
-    /**
-     * Create an instance of {@link ReturnSignedResponse.RequiredCommitments }
-     * 
-     */
-    public ReturnSignedResponse.RequiredCommitments createReturnSignedResponseRequiredCommitments() {
-        return new ReturnSignedResponse.RequiredCommitments();
-    }
-
-    /**
      * Create an instance of {@link ArchiveInfo }
      * 
      */
@@ -141,11 +53,99 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ReturnX509CertificateInfo }
+     * 
+     */
+    public ReturnX509CertificateInfo createReturnX509CertificateInfo() {
+        return new ReturnX509CertificateInfo();
+    }
+
+    /**
      * Create an instance of {@link SchemeInfo }
      * 
      */
     public SchemeInfo createSchemeInfo() {
         return new SchemeInfo();
+    }
+
+    /**
+     * Create an instance of {@link ReturnSignatureInfo }
+     * 
+     */
+    public ReturnSignatureInfo createReturnSignatureInfo() {
+        return new ReturnSignatureInfo();
+    }
+
+    /**
+     * Create an instance of {@link ReturnSignedResponse }
+     * 
+     */
+    public ReturnSignedResponse createReturnSignedResponse() {
+        return new ReturnSignedResponse();
+    }
+
+    /**
+     * Create an instance of {@link SignatureInfo }
+     * 
+     */
+    public SignatureInfo createSignatureInfo() {
+        return new SignatureInfo();
+    }
+
+    /**
+     * Create an instance of {@link Scheme }
+     * 
+     */
+    public Scheme createScheme() {
+        return new Scheme();
+    }
+
+    /**
+     * Create an instance of {@link BinaryAttributeValueType }
+     * 
+     */
+    public BinaryAttributeValueType createBinaryAttributeValueType() {
+        return new BinaryAttributeValueType();
+    }
+
+    /**
+     * Create an instance of {@link ReturnSignedResponse.RequiredCommitments }
+     * 
+     */
+    public ReturnSignedResponse.RequiredCommitments createReturnSignedResponseRequiredCommitments() {
+        return new ReturnSignedResponse.RequiredCommitments();
+    }
+
+    /**
+     * Create an instance of {@link X509CertificateInfo }
+     * 
+     */
+    public X509CertificateInfo createX509CertificateInfo() {
+        return new X509CertificateInfo();
+    }
+
+    /**
+     * Create an instance of {@link CounterSignature }
+     * 
+     */
+    public CounterSignature createCounterSignature() {
+        return new CounterSignature();
+    }
+
+    /**
+     * Create an instance of {@link SignaturePolicyInfo }
+     * 
+     */
+    public SignaturePolicyInfo createSignaturePolicyInfo() {
+        return new SignaturePolicyInfo();
+    }
+
+    /**
+     * Create an instance of {@link SignaturePolicy }
+     * 
+     */
+    public SignaturePolicy createSignaturePolicy() {
+        return new SignaturePolicy();
     }
 
     /**

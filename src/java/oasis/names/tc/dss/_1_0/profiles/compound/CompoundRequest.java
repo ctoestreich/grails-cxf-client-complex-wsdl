@@ -209,13 +209,13 @@ public class CompoundRequest {
     public static class Requests {
 
         @XmlElementRefs({
-            @XmlElementRef(name = "ArchiveDeleteRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveRetrievalRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveVerifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "ArchiveModifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
-            @XmlElementRef(name = "SignRequest", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignRequest.class),
+            @XmlElementRef(name = "ArchiveSubmitRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitRequest.class),
             @XmlElementRef(name = "VerifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = VerifyRequest.class),
-            @XmlElementRef(name = "ArchiveSubmitRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = ArchiveSubmitRequest.class)
+            @XmlElementRef(name = "ArchiveDeleteRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "ArchiveModifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "ArchiveVerifyRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "ArchiveRetrievalRequest", namespace = "urn:oasis:names:tc:dss:1.0:profiles:archive", type = JAXBElement.class),
+            @XmlElementRef(name = "SignRequest", namespace = "urn:oasis:names:tc:dss:1.0:core:schema", type = SignRequest.class)
         })
         protected List<Object> verifyRequestOrSignRequestOrArchiveSubmitRequest;
 
@@ -237,13 +237,13 @@ public class CompoundRequest {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
+         * {@link ArchiveSubmitRequest }
+         * {@link VerifyRequest }
          * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
          * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
          * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
          * {@link JAXBElement }{@code <}{@link ArchiveIdentifierRequest }{@code >}
          * {@link SignRequest }
-         * {@link VerifyRequest }
-         * {@link ArchiveSubmitRequest }
          * 
          * 
          */

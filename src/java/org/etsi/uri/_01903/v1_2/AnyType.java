@@ -65,9 +65,9 @@ public class AnyType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link String }
      * {@link Element }
+     * {@link Object }
      * 
      * 
      */

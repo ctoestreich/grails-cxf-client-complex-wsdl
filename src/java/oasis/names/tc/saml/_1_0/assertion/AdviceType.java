@@ -65,10 +65,10 @@ public class AdviceType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
      * {@link JAXBElement }{@code <}{@link AssertionType }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link Element }
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link Object }
      * 
      * 
      */

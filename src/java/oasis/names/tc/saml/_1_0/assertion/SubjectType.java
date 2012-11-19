@@ -41,8 +41,8 @@ import javax.xml.bind.annotation.XmlType;
 public class SubjectType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "NameIdentifier", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class),
-        @XmlElementRef(name = "SubjectConfirmation", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class)
+        @XmlElementRef(name = "SubjectConfirmation", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class),
+        @XmlElementRef(name = "NameIdentifier", namespace = "urn:oasis:names:tc:SAML:1.0:assertion", type = JAXBElement.class)
     })
     protected List<JAXBElement<?>> content;
 
@@ -74,8 +74,8 @@ public class SubjectType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link NameIdentifierType }{@code >}
      * {@link JAXBElement }{@code <}{@link SubjectConfirmationType }{@code >}
+     * {@link JAXBElement }{@code <}{@link NameIdentifierType }{@code >}
      * 
      * 
      */
